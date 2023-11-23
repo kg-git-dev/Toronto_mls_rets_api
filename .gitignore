@@ -7,4 +7,5 @@ package.json
 package-lock.json
 
 # Ignore official data files
-Data/sampleDataDuplicate.xml
+XmlParser/Data/official_data.xml
+XmlParser/Data/output.json
