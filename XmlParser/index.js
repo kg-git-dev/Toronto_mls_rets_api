@@ -4,7 +4,7 @@ const sax = require('sax');
 //Initializing an object with 255 keys and values set to null
 const initializeXmlObject = require('./xmlConfig');
 
-const xmlPath = './Data/official_data.xml';
+const xmlPath = './Data/sampleData.xml';
 
 // Creating a sax parser
 const parser = sax.createStream(true, { trim: true, normalize: true, lowercase: true });
