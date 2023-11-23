@@ -1,9 +1,10 @@
 const fs = require('fs');
 const sax = require('sax');
 
+//Initializing an object with 255 keys and values set to null
 const initializeXmlObject = require('./xmlConfig');
 
-const xmlPath = './Data/official_data.xml';
+const xmlPath = './Data/sampleData.xml';
 
 // Creating a sax parser
 const parser = sax.createStream(true, { trim: true, normalize: true, lowercase: true });
@@ -62,9 +63,10 @@ parser.on('closetag', (nodeName) => {
 parser.on('end', () => {
     // Log the structured data
     endTime = new Date().getTime();
+    
     console.log(`${counter} properties in ${(endTime - startTime)} seconds`);
 
-    const jsonOutput = JSON.stringify(residentialProperties, null, 2); // The '2' argument specifies the number of spaces to use for indentation
+    const jsonOutput = JSON.stringify(residentialProperties, null, 2);
     fs.writeFileSync('./Data/output.json', jsonOutput, 'utf-8');
     console.log('Data saved to output.json');
 });
