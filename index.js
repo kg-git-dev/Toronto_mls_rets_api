@@ -11,5 +11,5 @@ const residentialRoutes = require('./Routes/residential');
 app.use('/residential', residentialRoutes);
 
 app.listen(PORT, () => {
-    console.log(`Server running on Port 3000`);
+    console.log(`Server running on port: ${PORT}`);
 });
