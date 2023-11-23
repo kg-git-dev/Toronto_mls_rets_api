@@ -3,7 +3,6 @@
 
 # Ignore node modules
 node_modules/
-package.json
 package-lock.json
 
 # Ignore official data files

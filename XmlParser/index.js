@@ -4,7 +4,7 @@ const sax = require('sax');
 //Initializing an object with 255 keys and values set to null
 const initializeXmlObject = require('./xmlConfig');
 
-const xmlPath = './Data/sampleData.xml';
+const xmlPath = './Data/official_data.xml';
 
 // Creating a sax parser
 const parser = sax.createStream(true, { trim: true, normalize: true, lowercase: true });
@@ -63,7 +63,7 @@ parser.on('closetag', (nodeName) => {
 parser.on('end', () => {
     // Log the structured data
     endTime = new Date().getTime();
-    
+
     console.log(`${counter} properties in ${(endTime - startTime)} seconds`);
 
     const jsonOutput = JSON.stringify(residentialProperties, null, 2);
