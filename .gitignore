@@ -6,5 +6,6 @@ node_modules/
 package-lock.json
 
 # Ignore official data files
-XmlParser/Data/official_data.xml
-XmlParser/Data/output.json
+XmlParser/Data/Residential/initial_data.xml
+XmlParser/Data/Residential/initial_data.json
+XmlParser/Data/Residential/residentialDatabase.db

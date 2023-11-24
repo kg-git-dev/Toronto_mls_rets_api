@@ -6,6 +6,6 @@ const router = express.Router();
 const residentialControllers = require('../Controllers/ResidentialControllers/residentialControllers')
 
 //routing property to respective controller
-router.get('/Property', residentialControllers.controllers.Property);
+router.get('/Property/', residentialControllers.controllers.Property);
 
 module.exports = router;
