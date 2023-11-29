@@ -2,10 +2,11 @@ const express = require('express');
 
 const router = express.Router();
 
-//importing residential controllers
-const residentialControllers = require('../Controllers/ResidentialControllers/residentialControllers')
+const propertiesController = require('../Controllers/ResidentialControllers/Properties')
+
+const propertiesMiddleware = require('../Middleware/PropertiesMiddleware');
 
 //routing property to respective controller
-router.get('/Property/', residentialControllers.controllers.Property);
+router.get('/Properties/', propertiesMiddleware.handleOptionalParameters, propertiesController.handlePropertyRoute);
 
 module.exports = router;
