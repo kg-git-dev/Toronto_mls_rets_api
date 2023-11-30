@@ -5,13 +5,11 @@ const dbPath = path.resolve(__dirname, '../../XmlParser/Data/Residential/residen
 const db = new sqlite3.Database(dbPath);
 
 // Middleware to handle optional query parameters
-const handleOptionalParameters = async (req, res, next) => {
+const handleOptionalParameters = (req, res, next) => {
     const { $limit, $skip, $select, $range } = req.query;
 
     const key = 'testing';
     const value = 'someValue';
-
-    await req.redisClient.set(key, value);
 
     // Modify the database query based on the optional parameters
     const limit = $limit || 10;
