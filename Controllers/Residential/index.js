@@ -1,8 +1,8 @@
 // ResidentialControllers/residentialControllers.js
-const Property = require('./Property');
+const Properties = require('./properties');
 
 module.exports = {
   controllers: {
-    Property,
+    Properties,
   },
 };

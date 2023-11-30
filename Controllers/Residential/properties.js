@@ -4,7 +4,7 @@ const sqlite3 = require('sqlite3').verbose();
 
 const path = require('path');
 
-const handlePropertyRoute = (req, res) => {
+const Properties = (req, res) => {
     // Access the modified query from the request object
     const modifiedQuery = req.databaseQuery;
 
@@ -25,7 +25,4 @@ const handlePropertyRoute = (req, res) => {
     db.close();
 };
 
-module.exports = {
-    handlePropertyRoute,
-    // Add more functions for other routes or functionalities
-};
+module.exports = Properties;

@@ -1,4 +1,4 @@
-const { handleOptionalParameters } = require('./Properties');
+const { handleOptionalParameters } = require('./properties');
 
 const middleware = {
     handleOptionalParameters,
