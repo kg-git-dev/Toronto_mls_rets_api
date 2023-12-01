@@ -75,12 +75,22 @@ const buildDatabaseQuery = ({ limit, skip, selectFields, rangeFields }) => {
         });
     });
 
+    // Add ORDER BY clause for PixUpdtedDt in descending order
+    const orderByClause = 'ORDER BY PixUpdtedDt DESC';
+
     if (conditions.length > 0) {
-        query += ` WHERE ${conditions.join(' AND ')}`;
+        query += ` WHERE ${conditions.join(' AND ')} ${orderByClause}`;
+    } else {
+        query += ` ${orderByClause}`;
     }
 
     // Add LIMIT and OFFSET clauses
-    query += ` LIMIT ${limit} OFFSET ${skip}`;
+    if (limit) {
+        query += ` LIMIT ${limit}`;
+    }
+    if (skip) {
+        query += ` OFFSET ${skip}`;
+    }
 
     return query;
 };
@@ -103,8 +113,6 @@ const parseRangeParameters = (range) => {
 
     // Split the $range parameters
     return range.split(',');
-
-
 };
 
 
