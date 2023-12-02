@@ -22,4 +22,6 @@ function getMatchingFiles(directory, mlsIndex) {
 }
 
 
-module.exports = { getMatchingFiles };
+module.exports = {
+    getMatchingFiles,
+};
