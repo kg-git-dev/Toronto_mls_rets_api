@@ -8,9 +8,6 @@ const db = new sqlite3.Database(dbPath);
 const handleOptionalParameters = (req, res, next) => {
     const { $limit, $skip, $select, $range } = req.query;
 
-    const key = 'testing';
-    const value = 'someValue';
-
     // Modify the database query based on the optional parameters
     const limit = $limit || 10;
     const skip = $skip || 0; // Default to 0 if $skip is not provided

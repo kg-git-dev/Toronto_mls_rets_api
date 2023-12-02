@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const sax = require('sax');
 
 //Initializing an object with 255 keys and values set to null
@@ -9,6 +10,10 @@ const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('./Data/Residential/residentialDatabase.db');
 
 const xmlPath = './Data/Residential/initial_data.xml';
+
+const { getMatchingFiles } = require('./images');
+
+const directoryPath = './Data/Residential/Photos/'
 
 // Creating a sax parser
 const parser = sax.createStream(true, { trim: true, normalize: true, lowercase: true });
@@ -51,17 +56,25 @@ parser.on('text', (text) => {
         // Testing for boolean
         if (text === 'Y') {
             text = 1;
-            // if (!booleanFinder.includes(currentElement)) {
-            //     booleanFinder.push(currentElement);
-            // }
+
         } else if (text === 'N') {
             text = 0;
-            // if (!booleanFinder.includes(currentElement)) {
-            //     booleanFinder.push(currentElement);
-            // }
         };
 
         currentProperty[currentElement] = text;
+
+        if (currentElement === 'MLS') {
+            getMatchingFiles(directoryPath, text)
+            .then(result => {
+                currentProperty.PhotoCount = result;
+              })
+              .catch(err => {
+                console.error('Error:', err.message);
+                // Handle the case when no matching files are found
+              });
+        }
+    
+
     }
 });
 
@@ -69,41 +82,47 @@ parser.on('closetag', (nodeName) => {
     // Add the current property to the array when leaving ResidentialProperty
     if (nodeName === 'ResidentialProperty') {
         insideResidentialProperty = false;
+
+        // Check if PhotoCount is greater than 0
+        if (currentProperty.PhotoCount > 0) {
+            // Create an array of objects numbered as PhotoCount
+            const photoLinks = Array.from({ length: currentProperty.PhotoCount }, (_, index) => `localhost:3000/residentialPhotos/Photo${currentProperty.MLS}-${index + 1}.jpeg`);
+            // Assign the array to the PhotoLink key
+            currentProperty.PhotoLink = photoLinks;
+        }
+
         residentialProperties.push(currentProperty);
-        counter++
+        counter++;
     } else if (insideResidentialProperty && nodeName === 'Listing') {
         insideListing = false;
     }
 });
 
-parser.on('end', () => {
+
+parser.on('end', async () => {
     // Log the structured data
     endTime = new Date().getTime();
 
-    //looping through each property and assigning values and keys
-    residentialProperties.forEach((property) => {
+    // Loop through each property
+    for (const property of residentialProperties) {
+        // Check if PhotoCount is greater than 0
+        if (property.PhotoCount > 0) {
+            // Create an array of objects numbered as PhotoCount
+            const photoLinks = Array.from({ length: property.PhotoCount }, (_, index) => `localhost:3000/residentialPhotos/Photo${property.MLS}-${index + 1}.jpeg`);
+            // Assign the array to the PhotoLink key
+            property.PhotoLink = JSON.stringify(photoLinks);
+        }
+
         const keys = Object.keys(property);
         const values = Object.values(property);
-      
-        const insertStatement = `INSERT INTO residentialDatabase (${keys.join(', ')}) VALUES (${keys.map(() => '?').join(', ')})`;
-      
+
+        const placeholders = values.map(() => '?').join(', ');
+        const insertStatement = `INSERT INTO residentialDatabase (${keys.join(', ')}) VALUES (${placeholders})`;
+
         // Insert the property into the database
-        db.run(insertStatement, values, (err) => {
-          if (err) {
-            console.error('Error inserting data:', err);
-          } else {
-            console.log('Data inserted successfully.');
-          }
-        });
-      });
-    // console.log(booleanFinder);
-
-    // const jsonOutput = JSON.stringify(residentialProperties, null, 2);
-
-    // fs.writeFileSync('./Data/sampleDataOutput.json', jsonOutput, 'utf-8');
-    // console.log('Data saved to sampleDataOutput.json');
-
-    console.log(`${counter} properties in ${(endTime - startTime)} seconds`);
+        await db.run(insertStatement, values);
+        console.log(`${counter} properties in ${(endTime - startTime)} seconds`);
+    }
 
 
 });

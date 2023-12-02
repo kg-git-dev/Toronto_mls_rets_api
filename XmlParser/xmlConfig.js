@@ -81,6 +81,8 @@ const initializeXmlObject = () => {
         MapColumn: null,
         MapRow: null,
         MLS: null,
+        PhotoCount: null,
+        PhotoLink: [],
         Municipality: null,
         MunicipalityDistrict: null,
         MunicipalityCode: null,

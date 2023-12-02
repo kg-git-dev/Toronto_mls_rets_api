@@ -3,9 +3,13 @@ const sqlite3 = require('sqlite3').verbose();
 
 const db = new sqlite3.Database('./XMLParser/Data/Residential/residentialDatabase.db');
 
+db.run('PRAGMA foreign_keys=off;');
+db.run('BEGIN TRANSACTION;');
 db.run(`
   CREATE TABLE IF NOT EXISTS residentialDatabase (
     MLS TEXT PRIMARY KEY,
+    PhotoCount,
+    PhotoLink JSON,
     AccessToProperty1,
     AccessToProperty2,
     Acreage,
@@ -263,6 +267,6 @@ db.run(`
     Zoning INTEGER DEFAULT 0
   )
 `);
-
-// Close the database connection
-db.close();
+db.run('COMMIT;', () => {
+  db.close();
+});

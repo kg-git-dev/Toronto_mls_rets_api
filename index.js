@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 
 const redis = require('redis');
 
@@ -13,6 +14,9 @@ const residentialRoutes = require('./Routes/residential');
 const redisClient = redis.createClient();
 redisClient.on('error', (error) => console.error(`Redis Error: ${error}`));
 redisClient.connect();
+
+//make images available
+app.use('/residentialPhotos', express.static(path.join(__dirname, 'XmlParser/Data/Residential/Photos/')));
 
 // Pass the Redis client to the routes
 app.use((req, res, next) => {
