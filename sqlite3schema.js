@@ -81,6 +81,8 @@ db.run(`
     LinkComment,
     ListBrokerage,
     ListPrice,
+    MaxListPrice,
+    MinListPrice,
     LotDepth,
     LotFront,
     LotIrregularities,

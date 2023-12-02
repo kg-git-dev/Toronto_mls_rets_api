@@ -73,6 +73,8 @@ const initializeXmlObject = () => {
         LinkComment: null,
         ListBrokerage: null,
         ListPrice: null,
+        MaxListPrice:null,
+        MinListPrice:null,
         LotDepth: null,
         LotFront: null,
         LotIrregularities: null,

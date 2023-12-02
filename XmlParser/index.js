@@ -16,7 +16,7 @@ const { getMatchingFiles } = require('./images');
 const directoryPath = './Data/Residential/Photos/'
 
 // Creating a sax parser
-const parser = sax.createStream(true, { trim: true, normalize: true, lowercase: true });
+const parser = sax.createStream(true, { trim: true, normalize: true });
 
 // Setting up variables to keep track of the current element
 let currentElement = '';
@@ -26,9 +26,10 @@ let insideListing = false;
 // Setting up data structures
 let residentialProperties = [];
 let currentProperty = {};
-let startTime;
 let endTime;
 let counter = 0;
+let startTime = new Date().getTime();
+
 // let booleanFinder = [];
 
 // Setting up event handlers
@@ -38,7 +39,6 @@ parser.on('opentag', (node) => {
 
     // Check if we are inside a ResidentialProperty or Listing
     if (currentElement === 'ResidentialProperty') {
-        startTime = new Date().getTime();
         insideResidentialProperty = true;
         currentProperty = { ...initializeXmlObject }; // Creating a new object instance
     } else if (insideResidentialProperty && currentElement === 'Listing') {
@@ -62,34 +62,14 @@ parser.on('text', (text) => {
         };
 
         currentProperty[currentElement] = text;
-
-        if (currentElement === 'MLS') {
-            getMatchingFiles(directoryPath, text)
-            .then(result => {
-                currentProperty.PhotoCount = result;
-              })
-              .catch(err => {
-                console.error('Error:', err.message);
-                // Handle the case when no matching files are found
-              });
-        }
-    
-
     }
 });
 
 parser.on('closetag', (nodeName) => {
     // Add the current property to the array when leaving ResidentialProperty
     if (nodeName === 'ResidentialProperty') {
-        insideResidentialProperty = false;
 
-        // Check if PhotoCount is greater than 0
-        if (currentProperty.PhotoCount > 0) {
-            // Create an array of objects numbered as PhotoCount
-            const photoLinks = Array.from({ length: currentProperty.PhotoCount }, (_, index) => `localhost:3000/residentialPhotos/Photo${currentProperty.MLS}-${index + 1}.jpeg`);
-            // Assign the array to the PhotoLink key
-            currentProperty.PhotoLink = photoLinks;
-        }
+        insideResidentialProperty = false;
 
         residentialProperties.push(currentProperty);
         counter++;
@@ -100,18 +80,25 @@ parser.on('closetag', (nodeName) => {
 
 
 parser.on('end', async () => {
-    // Log the structured data
-    endTime = new Date().getTime();
-
     // Loop through each property
     for (const property of residentialProperties) {
-        // Check if PhotoCount is greater than 0
-        if (property.PhotoCount > 0) {
-            // Create an array of objects numbered as PhotoCount
-            const photoLinks = Array.from({ length: property.PhotoCount }, (_, index) => `localhost:3000/residentialPhotos/Photo${property.MLS}-${index + 1}.jpeg`);
-            // Assign the array to the PhotoLink key
-            property.PhotoLink = JSON.stringify(photoLinks);
-        }
+
+        property.MinListPrice = property.ListPrice;
+
+        property.MaxListPrice = property.ListPrice;
+
+        getMatchingFiles(directoryPath, property.MLS)
+            .then(result => {
+                currentProperty.PhotoCount = result;
+                // Create an array of objects numbered as PhotoCount
+                const photoLinks = Array.from({ length: property.PhotoCount }, (_, index) => `localhost:3000/residentialPhotos/Photo${property.MLS}-${index + 1}.jpeg`);
+                // Assign the array to the PhotoLink key
+                property.PhotoLink = JSON.stringify(photoLinks);
+            })
+            .catch(err => {
+                console.error('Error:', err.message);
+                // Handle the case when no matching files are found
+            });
 
         const keys = Object.keys(property);
         const values = Object.values(property);
@@ -121,9 +108,13 @@ parser.on('end', async () => {
 
         // Insert the property into the database
         await db.run(insertStatement, values);
-        console.log(`${counter} properties in ${(endTime - startTime)} seconds`);
     }
 
+    endTime = new Date().getTime();
+
+    db.close();
+
+    console.log(`${counter} properties in ${(endTime - startTime) / 1000} seconds`);
 
 });
 
