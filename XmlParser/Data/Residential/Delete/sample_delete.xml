@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE RETS SYSTEM "http://retsau.torontomls.net:6103/RETS-20041001.dtd">
+<RETS ReplyCode="0" ReplyText="">
+<REData>
+<REProperties>
+	<ResidentialProperty>
+		<Listing>
+			<MLS>N7246322</MLS>
+        </Listing>
+	</ResidentialProperty>
+    <ResidentialProperty>
+		<Listing>
+			<MLS>N7247664</MLS>
+        </Listing>
+	</ResidentialProperty>
+    <ResidentialProperty>
+		<Listing>
+			<MLS>N7252122</MLS>
+        </Listing>
+	</ResidentialProperty>
+</REProperties>
+</REData>
+<MAXROWS/>
+</RETS>
