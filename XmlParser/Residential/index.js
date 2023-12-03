@@ -171,7 +171,6 @@ parser.on('end', async () => {
     endTime = new Date().getTime();
     console.log(`${counter} properties updated successfully.`);
     console.log(`${counter} properties in ${(endTime - startTime) / 1000} seconds`);
-    // db.close();
 });
 
 
@@ -181,3 +180,4 @@ fs.createReadStream(xmlPath)
     .on('error', (err) => {
         console.error('Error parsing XML:', err);
     });
+

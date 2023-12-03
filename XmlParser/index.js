@@ -26,9 +26,10 @@ let insideListing = false;
 // Setting up data structures
 let residentialProperties = [];
 let currentProperty = {};
-let endTime;
 let counter = 0;
 let startTime = new Date().getTime();
+let endTime;
+
 
 // let booleanFinder = [];
 
@@ -80,25 +81,26 @@ parser.on('closetag', (nodeName) => {
 
 
 parser.on('end', async () => {
-    // Loop through each property
-    for (const property of residentialProperties) {
+    // Use Promise.all to wait for all asynchronous operations
+    await Promise.all(residentialProperties.map(async (property) => {
 
         property.MinListPrice = property.ListPrice;
-
         property.MaxListPrice = property.ListPrice;
 
-        getMatchingFiles(directoryPath, property.MLS)
-            .then(result => {
-                currentProperty.PhotoCount = result;
+        try {
+            const result = await getMatchingFiles(directoryPath, property.MLS);
+
+            if (result > 0) {
+                property.PhotoCount = result;
                 // Create an array of objects numbered as PhotoCount
                 const photoLinks = Array.from({ length: property.PhotoCount }, (_, index) => `localhost:3000/residentialPhotos/Photo${property.MLS}-${index + 1}.jpeg`);
                 // Assign the array to the PhotoLink key
                 property.PhotoLink = JSON.stringify(photoLinks);
-            })
-            .catch(err => {
-                console.error('Error:', err.message);
-                // Handle the case when no matching files are found
-            });
+            }
+        } catch (err) {
+            console.error('Error:', err.message);
+            // Handle the case when no matching files are found
+        }
 
         const keys = Object.keys(property);
         const values = Object.values(property);
@@ -108,15 +110,11 @@ parser.on('end', async () => {
 
         // Insert the property into the database
         await db.run(insertStatement, values);
-    }
 
-    endTime = new Date().getTime();
-
-    db.close();
-
-    console.log(`${counter} properties in ${(endTime - startTime) / 1000} seconds`);
-
+    }));
 });
+
+
 
 // Pipe the XML file into the sax parser
 fs.createReadStream(xmlPath)
