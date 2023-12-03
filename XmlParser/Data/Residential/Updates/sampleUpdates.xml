@@ -1302,6 +1302,522 @@
 			<WaterfrontAccBldgs2></WaterfrontAccBldgs2>
 			<Zoning></Zoning>
 		</Listing>
+		<Listing>
+		<AccessToProperty1>null</AccessToProperty1>
+			<AccessToProperty2>null</AccessToProperty2>
+			<Acreage>null</Acreage>
+			<AddlMonthlyFees>null</AddlMonthlyFees>
+			<Address>850 Sheppard Ave W</Address>
+			<AirConditioning>Central Air</AirConditioning>
+			<AllInclusive>null</AllInclusive>
+			<ApproxAge>null</ApproxAge>
+			<ApproxSquareFootage>1100-1500</ApproxSquareFootage>
+			<AptUnit>null</AptUnit>
+			<Area>Toronto</Area>
+			<AreaCode>01</AreaCode>
+			<Assessment>null</Assessment>
+			<AssessmentYear>null</AssessmentYear>
+			<Assignment>null</Assignment>
+			<Basement1>Full</Basement1>
+			<Basement2>null</Basement2>
+			<Bedrooms>2</Bedrooms>
+			<BedroomsPlus>2</BedroomsPlus>
+			<CableTVIncluded>null</CableTVIncluded>
+			<CacIncluded>null</CacIncluded>
+			<CentralVac>null</CentralVac>
+			<CommonElementsIncluded>null</CommonElementsIncluded>
+			<Community>Bathurst Manor</Community>
+			<CommunityCode>01.C06.0490</CommunityCode>
+			<DirectionsCrossStreets>Allen Expressway/Sheppard</DirectionsCrossStreets>
+			<DisplayAddressOnInternet>Y</DisplayAddressOnInternet>
+			<Drive>Other</Drive>
+			<EasementsRestrictions1>null</EasementsRestrictions1>
+			<EasementsRestrictions2>null</EasementsRestrictions2>
+			<EasementsRestrictions3>null</EasementsRestrictions3>
+			<EasementsRestrictions4>null</EasementsRestrictions4>
+			<Elevator>null</Elevator>
+			<Exterior1>Alum Siding</Exterior1>
+			<Exterior2>Brick</Exterior2>
+			<Extras>Main &amp; This is a test. 2nd Floor Ductless Air/Heating System, (Also Has Additional Hot Water Heating Gas System As Backup On Both Floors),Fridge,Stove, &amp; Hotwater Tank</Extras>
+			<FamilyRoom>N</FamilyRoom>
+			<FarmAgriculture>null</FarmAgriculture>
+			<FireplaceStove>N</FireplaceStove>
+			<FractionalOwnership>null</FractionalOwnership>
+			<FrontingOnNSEW>N</FrontingOnNSEW>
+			<Furnished>null</Furnished>
+			<GarageSpaces>0.0</GarageSpaces>
+			<GarageType>None</GarageType>
+			<HeatIncluded>null</HeatIncluded>
+			<HeatSource>Gas</HeatSource>
+			<HeatType>Water</HeatType>
+			<HydroIncluded>null</HydroIncluded>
+			<IdxUpdtedDt>2012-01-21 07:03:15.0</IdxUpdtedDt>
+			<Kitchens>1</Kitchens>
+			<KitchensPlus>1</KitchensPlus>
+			<LaundryAccess>null</LaundryAccess>
+			<LaundryLevel>null</LaundryLevel>
+			<LeasedTerms>null</LeasedTerms>
+			<LegalDescription>Plan 3103 Ptlt13 Rpr-719Pt27To 32 Part 33</LegalDescription>
+			<Level1>Main</Level1>
+			<Level10>Bsmt</Level10>
+			<Level11></Level11>
+			<Level12>null</Level12>
+			<Level2>2nd</Level2>
+			<Level3>2nd</Level3>
+			<Level4>2nd</Level4>
+			<Level5>2nd</Level5>
+			<Level6>2nd</Level6>
+			<Level7>2nd</Level7>
+			<Level8>Bsmt</Level8>
+			<Level9>Bsmt</Level9>
+			<Link></Link>
+			<LinkComment></LinkComment>
+			<ListBrokerage>RE/MAX REALTRON REALTY INC., BROKERAGE</ListBrokerage>
+			<ListPrice>1338000.00</ListPrice>
+			<LotDepth>143.00</LotDepth>
+			<LotFront>18.00</LotFront>
+			<LotIrregularities>null</LotIrregularities>
+			<LotSizeCode>Feet</LotSizeCode>
+			<Map>null</Map>
+			<MapColumn>null</MapColumn>
+			<MapRow></MapRow>
+			<MLS>C6003799</MLS>
+			<Municipality>Toronto</Municipality>
+			<MunicipalityDistrict>Toronto C06</MunicipalityDistrict>
+			<MunicipalityCode>01.C06</MunicipalityCode>
+			<OtherStructures1>null</OtherStructures1>
+			<OtherStructures2>null</OtherStructures2>
+			<OutofAreaMunicipality></OutofAreaMunicipality>
+			<ParcelOfTiedLand>null</ParcelOfTiedLand>
+			<ParkCostMo>null</ParkCostMo>
+			<ParkingIncluded>null</ParkingIncluded>
+			<ParkingSpaces>2</ParkingSpaces>
+			<ParcelId>null</ParcelId>
+			<PixUpdtedDt>2023-04-28 12:18:30.0</PixUpdtedDt>
+			<Pool>None</Pool>
+			<PortionLeaseComments>null</PortionLeaseComments>
+			<PortionPropertyLease1>null</PortionPropertyLease1>
+			<PortionPropertyLease2>null</PortionPropertyLease2>
+			<PortionPropertyLease3>null</PortionPropertyLease3>
+			<PortionPropertyLease4>null</PortionPropertyLease4>
+			<PortionPropertyLeaseSrch>null</PortionPropertyLeaseSrch>
+			<PossessionRemarks>30-60 Days</PossessionRemarks>
+			<PostalCode>M3H 2T5</PostalCode>
+			<PrivateEntrance>null</PrivateEntrance>
+			<PropertyFeatures1>Fenced Yard</PropertyFeatures1>
+			<PropertyFeatures2>Grnbelt/Conserv</PropertyFeatures2>
+			<PropertyFeatures3>Park</PropertyFeatures3>
+			<PropertyFeatures4>Place Of Worship</PropertyFeatures4>
+			<PropertyFeatures5>Public Transit</PropertyFeatures5>
+			<PropertyFeatures6>School</PropertyFeatures6>
+			<Province>Ontario</Province>
+			<RemarksForClients>Great Investment, Central &quot;Sheppard&quot;Corridor Location,Steps To Subway, 2 Bedroom Apt With 1-4Pce Bath &amp; Separate Walkout To Backyard Private Backyard,Separate Front Entrance To Recently Renovated Basement Unit, Paved Parking In Front &amp; Back Of Property, Steps To Public Transit,Shopping,Schools &amp; Places Of Worship, Close Proximity To Sheppard Subway Station, &quot;Additional Sign Income From Bldg&quot;,User/Investor Potential(2nd Floor Could Be Vacated), Variety Of Uses Permitted</RemarksForClients>
+			<Retirement>null</Retirement>
+			<Room1>Other</Room1>
+			<Room1Desc1>Open Concept</Room1Desc1>
+			<Room1Desc2>W/O To Yard</Room1Desc2>
+			<Room1Desc3></Room1Desc3>
+			<Room1Length>13.32</Room1Length>
+			<Room1Width>5.27</Room1Width>
+			<Room10>Workshop</Room10>
+			<Room10Desc1>Separate Rm</Room10Desc1>
+			<Room10Desc2>null</Room10Desc2>
+			<Room10Desc3>null</Room10Desc3>
+			<Room10Length>null</Room10Length>
+			<Room10Width>null</Room10Width>
+			<Room11></Room11>
+			<Room11Desc1></Room11Desc1>
+			<Room11Desc2>null</Room11Desc2>
+			<Room11Desc3>null</Room11Desc3>
+			<Room11Length>null</Room11Length>
+			<Room11Width>null</Room11Width>
+			<Room12>null</Room12>
+			<Room12Desc1>null</Room12Desc1>
+			<Room12Desc2>null</Room12Desc2>
+			<Room12Desc3>null</Room12Desc3>
+			<Room12Length>null</Room12Length>
+			<Room12Width>null</Room12Width>
+			<Room2>Living</Room2>
+			<Room2Desc1>Laminate</Room2Desc1>
+			<Room2Desc2>Open Concept</Room2Desc2>
+			<Room2Desc3>Combined W/Dining</Room2Desc3>
+			<Room2Length>2.72</Room2Length>
+			<Room2Width>4.43</Room2Width>
+			<Room3>Dining</Room3>
+			<Room3Desc1>Laminate</Room3Desc1>
+			<Room3Desc2>Open Concept</Room3Desc2>
+			<Room3Desc3>Combined W/Living</Room3Desc3>
+			<Room3Length>2.15</Room3Length>
+			<Room3Width>5.27</Room3Width>
+			<Room4>Kitchen</Room4>
+			<Room4Desc1>Laminate</Room4Desc1>
+			<Room4Desc2>Open Concept</Room4Desc2>
+			<Room4Desc3>null</Room4Desc3>
+			<Room4Length>4.07</Room4Length>
+			<Room4Width>2.52</Room4Width>
+			<Room5>Bathroom</Room5>
+			<Room5Desc1>Ceramic Floor</Room5Desc1>
+			<Room5Desc2>4 Pc Bath</Room5Desc2>
+			<Room5Desc3>null</Room5Desc3>
+			<Room5Length>null</Room5Length>
+			<Room5Width>null</Room5Width>
+			<Room6>Prim Bdrm</Room6>
+			<Room6Desc1>Laminate</Room6Desc1>
+			<Room6Desc2>W/O To Yard</Room6Desc2>
+			<Room6Desc3>Closet</Room6Desc3>
+			<Room6Length>2.48</Room6Length>
+			<Room6Width>4.55</Room6Width>
+			<Room7>2nd Br</Room7>
+			<Room7Desc1>Laminate</Room7Desc1>
+			<Room7Desc2>Closet</Room7Desc2>
+			<Room7Desc3>null</Room7Desc3>
+			<Room7Length>2.69</Room7Length>
+			<Room7Width>4.52</Room7Width>
+			<Room8>Other</Room8>
+			<Room8Desc1>Open Concept</Room8Desc1>
+			<Room8Desc2></Room8Desc2>
+			<Room8Desc3></Room8Desc3>
+			<Room8Length>null</Room8Length>
+			<Room8Width>null</Room8Width>
+			<Room9>Utility</Room9>
+			<Room9Desc1>Separate Rm</Room9Desc1>
+			<Room9Desc2>null</Room9Desc2>
+			<Room9Desc3>null</Room9Desc3>
+			<Room9Length>null</Room9Length>
+			<Room9Width>null</Room9Width>
+			<Rooms>7</Rooms>
+			<RoomsPlus>null</RoomsPlus>
+			<RuralServices1>null</RuralServices1>
+			<RuralServices2>null</RuralServices2>
+			<RuralServices3>null</RuralServices3>
+			<RuralServices4>null</RuralServices4>
+			<RuralServices5>null</RuralServices5>
+			<SaleLease>Sale</SaleLease>
+			<AlternativePower1>null</AlternativePower1>
+			<AlternativePower2>null</AlternativePower2>
+			<SellerPropertyInfoStatement>N</SellerPropertyInfoStatement>
+			<Sewage2>null</Sewage2>
+			<Sewers>Sewers</Sewers>
+			<ShorelineAllowance>null</ShorelineAllowance>
+			<ShorelineExposure>null</ShorelineExposure>
+			<Shoreline1>null</Shoreline1>
+			<Shoreline2>null</Shoreline2>
+			<SpecialDesignation1>Unknown</SpecialDesignation1>
+			<SpecialDesignation2>null</SpecialDesignation2>
+			<SpecialDesignation3>null</SpecialDesignation3>
+			<SpecialDesignation4>null</SpecialDesignation4>
+			<SpecialDesignation5>null</SpecialDesignation5>
+			<SpecialDesignation6>null</SpecialDesignation6>
+			<Status>A</Status>
+			<Street>850</Street>
+			<StreetAbbreviation>Ave</StreetAbbreviation>
+			<StreetDirection>W</StreetDirection>
+			<StreetName>Sheppard</StreetName>
+			<Style>2-Storey</Style>
+			<TaxYear>2023</TaxYear>
+			<Taxes>8400.00</Taxes>
+			<TotalParkingSpaces>2.0</TotalParkingSpaces>
+			<TypeOwnSrch>Y.</TypeOwnSrch>
+			<TypeOwn1Out>Store W/Apt/Office</TypeOwn1Out>
+			<Uffi>null</Uffi>
+			<TimestampSql>2023-11-16 12:28:17.0</TimestampSql>
+			<UtilitiesCable>null</UtilitiesCable>
+			<UtilitiesGas>null</UtilitiesGas>
+			<UtilitiesHydro>null</UtilitiesHydro>
+			<UtilitiesTelephone>null</UtilitiesTelephone>
+			<VirtualTourUploadDate>null</VirtualTourUploadDate>
+			<VirtualTourURL>null</VirtualTourURL>
+			<Washrooms>3</Washrooms>
+			<WashroomsType1>1</WashroomsType1>
+			<WashroomsType1Pcs>4</WashroomsType1Pcs>
+			<WashroomsType1Level>2nd</WashroomsType1Level>
+			<WashroomsType2>1</WashroomsType2>
+			<WashroomsType2Pcs>2</WashroomsType2Pcs>
+			<WashroomsType2Level>Bsmt</WashroomsType2Level>
+			<WashroomsType3>1</WashroomsType3>
+			<WashroomsType3Pcs>3</WashroomsType3Pcs>
+			<WashroomsType3Level>Bsmt</WashroomsType3Level>
+			<WashroomsType4>null</WashroomsType4>
+			<WashroomsType4Pcs>null</WashroomsType4Pcs>
+			<WashroomsType4Level>null</WashroomsType4Level>
+			<WashroomsType5>null</WashroomsType5>
+			<WashroomsType5Pcs>null</WashroomsType5Pcs>
+			<WashroomsType5Level>null</WashroomsType5Level>
+			<Water>Municipal</Water>
+			<WaterBodyName>null</WaterBodyName>
+			<WaterBodyType>null</WaterBodyType>
+			<WaterDeliveryFeatures1>null</WaterDeliveryFeatures1>
+			<WaterFeatures1>null</WaterFeatures1>
+			<WaterFeatures2>null</WaterFeatures2>
+			<WaterFeatures3>null</WaterFeatures3>
+			<WaterFeatures4>null</WaterFeatures4>
+			<WaterFeatures5>null</WaterFeatures5>
+			<WaterFrontage>null</WaterFrontage>
+			<WaterIncluded>null</WaterIncluded>
+			<WaterSupplyTypes>null</WaterSupplyTypes>
+			<Waterfront>null</Waterfront>
+			<WaterfrontAccBldgs1>null</WaterfrontAccBldgs1>
+			<WaterfrontAccBldgs2>null</WaterfrontAccBldgs2>
+			<Zoning>null</Zoning>
+		</Listing>
+				<Listing>
+		<AccessToProperty1>null</AccessToProperty1>
+			<AccessToProperty2>null</AccessToProperty2>
+			<Acreage>null</Acreage>
+			<AddlMonthlyFees>null</AddlMonthlyFees>
+			<Address>850 Sheppard Ave W</Address>
+			<AirConditioning>Central Air</AirConditioning>
+			<AllInclusive>null</AllInclusive>
+			<ApproxAge>null</ApproxAge>
+			<ApproxSquareFootage>1100-1500</ApproxSquareFootage>
+			<AptUnit>null</AptUnit>
+			<Area>Toronto</Area>
+			<AreaCode>01</AreaCode>
+			<Assessment>null</Assessment>
+			<AssessmentYear>null</AssessmentYear>
+			<Assignment>null</Assignment>
+			<Basement1>Full</Basement1>
+			<Basement2>null</Basement2>
+			<Bedrooms>2</Bedrooms>
+			<BedroomsPlus>2</BedroomsPlus>
+			<CableTVIncluded>null</CableTVIncluded>
+			<CacIncluded>null</CacIncluded>
+			<CentralVac>null</CentralVac>
+			<CommonElementsIncluded>null</CommonElementsIncluded>
+			<Community>Bathurst Manor</Community>
+			<CommunityCode>01.C06.0490</CommunityCode>
+			<DirectionsCrossStreets>Allen Expressway/Sheppard</DirectionsCrossStreets>
+			<DisplayAddressOnInternet>Y</DisplayAddressOnInternet>
+			<Drive>Other</Drive>
+			<EasementsRestrictions1>null</EasementsRestrictions1>
+			<EasementsRestrictions2>null</EasementsRestrictions2>
+			<EasementsRestrictions3>null</EasementsRestrictions3>
+			<EasementsRestrictions4>null</EasementsRestrictions4>
+			<Elevator>null</Elevator>
+			<Exterior1>Alum Siding</Exterior1>
+			<Exterior2>Brick</Exterior2>
+			<Extras>Main &amp; This is a test. 2nd Floor Ductless Air/Heating System, (Also Has Additional Hot Water Heating Gas System As Backup On Both Floors),Fridge,Stove, &amp; Hotwater Tank</Extras>
+			<FamilyRoom>N</FamilyRoom>
+			<FarmAgriculture>null</FarmAgriculture>
+			<FireplaceStove>N</FireplaceStove>
+			<FractionalOwnership>null</FractionalOwnership>
+			<FrontingOnNSEW>N</FrontingOnNSEW>
+			<Furnished>null</Furnished>
+			<GarageSpaces>0.0</GarageSpaces>
+			<GarageType>None</GarageType>
+			<HeatIncluded>null</HeatIncluded>
+			<HeatSource>Gas</HeatSource>
+			<HeatType>Water</HeatType>
+			<HydroIncluded>null</HydroIncluded>
+			<IdxUpdtedDt>2012-01-21 07:03:15.0</IdxUpdtedDt>
+			<Kitchens>1</Kitchens>
+			<KitchensPlus>1</KitchensPlus>
+			<LaundryAccess>null</LaundryAccess>
+			<LaundryLevel>null</LaundryLevel>
+			<LeasedTerms>null</LeasedTerms>
+			<LegalDescription>Plan 3103 Ptlt13 Rpr-719Pt27To 32 Part 33</LegalDescription>
+			<Level1>Main</Level1>
+			<Level10>Bsmt</Level10>
+			<Level11></Level11>
+			<Level12>null</Level12>
+			<Level2>2nd</Level2>
+			<Level3>2nd</Level3>
+			<Level4>2nd</Level4>
+			<Level5>2nd</Level5>
+			<Level6>2nd</Level6>
+			<Level7>2nd</Level7>
+			<Level8>Bsmt</Level8>
+			<Level9>Bsmt</Level9>
+			<Link></Link>
+			<LinkComment></LinkComment>
+			<ListBrokerage>RE/MAX REALTRON REALTY INC., BROKERAGE, SECOND TEST</ListBrokerage>
+			<ListPrice>1338000.00</ListPrice>
+			<LotDepth>143.00</LotDepth>
+			<LotFront>18.00</LotFront>
+			<LotIrregularities>null</LotIrregularities>
+			<LotSizeCode>Feet</LotSizeCode>
+			<Map>null</Map>
+			<MapColumn>null</MapColumn>
+			<MapRow></MapRow>
+			<MLS>C6003744</MLS>
+			<Municipality>Toronto</Municipality>
+			<MunicipalityDistrict>Toronto C06</MunicipalityDistrict>
+			<MunicipalityCode>01.C06</MunicipalityCode>
+			<OtherStructures1>null</OtherStructures1>
+			<OtherStructures2>null</OtherStructures2>
+			<OutofAreaMunicipality></OutofAreaMunicipality>
+			<ParcelOfTiedLand>null</ParcelOfTiedLand>
+			<ParkCostMo>null</ParkCostMo>
+			<ParkingIncluded>null</ParkingIncluded>
+			<ParkingSpaces>2</ParkingSpaces>
+			<ParcelId>null</ParcelId>
+			<PixUpdtedDt>2023-04-28 12:18:30.0</PixUpdtedDt>
+			<Pool>None</Pool>
+			<PortionLeaseComments>null</PortionLeaseComments>
+			<PortionPropertyLease1>null</PortionPropertyLease1>
+			<PortionPropertyLease2>null</PortionPropertyLease2>
+			<PortionPropertyLease3>null</PortionPropertyLease3>
+			<PortionPropertyLease4>null</PortionPropertyLease4>
+			<PortionPropertyLeaseSrch>null</PortionPropertyLeaseSrch>
+			<PossessionRemarks>30-60 Days</PossessionRemarks>
+			<PostalCode>M3H 2T5</PostalCode>
+			<PrivateEntrance>null</PrivateEntrance>
+			<PropertyFeatures1>Fenced Yard</PropertyFeatures1>
+			<PropertyFeatures2>Grnbelt/Conserv</PropertyFeatures2>
+			<PropertyFeatures3>Park</PropertyFeatures3>
+			<PropertyFeatures4>Place Of Worship</PropertyFeatures4>
+			<PropertyFeatures5>Public Transit</PropertyFeatures5>
+			<PropertyFeatures6>School</PropertyFeatures6>
+			<Province>Ontario</Province>
+			<RemarksForClients>Great Investment, Central &quot;Sheppard&quot;Corridor Location,Steps To Subway, 2 Bedroom Apt With 1-4Pce Bath &amp; Separate Walkout To Backyard Private Backyard,Separate Front Entrance To Recently Renovated Basement Unit, Paved Parking In Front &amp; Back Of Property, Steps To Public Transit,Shopping,Schools &amp; Places Of Worship, Close Proximity To Sheppard Subway Station, &quot;Additional Sign Income From Bldg&quot;,User/Investor Potential(2nd Floor Could Be Vacated), Variety Of Uses Permitted</RemarksForClients>
+			<Retirement>null</Retirement>
+			<Room1>Other</Room1>
+			<Room1Desc1>Open Concept</Room1Desc1>
+			<Room1Desc2>W/O To Yard</Room1Desc2>
+			<Room1Desc3></Room1Desc3>
+			<Room1Length>13.32</Room1Length>
+			<Room1Width>5.27</Room1Width>
+			<Room10>Workshop</Room10>
+			<Room10Desc1>Separate Rm</Room10Desc1>
+			<Room10Desc2>null</Room10Desc2>
+			<Room10Desc3>null</Room10Desc3>
+			<Room10Length>null</Room10Length>
+			<Room10Width>null</Room10Width>
+			<Room11></Room11>
+			<Room11Desc1></Room11Desc1>
+			<Room11Desc2>null</Room11Desc2>
+			<Room11Desc3>null</Room11Desc3>
+			<Room11Length>null</Room11Length>
+			<Room11Width>null</Room11Width>
+			<Room12>null</Room12>
+			<Room12Desc1>null</Room12Desc1>
+			<Room12Desc2>null</Room12Desc2>
+			<Room12Desc3>null</Room12Desc3>
+			<Room12Length>null</Room12Length>
+			<Room12Width>null</Room12Width>
+			<Room2>Living</Room2>
+			<Room2Desc1>Laminate</Room2Desc1>
+			<Room2Desc2>Open Concept</Room2Desc2>
+			<Room2Desc3>Combined W/Dining</Room2Desc3>
+			<Room2Length>2.72</Room2Length>
+			<Room2Width>4.43</Room2Width>
+			<Room3>Dining</Room3>
+			<Room3Desc1>Laminate</Room3Desc1>
+			<Room3Desc2>Open Concept</Room3Desc2>
+			<Room3Desc3>Combined W/Living</Room3Desc3>
+			<Room3Length>2.15</Room3Length>
+			<Room3Width>5.27</Room3Width>
+			<Room4>Kitchen</Room4>
+			<Room4Desc1>Laminate</Room4Desc1>
+			<Room4Desc2>Open Concept</Room4Desc2>
+			<Room4Desc3>null</Room4Desc3>
+			<Room4Length>4.07</Room4Length>
+			<Room4Width>2.52</Room4Width>
+			<Room5>Bathroom</Room5>
+			<Room5Desc1>Ceramic Floor</Room5Desc1>
+			<Room5Desc2>4 Pc Bath</Room5Desc2>
+			<Room5Desc3>null</Room5Desc3>
+			<Room5Length>null</Room5Length>
+			<Room5Width>null</Room5Width>
+			<Room6>Prim Bdrm</Room6>
+			<Room6Desc1>Laminate</Room6Desc1>
+			<Room6Desc2>W/O To Yard</Room6Desc2>
+			<Room6Desc3>Closet</Room6Desc3>
+			<Room6Length>2.48</Room6Length>
+			<Room6Width>4.55</Room6Width>
+			<Room7>2nd Br</Room7>
+			<Room7Desc1>Laminate</Room7Desc1>
+			<Room7Desc2>Closet</Room7Desc2>
+			<Room7Desc3>null</Room7Desc3>
+			<Room7Length>2.69</Room7Length>
+			<Room7Width>4.52</Room7Width>
+			<Room8>Other</Room8>
+			<Room8Desc1>Open Concept</Room8Desc1>
+			<Room8Desc2></Room8Desc2>
+			<Room8Desc3></Room8Desc3>
+			<Room8Length>null</Room8Length>
+			<Room8Width>null</Room8Width>
+			<Room9>Utility</Room9>
+			<Room9Desc1>Separate Rm</Room9Desc1>
+			<Room9Desc2>null</Room9Desc2>
+			<Room9Desc3>null</Room9Desc3>
+			<Room9Length>null</Room9Length>
+			<Room9Width>null</Room9Width>
+			<Rooms>7</Rooms>
+			<RoomsPlus>null</RoomsPlus>
+			<RuralServices1>null</RuralServices1>
+			<RuralServices2>null</RuralServices2>
+			<RuralServices3>null</RuralServices3>
+			<RuralServices4>null</RuralServices4>
+			<RuralServices5>null</RuralServices5>
+			<SaleLease>Sale</SaleLease>
+			<AlternativePower1>null</AlternativePower1>
+			<AlternativePower2>null</AlternativePower2>
+			<SellerPropertyInfoStatement>N</SellerPropertyInfoStatement>
+			<Sewage2>null</Sewage2>
+			<Sewers>Sewers</Sewers>
+			<ShorelineAllowance>null</ShorelineAllowance>
+			<ShorelineExposure>null</ShorelineExposure>
+			<Shoreline1>null</Shoreline1>
+			<Shoreline2>null</Shoreline2>
+			<SpecialDesignation1>Unknown</SpecialDesignation1>
+			<SpecialDesignation2>null</SpecialDesignation2>
+			<SpecialDesignation3>null</SpecialDesignation3>
+			<SpecialDesignation4>null</SpecialDesignation4>
+			<SpecialDesignation5>null</SpecialDesignation5>
+			<SpecialDesignation6>null</SpecialDesignation6>
+			<Status>A</Status>
+			<Street>850</Street>
+			<StreetAbbreviation>Ave</StreetAbbreviation>
+			<StreetDirection>W</StreetDirection>
+			<StreetName>Sheppard</StreetName>
+			<Style>2-Storey</Style>
+			<TaxYear>2023</TaxYear>
+			<Taxes>8400.00</Taxes>
+			<TotalParkingSpaces>2.0</TotalParkingSpaces>
+			<TypeOwnSrch>Y.</TypeOwnSrch>
+			<TypeOwn1Out>Store W/Apt/Office</TypeOwn1Out>
+			<Uffi>null</Uffi>
+			<TimestampSql>2023-11-16 12:28:17.0</TimestampSql>
+			<UtilitiesCable>null</UtilitiesCable>
+			<UtilitiesGas>null</UtilitiesGas>
+			<UtilitiesHydro>null</UtilitiesHydro>
+			<UtilitiesTelephone>null</UtilitiesTelephone>
+			<VirtualTourUploadDate>null</VirtualTourUploadDate>
+			<VirtualTourURL>null</VirtualTourURL>
+			<Washrooms>3</Washrooms>
+			<WashroomsType1>1</WashroomsType1>
+			<WashroomsType1Pcs>4</WashroomsType1Pcs>
+			<WashroomsType1Level>2nd</WashroomsType1Level>
+			<WashroomsType2>1</WashroomsType2>
+			<WashroomsType2Pcs>2</WashroomsType2Pcs>
+			<WashroomsType2Level>Bsmt</WashroomsType2Level>
+			<WashroomsType3>1</WashroomsType3>
+			<WashroomsType3Pcs>3</WashroomsType3Pcs>
+			<WashroomsType3Level>Bsmt</WashroomsType3Level>
+			<WashroomsType4>null</WashroomsType4>
+			<WashroomsType4Pcs>null</WashroomsType4Pcs>
+			<WashroomsType4Level>null</WashroomsType4Level>
+			<WashroomsType5>null</WashroomsType5>
+			<WashroomsType5Pcs>null</WashroomsType5Pcs>
+			<WashroomsType5Level>null</WashroomsType5Level>
+			<Water>Municipal</Water>
+			<WaterBodyName>null</WaterBodyName>
+			<WaterBodyType>null</WaterBodyType>
+			<WaterDeliveryFeatures1>null</WaterDeliveryFeatures1>
+			<WaterFeatures1>null</WaterFeatures1>
+			<WaterFeatures2>null</WaterFeatures2>
+			<WaterFeatures3>null</WaterFeatures3>
+			<WaterFeatures4>null</WaterFeatures4>
+			<WaterFeatures5>null</WaterFeatures5>
+			<WaterFrontage>null</WaterFrontage>
+			<WaterIncluded>null</WaterIncluded>
+			<WaterSupplyTypes>null</WaterSupplyTypes>
+			<Waterfront>null</Waterfront>
+			<WaterfrontAccBldgs1>null</WaterfrontAccBldgs1>
+			<WaterfrontAccBldgs2>null</WaterfrontAccBldgs2>
+			<Zoning>null</Zoning>
+		</Listing>
 	</ResidentialProperty>
     </REProperties>
 </REData>

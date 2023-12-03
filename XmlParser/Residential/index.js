@@ -126,6 +126,24 @@ parser.on('end', async () => {
                                     // Handle the case when no matching files are found
                                 }
                             }
+
+                            // Construct the SET clause dynamically based on property keys
+                            const setClause = Object.keys(property).map(key => `${key} = ?`).join(', ');
+
+                            db.run(
+                                `UPDATE residentialDatabase
+                            SET ${setClause}
+                            WHERE MLS = ?`,
+                                [...Object.values(property), property.MLS],
+                                (err) => {
+                                    if (err) {
+                                        console.error('Error updating property in the database:', err);
+                                    }
+                                    resolve();
+                                }
+                            );
+
+
                         } else {
                             // Property with the given MLS doesn't exist in the database
                             console.log(`Property with MLS ${property.MLS} does not exist in the database. Performing a different action...`);
@@ -144,23 +162,22 @@ parser.on('end', async () => {
                                 console.error('Error:', err.message);
                                 // Handle the case when no matching files are found
                             }
-                        }
 
-                        // Construct the SET clause dynamically based on property keys
-                        const setClause = Object.keys(property).map(key => `${key} = ?`).join(', ');
+                            const keys = Object.keys(property);
+                            const values = Object.values(property);
+                            const placeholders = values.map(() => '?').join(', ');
 
-                        db.run(
-                            `UPDATE residentialDatabase
-                            SET ${setClause}
-                            WHERE MLS = ?`,
-                            [...Object.values(property), property.MLS],
-                            (err) => {
+                            const insertStatement = `INSERT INTO residentialDatabase (${keys.join(', ')}) VALUES (${placeholders})`;
+
+                            db.run(insertStatement, values, (err) => {
                                 if (err) {
-                                    console.error('Error updating property in the database:', err);
+                                    console.error('Error inserting property into the database:', err);
                                 }
                                 resolve();
-                            }
-                        );
+                            });
+                        }
+
+
                     }
                 });
             });
