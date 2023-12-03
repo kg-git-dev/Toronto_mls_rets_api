@@ -75,44 +75,64 @@ parser.on('closetag', (nodeName) => {
     }
 });
 
+
 parser.on('end', async () => {
     // Wrap the updates in a transaction for efficiency
     db.serialize(() => {
         db.run('BEGIN TRANSACTION');
 
-        // Loop through each property
-        for (const property of residentialProperties) {
+        // Use Promise.all to wait for all asynchronous operations
+        Promise.all(residentialProperties.map(async (property) => {
+            return new Promise(async (resolve) => {
+                db.get('SELECT * FROM residentialDatabase WHERE MLS = ?', property.MLS, async (err, row) => {
+                    if (err) {
+                        console.error('Error querying database:', err);
+                        resolve();
+                    } else {
+                        if (row) {
+                            // Compare ListPrice values
+                            if (row.ListPrice !== property.ListPrice) {
+                                // ListPrice has changed, perform an action
+                                console.log(`ListPrice for property with MLS ${property.MLS} has changed. Performing action...`);
 
-            db.get('SELECT * FROM residentialDatabase WHERE MLS = ?', property.MLS, async (err, row) => {
-                if (err) {
-                    console.error('Error querying database:', err);
-                } else {
-                    // Check if the property with the given MLS exists in the database
-                    if (row) {
-                        // Compare ListPrice values
-                        if (row.ListPrice !== property.ListPrice) {
-                            // ListPrice has changed, perform an action
-                            console.log(`ListPrice for property with MLS ${property.MLS} has changed. Performing action...`);
+                                // Check if ListPrice is lower or equal to MinListPrice
+                                if (property.ListPrice <= row.MinListPrice) {
+                                    // Assign ListPrice to MinListPrice
+                                    console.log(`Assigning ListPrice ${property.ListPrice} to MinListPrice.`);
+                                    property.MinListPrice = property.ListPrice;
+                                }
 
-                            // Check if ListPrice is lower or equal to MinListPrice
-                            if (property.ListPrice <= row.MinListPrice) {
-                                // Assign ListPrice to MinListPrice
-                                console.log(`Assigning ListPrice ${property.ListPrice} to MinListPrice.`);
-                                property.MinListPrice = property.ListPrice;
+                                // Check if ListPrice is equal or higher than MaxListPrice
+                                if (property.ListPrice >= row.MaxListPrice) {
+                                    // Assign ListPrice to MaxListPrice
+                                    console.log(`Assigning ListPrice ${property.ListPrice} to MaxListPrice.`);
+                                    property.MaxListPrice = property.ListPrice;
+                                }
                             }
 
-                            // Check if ListPrice is equal or higher than MaxListPrice
-                            if (property.ListPrice >= row.MaxListPrice) {
-                                // Assign ListPrice to MaxListPrice
-                                console.log(`Assigning ListPrice ${property.ListPrice} to MaxListPrice.`);
-                                property.MaxListPrice = property.ListPrice;
-                            }
-                        }
+                            // Compare PixUpdtedDt values
+                            if (row.PixUpdtedDt !== property.PixUpdtedDt) {
+                                // pixUpdatedAt has changed, perform another action
+                                console.log(`pixUpdatedAt for property with MLS ${property.MLS} has changed. Performing another action...`);
+                                try {
+                                    const result = await getMatchingFiles(directoryPath, property.MLS);
+                                    property.PhotoCount = result;
 
-                        // Compare PixUpdtedDt values
-                        if (row.PixUpdtedDt !== property.PixUpdtedDt) {
-                            // pixUpdatedAt has changed, perform another action
-                            console.log(`pixUpdatedAt for property with MLS ${property.MLS} has changed. Performing another action...`);
+                                    const photoLinks = Array.from({ length: property.PhotoCount }, (_, index) => `localhost:3000/residentialPhotos/Photo${property.MLS}-${index + 1}.jpeg`);
+                                    // Assign the array to the PhotoLink key
+                                    property.PhotoLink = JSON.stringify(photoLinks);
+                                } catch (err) {
+                                    console.error('Error:', err.message);
+                                    // Handle the case when no matching files are found
+                                }
+                            }
+                        } else {
+                            // Property with the given MLS doesn't exist in the database
+                            console.log(`Property with MLS ${property.MLS} does not exist in the database. Performing a different action...`);
+
+                            property.MinListPrice = property.ListPrice;
+                            property.MaxListPrice = property.ListPrice;
+
                             try {
                                 const result = await getMatchingFiles(directoryPath, property.MLS);
                                 property.PhotoCount = result;
@@ -125,53 +145,35 @@ parser.on('end', async () => {
                                 // Handle the case when no matching files are found
                             }
                         }
-                    } else {
-                        // Property with the given MLS doesn't exist in the database
-                        console.log(`Property with MLS ${property.MLS} does not exist in the database. Performing a different action...`);
 
-                        property.MinListPrice = property.ListPrice;
-                        property.MaxListPrice = property.ListPrice;
+                        // Construct the SET clause dynamically based on property keys
+                        const setClause = Object.keys(property).map(key => `${key} = ?`).join(', ');
 
-                        try {
-                            const result = await getMatchingFiles(directoryPath, property.MLS);
-                            property.PhotoCount = result;
-
-                            const photoLinks = Array.from({ length: property.PhotoCount }, (_, index) => `localhost:3000/residentialPhotos/Photo${property.MLS}-${index + 1}.jpeg`);
-                            // Assign the array to the PhotoLink key
-                            property.PhotoLink = JSON.stringify(photoLinks);
-                        } catch (err) {
-                            console.error('Error:', err.message);
-                            // Handle the case when no matching files are found
-                        }
-                    }
-
-                    // Construct the SET clause dynamically based on property keys
-                    const setClause = Object.keys(property).map(key => `${key} = ?`).join(', ');
-
-                    // Execute the dynamic UPDATE statement
-                    db.run(
-                        `UPDATE residentialDatabase
-                        SET ${setClause}
-                        WHERE MLS = ?`,
-                        [...Object.values(property), property.MLS],
-                        (err) => {
-                            if (err) {
-                                console.error('Error updating property in the database:', err);
+                        db.run(
+                            `UPDATE residentialDatabase
+                            SET ${setClause}
+                            WHERE MLS = ?`,
+                            [...Object.values(property), property.MLS],
+                            (err) => {
+                                if (err) {
+                                    console.error('Error updating property in the database:', err);
+                                }
+                                resolve();
                             }
-                        }
-                    );
-                }
+                        );
+                    }
+                });
             });
-        }
+        })).then(() => {
+            // Commit the transaction after all updates are done
+            db.run('COMMIT');
 
-        // Commit the transaction after all updates are done
-        db.run('COMMIT');
-
+            endTime = new Date().getTime();
+            console.log(`${counter} properties in ${(endTime - startTime) / 1000} seconds`);
+        });
     });
-    endTime = new Date().getTime();
-    console.log(`${counter} properties updated successfully.`);
-    console.log(`${counter} properties in ${(endTime - startTime) / 1000} seconds`);
 });
+
 
 
 // Pipe the XML file into the sax parser

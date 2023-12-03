@@ -87,6 +87,7 @@ parser.on('end', async () => {
         property.MinListPrice = property.ListPrice;
         property.MaxListPrice = property.ListPrice;
 
+
         try {
             const result = await getMatchingFiles(directoryPath, property.MLS);
 
@@ -98,8 +99,8 @@ parser.on('end', async () => {
                 property.PhotoLink = JSON.stringify(photoLinks);
             }
         } catch (err) {
-            console.error('Error:', err.message);
             // Handle the case when no matching files are found
+
         }
 
         const keys = Object.keys(property);
@@ -112,8 +113,11 @@ parser.on('end', async () => {
         await db.run(insertStatement, values);
 
     }));
-});
 
+    endTime = new Date().getTime()
+    console.log(`${counter} properties in ${(endTime - startTime)} seconds`);
+
+});
 
 
 // Pipe the XML file into the sax parser

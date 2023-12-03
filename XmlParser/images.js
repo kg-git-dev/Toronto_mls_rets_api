@@ -13,14 +13,15 @@ function getMatchingFiles(directory, mlsIndex) {
             const matchingFiles = files.filter(file => file.match(mlsPattern));
 
             if (matchingFiles.length === 0) {
-                return
+                // Reject the promise when no matching files are found
+                reject(new Error('No matching files found.'));
             } else {
+                // Resolve the promise with the length of matching files
                 resolve(matchingFiles.length);
             }
         });
     });
 }
-
 
 module.exports = {
     getMatchingFiles,
