@@ -18,9 +18,9 @@ expressApp.on('close', (code) => {
   console.log(`Express App closed with code ${code}`);
 });
 
-// Schedule the residential.js watcher as a cron job
+// // Schedule the sampleCron.js watcher as a cron job
 // cron.schedule('*/5 * * * * *', () => {
-//   const residentialWatcher = spawn('node', ['./XmlParser/Residential/']); // Replace 'residential.js' with the path to your watcher script
+//   const residentialWatcher = spawn('node', ['./sampleCron']); 
 
 //   residentialWatcher.stdout.on('data', (data) => {
 //     console.log(`Residential Watcher: ${data}`);
@@ -35,5 +35,5 @@ expressApp.on('close', (code) => {
 //   });
 // });
 
-// Log that the cron job has started
-console.log('Cron job scheduled to run residential.js every 5 seconds.');
+// // Log that the cron job has started
+// console.log('Cron job scheduled to run sampleCron.js every 5 seconds.');

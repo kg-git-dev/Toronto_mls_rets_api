@@ -9,7 +9,7 @@ const initializeXmlObject = require('./xmlConfig');
 const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('./Data/Residential/residentialDatabase.db');
 
-const xmlPath = './Data/Residential/initial_data.xml';
+const xmlPath = './Data/Residential/sample_data.xml';
 
 const { getMatchingFiles } = require('./images');
 

@@ -32,7 +32,6 @@ const handleOptionalParameters = (req, res, next) => {
 const buildDatabaseQuery = ({ limit, skip, selectFields, rangeFields }) => {
     let query = 'SELECT * FROM residentialDatabase';
 
-    // Add WHERE clause for boolean and string conditions
     const conditions = [];
 
     // Add conditions for each field in the $select query

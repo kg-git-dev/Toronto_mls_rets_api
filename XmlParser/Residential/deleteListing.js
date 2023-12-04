@@ -105,9 +105,12 @@ parser.on('end', async () => {
             // Commit the transaction after all updates are done
             db.run('COMMIT');
 
-            endTime = new Date().getTime();
-            console.log(`${counter} properties in ${(endTime - startTime) / 1000} seconds`);
+
         });
+
+        endTime = new Date().getTime();
+        console.log(`${counter} properties in ${(endTime - startTime) / 1000} seconds`);
+        
     });
 });
 
