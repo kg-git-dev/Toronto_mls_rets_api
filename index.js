@@ -1,9 +1,13 @@
 const express = require('express');
+// const cors = require('cors');
+
 const path = require('path');
 
 const redis = require('redis');
 
 const app = express();
+
+// app.use(cors);
 
 const PORT = process.env.PORT || 3000;
 

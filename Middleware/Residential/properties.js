@@ -4,51 +4,45 @@ const path = require('path');
 const dbPath = path.resolve(__dirname, '../../XmlParser/Data/Residential/residentialDatabase.db');
 const db = new sqlite3.Database(dbPath);
 
-// Middleware to handle optional query parameters
 const handleOptionalParameters = (req, res, next) => {
     const { $limit, $skip, $select, $range } = req.query;
 
-    // Modify the database query based on the optional parameters
     const limit = $limit || 10;
-    const skip = $skip || 0; // Default to 0 if $skip is not provided
+    const skip = $skip || 0;
 
     const selectFields = parseSelectParameters($select);
-
     const rangeFields = parseRangeParameters($range);
 
-    const databaseQuery = buildDatabaseQuery({
-        limit,
-        skip,
-        selectFields,
-        rangeFields,
-    });
-
-    // Attach the modified query to the request object for later use
+    const databaseQuery = buildDatabaseQuery({ limit, skip, selectFields, rangeFields });
+    
     req.databaseQuery = databaseQuery;
-
+   
     next();
 };
 
 const buildDatabaseQuery = ({ limit, skip, selectFields, rangeFields }) => {
-    let query = 'SELECT * FROM residentialDatabase';
-
-    // Add WHERE clause for boolean and string conditions
+    const query = 'SELECT * FROM residentialDatabase';
     const conditions = [];
 
-    // Add conditions for each field in the $select query
+    addSelectConditions(conditions, selectFields);
+    addRangeConditions(conditions, rangeFields);
+
+    if (conditions.length > 0) {
+        return addLimitOffset(query + ` WHERE ${conditions.join(' AND ')}`, limit, skip);
+    }
+
+    return addLimitOffset(query, limit, skip);
+};
+
+const addSelectConditions = (conditions, selectFields) => {
     selectFields.forEach(field => {
         const [fieldName, value] = field.split('=');
-
-        // Check if the value is a boolean or string
-        if (value === 'true' || value === 'false') {
-            conditions.push(`${fieldName} = ${value}`);
-        } else {
-            // Remove surrounding quotes and enclose in single quotes
-            const stringValue = value.replace(/^'|'$/g, '');
-            conditions.push(`${fieldName} = '${stringValue}'`);
-        }
+        const condition = getConditionString(fieldName, value);
+        conditions.push(condition);
     });
+};
 
+const addRangeConditions = (conditions, rangeFields) => {
     const rangeValues = {};
 
     rangeFields.forEach(field => {
@@ -56,14 +50,13 @@ const buildDatabaseQuery = ({ limit, skip, selectFields, rangeFields }) => {
         const match = fieldName.match(/^(min|max)/);
 
         if (match) {
-            const minMaxType = match[0]; // "min" or "max"
-            const key = fieldName.substring(3); // Remove "min" or "max" from the field name
+            const minMaxType = match[0];
+            const key = fieldName.substring(3);
 
-            // Store the value based on the minMaxType and key
             rangeValues[minMaxType] = rangeValues[minMaxType] || {};
             rangeValues[minMaxType][key] = parseInt(value);
         }
-    })
+    });
 
     Object.entries(rangeValues).forEach(([minMaxType, values]) => {
         Object.entries(values).forEach(([key, value]) => {
@@ -71,39 +64,24 @@ const buildDatabaseQuery = ({ limit, skip, selectFields, rangeFields }) => {
             conditions.push(`CAST(${key} AS REAL) ${operator} CAST(${value} AS REAL)`);
         });
     });
-
-    if (conditions.length > 0) {
-        query += ` WHERE ${conditions.join(' AND ')}`;
-    }
-
-    // Add LIMIT and OFFSET clauses
-    query += ` LIMIT ${limit} OFFSET ${skip}`;
-
-    return query;
 };
 
-
-// Example function to parse select parameters
-const parseSelectParameters = (select) => {
-    if (!select) {
-        return [];
+const getConditionString = (fieldName, value) => {
+    if (value === 'true' || value === 'false') {
+        return `${fieldName} = ${value}`;
     }
 
-    // Split the $select parameters
-    return select.split(',');
+    const stringValue = value.replace(/^'|'$/g, '');
+    return `${fieldName} = '${stringValue}'`;
 };
 
-const parseRangeParameters = (range) => {
-    if (!range) {
-        return [];
-    }
-
-    // Split the $range parameters
-    return range.split(',');
-
-
+const addLimitOffset = (query, limit, skip) => {
+    return query + ` LIMIT ${limit} OFFSET ${skip}`;
 };
 
+const parseSelectParameters = (select) => (select ? select.split(',') : []);
+
+const parseRangeParameters = (range) => (range ? range.split(',') : []);
 
 module.exports = {
     handleOptionalParameters,

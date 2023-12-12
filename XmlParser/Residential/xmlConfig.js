@@ -1,5 +1,3 @@
-// xmlConfig.js
-
 const initializeXmlObject = () => {
     return {
         AccessToProperty1: null,

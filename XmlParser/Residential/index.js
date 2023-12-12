@@ -1,202 +1,68 @@
-const fs = require('fs');
-const path = require('path');
-const sax = require('sax');
+const parseXmlAsync = require('..');
+const xmlPath = '../Data/Residential/initial_data.xml';
+const imageDirectoryPath = '../Data/Residential/Photos/';
 
-//Initializing an object with 255 keys and values set to null
-const initializeXmlObject = require('../xmlConfig');
-
-//Initializing sqllite3 database in reference to the initializeXmlObject
 const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('../Data/Residential/residentialDatabase.db');
 
-const xmlPath = '../Data/Residential/Updates/sampleUpdates.xml';
+const util = require('util');
+const dbRunAsync = util.promisify(db.run).bind(db);
 
+const initialXmlObject = require('./xmlConfig');
 const { getMatchingFiles } = require('../images');
 
-const directoryPath = '../Data/Residential/Photos/';
+(async () => {
+    try {
+        let startTime = new Date().getTime();
 
-// Creating a sax parser
-const parser = sax.createStream(true, { trim: true, normalize: true });
+        const residentialProperties = await parseXmlAsync(xmlPath, initialXmlObject, propertyType = 'ResidentialProperty');
 
-// Setting up variables to keep track of the current element
-let currentElement = '';
-let insideResidentialProperty = false;
-let insideListing = false;
+        for (const property of residentialProperties) {
+            property.MinListPrice = property.ListPrice;
+            property.MaxListPrice = property.ListPrice;
 
-// Setting up data structures
-let residentialProperties = [];
-let currentProperty = {};
-let startTime = new Date().getTime();
-let endTime;
-let counter = 0;
+            try {
+                const fileNames = await getMatchingFiles(imageDirectoryPath, property.MLS);
+            
+                if (fileNames.length > 0) {
+                    property.PhotoCount = fileNames.length;
+            
+                    // Map file names to web links
+                    const photoLinks = fileNames.map((fileName, index) => `localhost:3000/residentialPhotos/${fileName}`);
+                    
+                    // Assign the array to the PhotoLink key
+                    property.PhotoLink = JSON.stringify(photoLinks);
+                }
+            } catch (err) {
+                console.error('Error:', err.message);
+            }
+            
+            const keys = Object.keys(property);
+            const values = Object.values(property);
 
-// Setting up event handlers
-parser.on('opentag', (node) => {
-    // Update the current element
-    currentElement = node.name;
+            const placeholders = values.map(() => '?').join(', ');
+            const insertStatement = `INSERT INTO residentialDatabase (${keys.join(', ')}) VALUES (${placeholders})`;
 
-    // Check if we are inside a ResidentialProperty or Listing
-    if (currentElement === 'ResidentialProperty') {
-        insideResidentialProperty = true;
-        currentProperty = { ...initializeXmlObject }; // Creating a new object instance
-    } else if (insideResidentialProperty && currentElement === 'Listing') {
-        insideListing = true;
+            // Insert the property into the database
+            try {
+                await dbRunAsync(insertStatement, values);
+            } catch (error) {
+                console.error('Error inserting property into the database:', error);
+                // You may choose to throw the error to propagate it up or handle it as needed.
+                throw error;
+            }
+        }
+
+        let endTime = new Date().getTime();
+
+        const durationInSeconds = (endTime - startTime) / 1000; // Convert milliseconds to seconds
+
+        console.log(`Total time for initial read/write operation ${durationInSeconds}`);
+
+    } catch (error) {
+        console.error('Error:', error);
+    } finally {
+        // Close the database connection when done
+        db.close();
     }
-});
-
-parser.on('text', (text) => {
-
-    // Accumulate the text content if inside a Listing
-    if (insideListing) {
-        // Testing for null values
-        if (text === 'null') text = null;
-
-        // Testing for boolean
-        if (text === 'Y') {
-            text = 1;
-
-        } else if (text === 'N') {
-            text = 0;
-        };
-
-        currentProperty[currentElement] = text;
-
-    }
-});
-
-parser.on('closetag', (nodeName) => {
-    // Add the current property to the array when leaving ResidentialProperty
-    if (nodeName === 'ResidentialProperty') {
-        insideResidentialProperty = false;
-        residentialProperties.push(currentProperty);
-        counter++;
-    } else if (insideResidentialProperty && nodeName === 'Listing') {
-        insideListing = false;
-    }
-});
-
-
-parser.on('end', async () => {
-    // Wrap the updates in a transaction for efficiency
-    db.serialize(() => {
-        db.run('BEGIN TRANSACTION');
-
-        // Use Promise.all to wait for all asynchronous operations
-        Promise.all(residentialProperties.map(async (property) => {
-            return new Promise(async (resolve) => {
-                db.get('SELECT * FROM residentialDatabase WHERE MLS = ?', property.MLS, async (err, row) => {
-                    if (err) {
-                        console.error('Error querying database:', err);
-                        resolve();
-                    } else {
-                        if (row) {
-                            // Compare ListPrice values
-                            if (row.ListPrice !== property.ListPrice) {
-                                // ListPrice has changed, perform an action
-                                console.log(`ListPrice for property with MLS ${property.MLS} has changed. Performing action...`);
-
-                                // Check if ListPrice is lower or equal to MinListPrice
-                                if (property.ListPrice <= row.MinListPrice) {
-                                    // Assign ListPrice to MinListPrice
-                                    console.log(`Assigning ListPrice ${property.ListPrice} to MinListPrice.`);
-                                    property.MinListPrice = property.ListPrice;
-                                }
-
-                                // Check if ListPrice is equal or higher than MaxListPrice
-                                if (property.ListPrice >= row.MaxListPrice) {
-                                    // Assign ListPrice to MaxListPrice
-                                    console.log(`Assigning ListPrice ${property.ListPrice} to MaxListPrice.`);
-                                    property.MaxListPrice = property.ListPrice;
-                                }
-                            }
-
-                            // Compare PixUpdtedDt values
-                            if (row.PixUpdtedDt !== property.PixUpdtedDt) {
-                                // pixUpdatedAt has changed, perform another action
-                                console.log(`pixUpdatedAt for property with MLS ${property.MLS} has changed. Performing another action...`);
-                                try {
-                                    const result = await getMatchingFiles(directoryPath, property.MLS);
-                                    property.PhotoCount = result;
-
-                                    const photoLinks = Array.from({ length: property.PhotoCount }, (_, index) => `localhost:3000/residentialPhotos/Photo${property.MLS}-${index + 1}.jpeg`);
-                                    // Assign the array to the PhotoLink key
-                                    property.PhotoLink = JSON.stringify(photoLinks);
-                                } catch (err) {
-                                    console.error('Error:', err.message);
-                                    // Handle the case when no matching files are found
-                                }
-                            }
-
-                            // Construct the SET clause dynamically based on property keys
-                            const setClause = Object.keys(property).map(key => `${key} = ?`).join(', ');
-
-                            db.run(
-                                `UPDATE residentialDatabase
-                            SET ${setClause}
-                            WHERE MLS = ?`,
-                                [...Object.values(property), property.MLS],
-                                (err) => {
-                                    if (err) {
-                                        console.error('Error updating property in the database:', err);
-                                    }
-                                    resolve();
-                                }
-                            );
-
-
-                        } else {
-                            // Property with the given MLS doesn't exist in the database
-                            console.log(`Property with MLS ${property.MLS} does not exist in the database. Performing a different action...`);
-
-                            property.MinListPrice = property.ListPrice;
-                            property.MaxListPrice = property.ListPrice;
-
-                            try {
-                                const result = await getMatchingFiles(directoryPath, property.MLS);
-                                property.PhotoCount = result;
-
-                                const photoLinks = Array.from({ length: property.PhotoCount }, (_, index) => `localhost:3000/residentialPhotos/Photo${property.MLS}-${index + 1}.jpeg`);
-                                // Assign the array to the PhotoLink key
-                                property.PhotoLink = JSON.stringify(photoLinks);
-                            } catch (err) {
-                                console.error('Error:', err.message);
-                                // Handle the case when no matching files are found
-                            }
-
-                            const keys = Object.keys(property);
-                            const values = Object.values(property);
-                            const placeholders = values.map(() => '?').join(', ');
-
-                            const insertStatement = `INSERT INTO residentialDatabase (${keys.join(', ')}) VALUES (${placeholders})`;
-
-                            db.run(insertStatement, values, (err) => {
-                                if (err) {
-                                    console.error('Error inserting property into the database:', err);
-                                }
-                                resolve();
-                            });
-                        }
-
-
-                    }
-                });
-            });
-        })).then(() => {
-            // Commit the transaction after all updates are done
-            db.run('COMMIT');
-
-            endTime = new Date().getTime();
-            console.log(`${counter} properties in ${(endTime - startTime) / 1000} seconds`);
-        });
-    });
-});
-
-
-
-// Pipe the XML file into the sax parser
-fs.createReadStream(xmlPath)
-    .pipe(parser)
-    .on('error', (err) => {
-        console.error('Error parsing XML:', err);
-    });
-
+})();
