@@ -18,7 +18,7 @@ const parseXml = async (xmlPath, initialXmlObject, propertyType) => {
         parser.on('opentag', (node) => {
             currentElement = node.name;
             if (currentElement === propertyType) {
-                currentProperty = { ...initialXmlObject }; // Creating a new object instance
+                currentProperty = { ...initialXmlObject() }; // Creating a new object instance
                 insidePropertyType = true;
             } else if (insidePropertyType && currentElement === 'Listing') {
                 insideListing = true;
