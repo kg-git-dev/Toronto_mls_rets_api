@@ -1,10 +1,12 @@
 const fs = require('fs');
 const sqlite3 = require('sqlite3').verbose();
 
-const db = new sqlite3.Database('./XMLParser/Data/Residential/residentialDatabase.db');
+const db = new sqlite3.Database('../Data/Residential/residentialDatabase.db');
 
 db.run('PRAGMA foreign_keys=off;');
+
 db.run('BEGIN TRANSACTION;');
+
 db.run(`
   CREATE TABLE IF NOT EXISTS residentialDatabase (
     MLS TEXT PRIMARY KEY,

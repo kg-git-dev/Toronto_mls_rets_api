@@ -1,128 +1,79 @@
-const fs = require('fs');
-const path = require('path');
-const sax = require('sax');
+const fs = require("fs").promises;
+const sax = require("sax");
 
-//Initializing an object with 255 keys and values set to null
-const initializeXmlObject = require('./xmlConfig');
+const parseXml = async (xmlPath, initialXmlObject, propertyType) => {
+  try {
+    const xmlContent = await fs.readFile(xmlPath, "utf-8");
 
-//Initializing sqllite3 database in reference to the initializeXmlObject
-const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database('./Data/Residential/residentialDatabase.db');
+    const parser = sax.createStream(true, { trim: true, normalize: true });
+    let currentElement = "";
+    let insidePropertyType = false;
+    let insideListing = false;
+    let propertyObject = [];
+    let currentProperty = {};
+    let counter = 0;
+    let startTime = new Date().getTime();
+    let endTime;
 
-const xmlPath = './Data/Residential/sample_data.xml';
-
-const { getMatchingFiles } = require('./images');
-
-const directoryPath = './Data/Residential/Photos/'
-
-// Creating a sax parser
-const parser = sax.createStream(true, { trim: true, normalize: true });
-
-// Setting up variables to keep track of the current element
-let currentElement = '';
-let insideResidentialProperty = false;
-let insideListing = false;
-
-// Setting up data structures
-let residentialProperties = [];
-let currentProperty = {};
-let counter = 0;
-let startTime = new Date().getTime();
-let endTime;
-
-
-// let booleanFinder = [];
-
-// Setting up event handlers
-parser.on('opentag', (node) => {
-    // Update the current element
-    currentElement = node.name;
-
-    // Check if we are inside a ResidentialProperty or Listing
-    if (currentElement === 'ResidentialProperty') {
-        insideResidentialProperty = true;
-        currentProperty = { ...initializeXmlObject }; // Creating a new object instance
-    } else if (insideResidentialProperty && currentElement === 'Listing') {
+    parser.on("opentag", (node) => {
+      currentElement = node.name;
+      if (currentElement === propertyType) {
+        currentProperty = { ...initialXmlObject() }; // Creating a new object instance
+        insidePropertyType = true;
+      } else if (insidePropertyType && currentElement === "Listing") {
         insideListing = true;
-    }
-});
+      }
+    });
 
-parser.on('text', (text) => {
-
-    // Accumulate the text content if inside a Listing
-    if (insideListing) {
+    parser.on("text", (text) => {
+      // Accumulate the text content if inside a Listing
+      if (insideListing) {
         // Testing for null values
-        if (text === 'null') text = null;
+        if (text === "null") text = null;
 
         // Testing for boolean
-        if (text === 'Y') {
-            text = 1;
-
-        } else if (text === 'N') {
-            text = 0;
-        };
-
-        currentProperty[currentElement] = text;
-    }
-});
-
-parser.on('closetag', (nodeName) => {
-    // Add the current property to the array when leaving ResidentialProperty
-    if (nodeName === 'ResidentialProperty') {
-
-        insideResidentialProperty = false;
-
-        residentialProperties.push(currentProperty);
-        counter++;
-    } else if (insideResidentialProperty && nodeName === 'Listing') {
-        insideListing = false;
-    }
-});
-
-
-parser.on('end', async () => {
-    // Use Promise.all to wait for all asynchronous operations
-    await Promise.all(residentialProperties.map(async (property) => {
-
-        property.MinListPrice = property.ListPrice;
-        property.MaxListPrice = property.ListPrice;
-
-
-        try {
-            const result = await getMatchingFiles(directoryPath, property.MLS);
-
-            if (result > 0) {
-                property.PhotoCount = result;
-                // Create an array of objects numbered as PhotoCount
-                const photoLinks = Array.from({ length: property.PhotoCount }, (_, index) => `localhost:3000/residentialPhotos/Photo${property.MLS}-${index + 1}.jpeg`);
-                // Assign the array to the PhotoLink key
-                property.PhotoLink = JSON.stringify(photoLinks);
-            }
-        } catch (err) {
-            // Handle the case when no matching files are found
-
+        if (text === "Y") {
+          text = 1;
+        } else if (text === "N") {
+          text = 0;
         }
 
-        const keys = Object.keys(property);
-        const values = Object.values(property);
-
-        const placeholders = values.map(() => '?').join(', ');
-        const insertStatement = `INSERT INTO residentialDatabase (${keys.join(', ')}) VALUES (${placeholders})`;
-
-        // Insert the property into the database
-        await db.run(insertStatement, values);
-
-    }));
-
-    endTime = new Date().getTime()
-    console.log(`${counter} properties in ${(endTime - startTime)} seconds`);
-
-});
-
-
-// Pipe the XML file into the sax parser
-fs.createReadStream(xmlPath)
-    .pipe(parser)
-    .on('error', (err) => {
-        console.error('Error parsing XML:', err);
+        currentProperty[currentElement] = text;
+      }
     });
+
+    parser.on("closetag", (nodeName) => {
+      if (nodeName === propertyType) {
+        insidePropertyType = false;
+        propertyObject.push(currentProperty);
+        counter++;
+      } else if (insidePropertyType && nodeName === "Listing") {
+        insideListing = false;
+      }
+    });
+
+    parser.on("end", () => {
+      endTime = new Date().getTime();
+      const durationInSeconds = (endTime - startTime) / 1000; // Convert milliseconds to seconds
+      console.log(
+        `XML Parser: ${counter} properties in ${durationInSeconds.toFixed(
+          2
+        )} seconds`
+      );
+    });
+
+    parser.on("error", (err) => {
+      console.error("Error parsing XML:", err);
+    });
+
+    parser.write(xmlContent);
+    parser.end();
+
+    return propertyObject;
+  } catch (error) {
+    console.error("Error:", error);
+    throw error;
+  }
+};
+
+module.exports = parseXml;

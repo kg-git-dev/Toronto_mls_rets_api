@@ -1,123 +1,78 @@
-const fs = require('fs');
-const path = require('path');
-const sax = require('sax');
+const parseXmlAsync = require("..");
 
-//Initializing sqllite3 database in reference to the initializeXmlObject
-const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database('../Data/Residential/residentialDatabase.db');
+const sqlite3 = require("sqlite3").verbose();
+const db = new sqlite3.Database("../Data/Residential/residentialDatabase.db");
 
-const xmlPath = '../Data/Residential/Delete/sample_delete.xml';
-const directoryPath = '../Data/Residential/Photos/';
+const util = require("util");
+const dbGetAsync = util.promisify(db.get).bind(db);
 
-const { deleteMatchingFiles } = require('../images');
+const xmlPath = "../Data/Residential/Delete/sample_delete.xml";
+const directoryPath = "../Data/Residential/Photos/";
 
-// Creating a sax parser
-const parser = sax.createStream(true, { trim: true, normalize: true });
+const { deleteMatchingFiles } = require("../images");
 
-// Setting up variables to keep track of the current element
-let currentElement = '';
-let insideResidentialProperty = false;
-let insideListing = false;
+(async () => {
+  let startTime = new Date().getTime();
 
-// Setting up data structures
-let residentialProperties = [];
-let currentProperty = {};
-let startTime = new Date().getTime();
-let endTime;
-let counter = 0;
+  try {
+    const deleteProperties = await parseXmlAsync(
+      xmlPath,
+      (initialXmlObject = () => {
+        return { MLS: null };
+      }),
+      (propertyType = "ResidentialProperty")
+    );
 
-// Setting up event handlers
-parser.on('opentag', (node) => {
-    // Update the current element
-    currentElement = node.name;
+    // Begin a transaction
+    db.run("BEGIN TRANSACTION");
 
-    // Check if we are inside a ResidentialProperty or Listing
-    if (currentElement === 'ResidentialProperty') {
-        insideResidentialProperty = true;
-        currentProperty = {}; // Creating a new object instance
-    } else if (insideResidentialProperty && currentElement === 'Listing') {
-        insideListing = true;
-    }
-});
+    for (const property of deleteProperties) {
+      let oldPropertyValue = await checkIfPropertyExists(property.MLS);
 
-parser.on('text', (text) => {
+      if (oldPropertyValue) {
+        await deleteMatchingFiles(directoryPath, property.MLS);
 
-    // Accumulate the text content if inside a Listing
-    if (insideListing) {
-        currentProperty[currentElement] = text;
-    }
-});
-
-parser.on('closetag', (nodeName) => {
-    // Add the current property to the array when leaving ResidentialProperty
-    if (nodeName === 'ResidentialProperty') {
-        insideResidentialProperty = false;
-        residentialProperties.push(currentProperty);
-        counter++;
-    } else if (insideResidentialProperty && nodeName === 'Listing') {
-        insideListing = false;
-    }
-});
-
-
-parser.on('end', async () => {
-    // Wrap the updates in a transaction for efficiency
-    db.serialize(() => {
-        db.run('BEGIN TRANSACTION');
-
-        // Use Promise.all to wait for all asynchronous operations
-        Promise.all(residentialProperties.map(async (property) => {
-            return new Promise(async (resolve) => {
-                db.get('SELECT * FROM residentialDatabase WHERE MLS = ?', property.MLS, async (err, row) => {
-                    if (err) {
-                        console.error('Error querying database:', err);
-                        resolve();
-                    } else {
-                        if (row) {
-                            try { 
-                                await deleteMatchingFiles(directoryPath, property.MLS);
-
-                            } catch (err) {
-                                console.error('Error:', err.message);
-                            }
-
-                            // Row with MLS exists, perform a DELETE
-                            db.run(
-                                `DELETE FROM residentialDatabase
-                                WHERE MLS = ?`,
-                                [property.MLS],
-                                (err) => {
-                                    if (err) {
-                                        console.error('Error deleting property from the database:', err);
-                                    }
-                                    resolve();
-                                }
-                            );
-                        } else {
-                            // Property with the given MLS doesn't exist in the database
-                            console.log(`Property with MLS ${property.MLS} does not exist in the database`);
-                            resolve();
-                        }
-                    }
-                });
-            });
-        })).then(() => {
-            // Commit the transaction after all updates are done
-            db.run('COMMIT');
-
-
+        // Delete rows from the SQLite database
+        await new Promise((resolve, reject) => {
+          db.run(
+            "DELETE FROM residentialDatabase WHERE MLS = ?",
+            [property.MLS],
+            function (err) {
+              if (err) reject(err);
+              else resolve();
+            }
+          );
         });
+      }
+    }
 
-        endTime = new Date().getTime();
-        console.log(`${counter} properties in ${(endTime - startTime) / 1000} seconds`);
-        
-    });
-});
+    // Commit the transaction
+    db.run("COMMIT");
+  } catch (error) {
+    console.error("Error:", error);
+  } finally {
+    // Close the SQLite database connection
+    db.close();
 
-// Pipe the XML file into the sax parser
-fs.createReadStream(xmlPath)
-    .pipe(parser)
-    .on('error', (err) => {
-        console.error('Error parsing XML:', err);
-    });
+    let endTime = new Date().getTime();
+    const durationInSeconds = (endTime - startTime) / 1000;
+    console.log(`Total time for delete operation ${durationInSeconds}`);
+  }
+})();
 
+const checkIfPropertyExists = async (MLS) => {
+  try {
+    const row = await dbGetAsync(
+      "SELECT * FROM residentialDatabase WHERE MLS = ?",
+      MLS
+    );
+    if (row) {
+      return row;
+    } else {
+      return false;
+    }
+  } catch (err) {
+    console.error("Error querying database:", err);
+    throw err;
+  }
+};

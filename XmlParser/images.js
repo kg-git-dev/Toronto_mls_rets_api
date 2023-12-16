@@ -1,72 +1,46 @@
-const fs = require('fs');
+const fs = require('fs').promises;
 const path = require('path');
 
-function getMatchingFiles(directory, mlsIndex) {
-    return new Promise((resolve, reject) => {
+const getMatchingFiles = async (directory, mlsIndex) => {
+    try {
         const mlsPattern = new RegExp(`^Photo${mlsIndex}-(\\d+)\\.jpeg$`, 'i');
 
-        fs.readdir(directory, (err, files) => {
-            if (err) {
-                reject(err);
-                return;
-            }
+        const files = await fs.readdir(directory);
 
-            const matchingFiles = files.filter(file => file.match(mlsPattern));
+        const matchingFiles = files
+            .filter(file => file.match(mlsPattern))
+            .map(file => ({
+                name: file,
+                number: parseInt(file.match(mlsPattern)[1], 10)
+            }))
+            .sort((a, b) => a.number - b.number)
+            .map(fileObj => fileObj.name);
 
-            if (matchingFiles.length === 0) {
-                // Reject the promise when no matching files are found
-                reject(new Error('No matching files found.'));
-            } else {
-                // Resolve the promise with the length of matching files
-                resolve(matchingFiles.length);
-            }
-        });
-    });
+        return matchingFiles;
+    } catch (err) {
+        throw err;
+    }
 }
 
-function deleteMatchingFiles(directory, mlsIndex) {
-    return new Promise(async (resolve, reject) => {
-        const mlsPattern = new RegExp(`^Photo${mlsIndex}-(\\d+)\\.jpeg$`, 'i');
+const deleteMatchingFiles = async (directory, mlsIndex) => {
 
-        fs.readdir(directory, async (err, files) => {
-            if (err) {
-                reject(err);
-                return;
-            }
+    try {
+        const matchingFiles = await getMatchingFiles(directory, mlsIndex);
 
-            const matchingFiles = files.filter(file => file.match(mlsPattern));
+        if (matchingFiles > 0) {
+            await Promise.all(matchingFiles.map(async (file) => {
+                const filePath = path.join(directory, file);
+                await fs.unlink(filePath);
+                console.log(`Deleted ${matchingFiles.length} files.`);
+            }));
+        }
 
-            if (matchingFiles.length === 0) {
-                // Reject the promise when no matching files are found
-                reject(new Error('No matching files found.'));
-            } else {
-                // Delete each matching file
-                const deletePromises = matchingFiles.map(file => {
-                    const filePath = path.join(directory, file);
-                    return new Promise((resolve, reject) => {
-                        fs.unlink(filePath, err => {
-                            if (err) {
-                                reject(err);
-                            } else {
-                                resolve();
-                            }
-                        });
-                    });
-                });
-
-                try {
-                    // Wait for all file deletions to complete
-                    await Promise.all(deletePromises);
-                    console.log(`Deleted ${matchingFiles.length} matching files.`);
-                    resolve(matchingFiles.length);
-                } catch (error) {
-                    console.error('Error deleting files:', error.message);
-                    reject(error);
-                }
-            }
-        });
-    });
+    } catch (err) {
+        console.log('errror deleting files');
+    }
 }
+
+
 
 module.exports = {
     getMatchingFiles,
