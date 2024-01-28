@@ -37,14 +37,15 @@ const buildDatabaseQuery = ({ limit, skip, selectFields, rangeFields }) => {
 
   if (conditions.length > 0) {
     return addLimitOffset(
-      query + ` WHERE ${conditions.join(" AND ")}`,
+      query + ` WHERE ${conditions.join(" AND ")} ORDER BY IdxUpdtedDt DESC`,
       limit,
       skip
     );
   }
 
-  return addLimitOffset(query, limit, skip);
+  return addLimitOffset(query + ' ORDER BY IdxUpdtedDt DESC', limit, skip);
 };
+
 
 const addSelectConditions = (conditions, selectFields) => {
   selectFields.forEach((field) => {
