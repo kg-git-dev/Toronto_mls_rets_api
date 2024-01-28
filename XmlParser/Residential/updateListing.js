@@ -128,17 +128,22 @@ const propertyExistsTrue = async (oldPropertyValue, property, clauseCollection) 
         // pixUpdatedAt has changed, perform another action
         console.log(`pixUpdatedAt for property with MLS ${property.MLS} has changed. Performing another action...`);
 
+
         try {
             const fileNames = await getMatchingFiles(imageDirectoryPath, property.MLS);
-
+        
             if (fileNames.length > 0) {
                 property.PhotoCount = fileNames.length;
-
+        
                 // Map file names to web links
-                const photoLinks = fileNames.map((fileName, index) => `localhost:3000/residentialPhotos/${fileName}`);
-
+                const photoLinks = fileNames.map((fileName, index) => fileName);
+        
                 // Assign the array to the PhotoLink key
                 property.PhotoLink = JSON.stringify(photoLinks);
+            } else {
+                // No matching files, handle this case
+                property.PhotoCount = 0; // or set it to null or any default value
+                property.PhotoLink = null; // or set it to any default value
             }
         } catch (err) {
             console.error('Error:', err.message);
@@ -161,17 +166,22 @@ const propertyExistsFalse = async (property, clauseCollection) => {
     property.MinListPrice = property.ListPrice;
     property.MaxListPrice = property.ListPrice;
 
+
     try {
         const fileNames = await getMatchingFiles(imageDirectoryPath, property.MLS);
-
+    
         if (fileNames.length > 0) {
             property.PhotoCount = fileNames.length;
-
+    
             // Map file names to web links
-            const photoLinks = fileNames.map((fileName, index) => `localhost:3000/residentialPhotos/${fileName}`);
-
+            const photoLinks = fileNames.map((fileName, index) => fileName);
+    
             // Assign the array to the PhotoLink key
             property.PhotoLink = JSON.stringify(photoLinks);
+        } else {
+            // No matching files, handle this case
+            property.PhotoCount = 0; // or set it to null or any default value
+            property.PhotoLink = null; // or set it to any default value
         }
     } catch (err) {
         console.error('Error:', err.message);

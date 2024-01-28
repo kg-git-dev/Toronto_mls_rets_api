@@ -28,14 +28,19 @@ const { getMatchingFiles } = require('../images');
                     property.PhotoCount = fileNames.length;
             
                     // Map file names to web links
-                    const photoLinks = fileNames.map((fileName, index) => `localhost:3000/residentialPhotos/${fileName}`);
-                    
+                    const photoLinks = fileNames.map((fileName, index) => fileName);
+            
                     // Assign the array to the PhotoLink key
                     property.PhotoLink = JSON.stringify(photoLinks);
+                } else {
+                    // No matching files, handle this case
+                    property.PhotoCount = 0; // or set it to null or any default value
+                    property.PhotoLink = null; // or set it to any default value
                 }
             } catch (err) {
                 console.error('Error:', err.message);
             }
+            
             
             const keys = Object.keys(property);
             const values = Object.values(property);
