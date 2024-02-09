@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 
 const path = require("path");
 
@@ -42,7 +43,7 @@ app.use(
 app.use("/residential", residentialRoutes);
 
 //Integrating get-lat-long-queue
-app.use("/get-lat-long", getLatLongRoutes);
+app.use("/get-lat-long", cors(), getLatLongRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running on port: ${PORT}`);
