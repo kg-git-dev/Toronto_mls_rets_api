@@ -48,6 +48,8 @@ const { getMatchingFiles } = require('../images');
             const placeholders = values.map(() => '?').join(', ');
             const insertStatement = `INSERT INTO residentialDatabase (${keys.join(', ')}) VALUES (${placeholders})`;
 
+            console.log('commited to database for MLS ID:', property.MLS)
+
             // Insert the property into the database
             try {
                 await dbRunAsync(insertStatement, values);

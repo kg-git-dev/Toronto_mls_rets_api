@@ -34,6 +34,7 @@ const { getMatchingFiles } = require('../images');
         const clauseCollection = [];
 
         for (const property of residentialProperties) {
+            console.log('updating property for:', property.MLS)
             let oldPropertyValue = await checkIfPropertyExists(property.MLS);
 
             if (oldPropertyValue) {

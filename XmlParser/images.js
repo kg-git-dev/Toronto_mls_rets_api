@@ -15,7 +15,9 @@ const getMatchingFiles = async (directory, mlsIndex) => {
             }))
             .sort((a, b) => a.number - b.number)
             .map(fileObj => fileObj.name);
-
+   
+        console.log('matching files found:', matchingFiles)
+            
         return matchingFiles;
     } catch (err) {
         throw err;

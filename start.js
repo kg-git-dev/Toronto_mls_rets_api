@@ -3,11 +3,11 @@ const cron = require("node-cron");
 
 // Function to execute Redis process
 function executeRedisProcess () {
-  // Construct the commands to be executed
-  const commands = `redis-cli -n 0 SELECT 0\nFLUSHDB`;
+  // Construct the command to be executed
+  const command = `redis-cli -n 0 FLUSHDB`;
 
-  // Execute the Redis command with the constructed commands via shell
-  const redisProcess = spawn(commands, [], {
+  // Execute the Redis command with the constructed command via shell
+  const redisProcess = spawn(command, {
     shell: true,
     stdio: ["pipe", "pipe", "pipe"] // Redirect all stdio streams to pipes
   });
