@@ -2,7 +2,7 @@ const { spawn } = require("child_process");
 const cron = require("node-cron");
 
 // Function to execute Redis process
-function executeRedisProcess() {
+function executeRedisProcess () {
   // Construct the commands to be executed
   const commands = `redis-cli -n 0 SELECT 0\nFLUSHDB`;
 
@@ -34,23 +34,8 @@ function executeRedisProcess() {
   });
 }
 
-// Start the Express application
-const expressApp = spawn("node", ["index.js"]);
-
-expressApp.stdout.on("data", (data) => {
-  console.log(`Express App: ${data}`);
-});
-
-expressApp.stderr.on("data", (data) => {
-  console.error(`Express App Error: ${data}`);
-});
-
-expressApp.on("close", (code) => {
-  console.log(`Express App closed with code ${code}`);
-});
-
-// Schedule the update process to run every two hours starting at 15 minute past (Eastern Standard Time)
-cron.schedule('15 */2 * * *', () => {
+// Function to execute update process
+function executeUpdateProcess () {
   const updateProcess = spawn("node", ["./XmlParser/Residential/updateListing.js"]);
 
   updateProcess.stdout.on("data", (data) => {
@@ -65,27 +50,45 @@ cron.schedule('15 */2 * * *', () => {
     console.log(`Update Process closed with code ${code}`);
     executeRedisProcess(); // Execute Redis process after update process completion
   });
-}, {
-  timezone: "America/Toronto"
-});
+}
 
-// Schedule delete process to run twice a day at 10:30 AM and 10:30 PM (Eastern Standard Time)
-cron.schedule('30 10,22 * * *', () => {
+// Function to execute delete process
+function executeDeleteProcess () {
   const { spawnSync } = require('child_process');
 
-  // Logging a message to indicate the cron job is triggered
   console.log("Cron job running...");
 
-  // Executing delete.js using spawnSync
   const deleteProcess = spawnSync("node", ["./XmlParser/Residential/deleteListing.js"]);
 
-  // Checking the status of deleteProcess
   if (deleteProcess.status === 0) {
     console.log("Delete Process completed successfully");
     executeRedisProcess(); // Execute Redis process after delete process completion
   } else {
     console.error("Delete Process failed");
   }
-}, {
+}
+
+// Schedule the update process to run every two hours starting at 15 minutes past (Eastern Standard Time)
+cron.schedule('15 */2 * * *', executeUpdateProcess, {
   timezone: "America/Toronto"
+});
+
+// Schedule delete process to run twice a day at 10:30 AM and 10:30 PM (Eastern Standard Time)
+cron.schedule('30 10,22 * * *', executeDeleteProcess, {
+  timezone: "America/Toronto"
+});
+
+// Start the Express application
+const expressApp = spawn("node", ["index.js"]);
+
+expressApp.stdout.on("data", (data) => {
+  console.log(`Express App: ${data}`);
+});
+
+expressApp.stderr.on("data", (data) => {
+  console.error(`Express App Error: ${data}`);
+});
+
+expressApp.on("close", (code) => {
+  console.log(`Express App closed with code ${code}`);
 });
