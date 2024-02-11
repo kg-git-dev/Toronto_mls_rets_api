@@ -1,10 +1,12 @@
+const path = require('path');
 const parseXmlAsync = require('..');
-const xmlPath = '../Data/Residential/Updates/sampleUpdates.xml';
-const imageDirectoryPath = '../Data/Residential/Photos/';
+const xmlPath = path.resolve(__dirname, '../Data/Residential/Updates/sampleUpdates.xml');
+const imageDirectoryPath = path.resolve(__dirname, '../Data/Residential/Photos/');
 const initialXmlObject = require('./xmlConfig');
 
 const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database('../Data/Residential/residentialDatabase.db');
+const dbPath = path.resolve(__dirname, '../Data/Residential/residentialDatabase.db');
+const db = new sqlite3.Database(dbPath);
 
 const util = require('util');
 const dbGetAsync = util.promisify(db.get).bind(db);
