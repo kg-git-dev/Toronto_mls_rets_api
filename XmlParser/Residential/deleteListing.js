@@ -1,15 +1,17 @@
+const path = require('path');
 const parseXmlAsync = require("..");
 
 const sqlite3 = require("sqlite3").verbose();
-const db = new sqlite3.Database("../Data/Residential/residentialDatabase.db");
+const dbPath = path.resolve(__dirname, "../Data/Residential/residentialDatabase.db");
+const db = new sqlite3.Database(dbPath);
 
 const util = require("util");
 const dbGetAsync = util.promisify(db.get).bind(db);
 
-const xmlPath = "../Data/Residential/Delete/sample_delete.xml";
-const directoryPath = "../Data/Residential/Photos/";
+const xmlPath = path.resolve(__dirname, "../Data/Residential/Delete/sample_delete.xml");
+const directoryPath = path.resolve(__dirname, "../Data/Residential/Photos/");
 
-const { deleteMatchingFiles } = require("../images");
+const { deleteMatchingFiles } = require("../images"); 
 
 (async () => {
   let startTime = new Date().getTime();
