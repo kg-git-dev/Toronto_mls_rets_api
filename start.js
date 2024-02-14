@@ -68,8 +68,8 @@ function executeDeleteProcess () {
   }
 }
 
-// Schedule the update process to run every two hours starting at 15 minutes past (Eastern Standard Time)
-cron.schedule('15 */2 * * *', executeUpdateProcess, {
+// Schedule the update process to run every three hours starting at 15 minutes past (Eastern Standard Time)
+cron.schedule('15 */3 * * *', executeUpdateProcess, {
   timezone: "America/Toronto"
 });
 
