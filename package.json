@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon start.js",
-    "watch-residential": "nodemon ./XmlParser/Residential/residential.js"
   },
   "keywords": [
     "rets"
