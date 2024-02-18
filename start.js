@@ -12,7 +12,7 @@ function executeRedisProcess() {
     stdio: ["pipe", "pipe", "pipe"], // Redirect all stdio streams to pipes
   });
 
-  console.log("Redis Process started at ${new Date(Date.now()).toLocaleString()}");
+  console.log(`Redis Process started at ${new Date(Date.now()).toLocaleString()}`);
 
   let output = "";
 
@@ -28,7 +28,7 @@ function executeRedisProcess() {
 
   redisProcess.on("close", (code) => {
     if (code === 0) {
-      console.log("Redis Process completed successfully at ${new Date(Date.now()).toLocaleString()}");
+      console.log(`Redis Process completed successfully at ${new Date(Date.now()).toLocaleString()}`);
       console.log("Redis Process output:", output); // Log captured output
     } else {
       console.error("Redis Process failed");
