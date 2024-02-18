@@ -1,26 +1,19 @@
-const sqlite3 = require("sqlite3").verbose();
-const path = require("path");
-
-const dbPath = path.resolve(
-  __dirname,
-  "../../XmlParser/Data/Residential/residentialDatabase.db"
-);
-const db = new sqlite3.Database(dbPath);
-
 const handleOptionalParameters = (req, res, next) => {
-  const { $limit, $skip, $select, $range } = req.query;
+  const { $limit, $skip, $select, $range, $selectOr } = req.query;
 
-  const limit = $limit || 10;
-  const skip = $skip || 0;
+  const limit = parseInt($limit) || 10; 
+  const skip = parseInt($skip) || 0; 
 
   const selectFields = parseSelectParameters($select);
   const rangeFields = parseRangeParameters($range);
+  const selectOrFields = parseSelectParameters($selectOr); // Parse $selectOr parameters
 
   const databaseQuery = buildDatabaseQuery({
     limit,
     skip,
     selectFields,
     rangeFields,
+    selectOrFields, // Pass selectOrFields to buildDatabaseQuery
   });
 
   req.databaseQuery = databaseQuery;
@@ -28,24 +21,30 @@ const handleOptionalParameters = (req, res, next) => {
   next();
 };
 
-const buildDatabaseQuery = ({ limit, skip, selectFields, rangeFields }) => {
+const buildDatabaseQuery = ({ limit, skip, selectFields, rangeFields, selectOrFields }) => {
   const query = "SELECT * FROM residentialDatabase";
   const conditions = [];
 
   addSelectConditions(conditions, selectFields);
+  addSelectOrConditions(conditions, selectOrFields); // Add conditions for $selectOr
   addRangeConditions(conditions, rangeFields);
 
-  if (conditions.length > 0) {
-    return addLimitOffset(
-      query + ` WHERE ${conditions.join(" AND ")} ORDER BY TimestampSql DESC`,
-      limit,
-      skip
-    );
-  }
-
-  return addLimitOffset(query + ' ORDER BY TimestampSql DESC', limit, skip);
+  return addLimitOffset(
+    conditions.length ? `${query} WHERE ${conditions.join(" AND ")} ORDER BY TimestampSql DESC` : `${query} ORDER BY TimestampSql DESC`,
+    limit,
+    skip
+  );
 };
 
+const addSelectOrConditions = (conditions, selectOrFields) => {
+  if (selectOrFields.length > 0) {
+    const selectOrConditions = selectOrFields.map(field => {
+      const [fieldName, value] = field.split("=");
+      return getConditionString(fieldName, value);
+    });
+    conditions.push(`(${selectOrConditions.join(" OR ")})`);
+  }
+};
 
 const addSelectConditions = (conditions, selectFields) => {
   selectFields.forEach((field) => {
