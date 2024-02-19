@@ -98,9 +98,9 @@ cron.schedule("15 */3 * * *", executeUpdateProcess, {
 });
 
 // Schedule delete process to run twice a day at 10:30 AM and 10:30 PM (Eastern Standard Time)
-cron.schedule("30 10,22 * * *", executeDeleteProcess, {
-  timezone: "America/Toronto",
-});
+// cron.schedule("30 10,22 * * *", executeDeleteProcess, {
+//   timezone: "America/Toronto",
+// });
 
 // Start the Express application
 const expressApp = spawn("node", ["index.js"]);
