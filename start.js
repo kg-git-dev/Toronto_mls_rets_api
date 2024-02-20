@@ -6,13 +6,15 @@ function executeRedisProcess() {
   // Construct the command to be executed
   const command = `redis-cli -n 0 FLUSHDB`;
 
+  console.log(`initialized function executeRedisProcess at ${new Date(Date.now()).toLocaleString()}`);
+
   // Execute the Redis command with the constructed command via shell
   const redisProcess = spawn(command, {
     shell: true,
     stdio: ["pipe", "pipe", "pipe"], // Redirect all stdio streams to pipes
   });
 
-  console.log(`Redis Process started at ${new Date(Date.now()).toLocaleString()}`);
+  console.log(`executeRedisProcess: spawned at ${new Date(Date.now()).toLocaleString()}`);
 
   let output = "";
 
@@ -23,43 +25,37 @@ function executeRedisProcess() {
 
   // Logging errors, if any, from Redis command
   redisProcess.stderr.on("data", (data) => {
-    console.error("Redis Process errors:", data.toString());
+    console.error("fexecuteRedisProcess errors:", data.toString());
   });
 
   redisProcess.on("close", (code) => {
     if (code === 0) {
-      console.log(`Redis Process completed successfully at ${new Date(Date.now()).toLocaleString()}`);
-      console.log("Redis Process output:", output); // Log captured output
+      console.log(`function executeRedisProcess: completed successfully at ${new Date(Date.now()).toLocaleString()}`);
+      console.log("executeRedisProcess output:", output); // Log captured output
     } else {
-      console.error("Redis Process failed");
+      console.error("executeRedisProcess failed whiled closing");
     }
   });
 }
 
 // Function to execute update process
 function executeUpdateProcess() {
+  console.log(`initialized function executeUpdateProcess at ${new Date(Date.now()).toLocaleString()}`)
+
   const updateProcess = spawn("node", ["./XmlParser/Residential/updateListing.js"]);
 
-  console.log(`Update process started at ${new Date(Date.now()).toLocaleString()}`)
-
-  // Log memory usage for the update process every 30 seconds
-  const updateMemoryLoggingInterval = setInterval(() => {
-    const used = process.memoryUsage();
-    console.log(`Update Process Memory usage at ${new Date(Date.now()).toLocaleString()}: ${Math.round(used.heapUsed / 1024 / 1024 * 100) / 100} MB`);
-    console.log(`Update Process Heap memory available: ${Math.round(used.heapTotal / 1024 / 1024 * 100) / 100} MB`);
-  }, 30 * 1000); 
+  console.log(`executeUpdateProcess: spawned at ${new Date(Date.now()).toLocaleString()}`)
 
   updateProcess.stdout.on("data", (data) => {
-    console.log(`Update Process: ${data}`);
+    console.log(`executeUpdateProcess Data: ${data}`);
   });
 
   updateProcess.stderr.on("data", (data) => {
-    console.error(`Update Process Error: ${data}`);
+    console.error(`executeUpdateProcess error: ${data}`);
   });
 
   updateProcess.on("close", (code) => {
-    clearInterval(updateMemoryLoggingInterval); // Stop memory logging interval when update process is closed
-    console.log(`Update Process closed with code at ${new Date(Date.now()).toLocaleString()} ${code}`);
+    console.log(`executeUpdateProcess: completed successfully at ${new Date(Date.now()).toLocaleString()} ${code}`);
     executeRedisProcess(); // Execute Redis process after update process completion
   });
 }
@@ -68,26 +64,18 @@ function executeUpdateProcess() {
 function executeDeleteProcess() {
   const deleteProcess = spawn("node", ["./XmlParser/Residential/deleteListing.js"]);
   
-  console.log(`Delete process started at ${new Date(Date.now()).toLocaleString()}`)
-
-  // Log memory usage for the delete process every 30 seconds
-  const deleteMemoryLoggingInterval = setInterval(() => {
-    const used = process.memoryUsage();
-    console.log(`Delete Process Memory usage ${new Date(Date.now()).toLocaleString()}: ${Math.round(used.heapUsed / 1024 / 1024 * 100) / 100} MB`);
-    console.log(`Delete Process Heap memory available: ${Math.round(used.heapTotal / 1024 / 1024 * 100) / 100} MB`);
-  }, 30 * 1000);
+  console.log(`initialized function deleteProcess at ${new Date(Date.now()).toLocaleString()}`)
 
   deleteProcess.stdout.on("data", (data) => {
-    console.log(`Delete Process: ${data}`);
+    console.log(`deleteProcess Data: ${data}`);
   });
 
   deleteProcess.stderr.on("data", (data) => {
-    console.error(`Delete Process Error: ${data}`);
+    console.error(`deleteProcess Error: ${data}`);
   });
 
   deleteProcess.on("close", (code) => {
-    clearInterval(deleteMemoryLoggingInterval); // Stop memory logging interval when delete process is closed
-    console.log(`Delete Process closed with code at ${new Date(Date.now()).toLocaleString()} ${code}`);
+    console.log(`executeDeleteProcess: completed successfully at ${new Date(Date.now()).toLocaleString()} ${code}`);
     executeRedisProcess(); // Execute Redis process after delete process completion
   });
 }
@@ -103,23 +91,19 @@ cron.schedule("15 */3 * * *", executeUpdateProcess, {
 // });
 
 // Start the Express application
+
 const expressApp = spawn("node", ["index.js"]);
 
 expressApp.stdout.on("data", (data) => {
-  console.log(`Express App: ${data}`);
+  console.log(`Express App ${new Date(Date.now()).toLocaleString()}: ${data}`);
 });
 
 expressApp.stderr.on("data", (data) => {
-  console.error(`Express App Error: ${data}`);
+  console.error(`Express App Error ${new Date(Date.now()).toLocaleString()}: ${data}`);
 });
 
 expressApp.on("close", (code) => {
-  console.log(`Express App closed with code ${code}`);
+  console.log(`Express App closed with code ${code} at ${new Date(Date.now()).toLocaleString()}: ${data}`);
 });
 
-// Log memory usage every 15 minutes
-setInterval(() => {
-  const used = process.memoryUsage();
-  console.log(`Memory usage for the main application at ${new Date(Date.now()).toLocaleString()} : ${Math.round(used.heapUsed / 1024 / 1024 * 100) / 100} MB`);
-  console.log(`Heap memory available for the main application: ${Math.round(used.heapTotal / 1024 / 1024 * 100) / 100} MB`);
-}, 15 * 60 * 1000); 
+
