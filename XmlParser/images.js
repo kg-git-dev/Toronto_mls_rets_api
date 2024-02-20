@@ -42,8 +42,6 @@ const deleteMatchingFiles = async (directory, mlsIndex) => {
     }
 }
 
-
-
 module.exports = {
     getMatchingFiles,
     deleteMatchingFiles

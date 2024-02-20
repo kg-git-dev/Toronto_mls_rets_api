@@ -6,7 +6,7 @@ function executeRedisProcess() {
   // Construct the command to be executed
   const command = `redis-cli -n 0 FLUSHDB`;
 
-  console.log(`initialized function executeRedisProcess at ${new Date(Date.now()).toLocaleString()}`);
+  console.log(`${new Date(Date.now()).toLocaleString()}: initialized function executeRedisProcess}`);
 
   // Execute the Redis command with the constructed command via shell
   const redisProcess = spawn(command, {
@@ -14,7 +14,7 @@ function executeRedisProcess() {
     stdio: ["pipe", "pipe", "pipe"], // Redirect all stdio streams to pipes
   });
 
-  console.log(`executeRedisProcess: spawned at ${new Date(Date.now()).toLocaleString()}`);
+  console.log(`${new Date(Date.now()).toLocaleString()}: executeRedisProcess spawned`);
 
   let output = "";
 
@@ -25,37 +25,37 @@ function executeRedisProcess() {
 
   // Logging errors, if any, from Redis command
   redisProcess.stderr.on("data", (data) => {
-    console.error("fexecuteRedisProcess errors:", data.toString());
+    console.error(`${new Date(Date.now()).toLocaleString()}: executeRedisProcess errors: ${data}`);
   });
 
   redisProcess.on("close", (code) => {
     if (code === 0) {
-      console.log(`function executeRedisProcess: completed successfully at ${new Date(Date.now()).toLocaleString()}`);
-      console.log("executeRedisProcess output:", output); // Log captured output
+      console.log(`${new Date(Date.now()).toLocaleString()}: function executeRedisProcess: completed successfully}`);
+      console.log(`${new Date(Date.now()).toLocaleString()}: executeRedisProcess output: ${output}`); // Log captured output
     } else {
-      console.error("executeRedisProcess failed whiled closing");
+      console.error(`${new Date(Date.now()).toLocaleString()}: executeRedisProcess failed whiled closing`);
     }
   });
 }
 
 // Function to execute update process
 function executeUpdateProcess() {
-  console.log(`initialized function executeUpdateProcess at ${new Date(Date.now()).toLocaleString()}`)
+  console.log(`${new Date(Date.now()).toLocaleString()}: initialized function executeUpdateProcess}`)
 
   const updateProcess = spawn("node", ["./XmlParser/Residential/updateListing.js"]);
 
-  console.log(`executeUpdateProcess: spawned at ${new Date(Date.now()).toLocaleString()}`)
+  console.log(`${new Date(Date.now()).toLocaleString()}: executeUpdateProcess spawned}`)
 
   updateProcess.stdout.on("data", (data) => {
-    console.log(`executeUpdateProcess Data: ${data}`);
+    console.log(`${new Date(Date.now()).toLocaleString()}: executeUpdateProcess Data: ${data}`);
   });
 
   updateProcess.stderr.on("data", (data) => {
-    console.error(`executeUpdateProcess error: ${data}`);
+    console.error(`${new Date(Date.now()).toLocaleString()}: executeUpdateProcess error: ${data}`);
   });
 
   updateProcess.on("close", (code) => {
-    console.log(`executeUpdateProcess: completed successfully at ${new Date(Date.now()).toLocaleString()} ${code}`);
+    console.log(`${new Date(Date.now()).toLocaleString()}: executeUpdateProcess: completed successfully with code:} ${code}`);
     executeRedisProcess(); // Execute Redis process after update process completion
   });
 }
@@ -64,18 +64,18 @@ function executeUpdateProcess() {
 function executeDeleteProcess() {
   const deleteProcess = spawn("node", ["./XmlParser/Residential/deleteListing.js"]);
   
-  console.log(`initialized function deleteProcess at ${new Date(Date.now()).toLocaleString()}`)
+  console.log(`${new Date(Date.now()).toLocaleString()}:initialized function deleteProcess}`)
 
   deleteProcess.stdout.on("data", (data) => {
-    console.log(`deleteProcess Data: ${data}`);
+    console.log(`${new Date(Date.now()).toLocaleString()}: deleteProcess Data: ${data}`);
   });
 
   deleteProcess.stderr.on("data", (data) => {
-    console.error(`deleteProcess Error: ${data}`);
+    console.error(`${new Date(Date.now()).toLocaleString()}: deleteProcess Error: ${data}`);
   });
 
   deleteProcess.on("close", (code) => {
-    console.log(`executeDeleteProcess: completed successfully at ${new Date(Date.now()).toLocaleString()} ${code}`);
+    console.log(`${new Date(Date.now()).toLocaleString()}: executeDeleteProcess: completed successfully with code:} ${code}`);
     executeRedisProcess(); // Execute Redis process after delete process completion
   });
 }
@@ -103,7 +103,7 @@ expressApp.stderr.on("data", (data) => {
 });
 
 expressApp.on("close", (code) => {
-  console.log(`Express App closed with code ${code} at ${new Date(Date.now()).toLocaleString()}`);
+  console.log(`${new Date(Date.now()).toLocaleString()}: Express App closed with code: ${code}}`);
 });
 
 
