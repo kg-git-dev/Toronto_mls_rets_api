@@ -12,6 +12,7 @@ db.run(`
     MLS TEXT PRIMARY KEY,
     PhotoCount,
     PhotoLink JSON,
+    SearchAddress,
     AccessToProperty1,
     AccessToProperty2,
     Acreage,

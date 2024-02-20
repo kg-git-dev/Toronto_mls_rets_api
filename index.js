@@ -16,6 +16,9 @@ const residentialRoutes = require("./Routes/residential");
 //importing getLatLong routes
 const getLatLongRoutes = require("./Routes/getLatLong");
 
+//Importing property search routes
+const propertySearchRoutes = require("./Routes/propertySearch")
+
 // Create Redis client
 const redisClient = redis.createClient();
 redisClient.on("error", (error) => console.error(`Redis Error: ${error}`));
@@ -44,6 +47,9 @@ app.use("/residential", residentialRoutes);
 
 //Integrating get-lat-long-queue
 app.use("/get-lat-long", cors(), getLatLongRoutes);
+
+//Integreate search
+app.use("/propertySearch", propertySearchRoutes)
 
 app.listen(PORT, () => {
   console.log(`Server running on port: ${PORT}`);

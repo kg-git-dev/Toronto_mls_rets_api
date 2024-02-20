@@ -44,6 +44,17 @@ const parseXml = async (xmlPath, initialXmlObject, propertyType) => {
 
     parser.on("closetag", (nodeName) => {
       if (nodeName === propertyType) {
+        // Sanitize the searchAddress field before adding it to currentProperty
+        const searchAddress = [
+          currentProperty.Street,
+          currentProperty.StreetName,
+          currentProperty.StreetAbbreviation,
+          currentProperty.Area,
+          currentProperty.Province,
+          "Canada"
+        ].join(" ").toLowerCase().replace(/,/g, ""); // Concatenate and sanitize
+        currentProperty.SearchAddress = searchAddress;
+
         insidePropertyType = false;
         propertyObject.push(currentProperty);
         counter++;
