@@ -103,7 +103,7 @@ expressApp.stderr.on("data", (data) => {
 });
 
 expressApp.on("close", (code) => {
-  console.log(`Express App closed with code ${code} at ${new Date(Date.now()).toLocaleString()}: ${data}`);
+  console.log(`Express App closed with code ${code} at ${new Date(Date.now()).toLocaleString()}`);
 });
 
 

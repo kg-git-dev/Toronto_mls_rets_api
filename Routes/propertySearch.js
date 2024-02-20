@@ -10,6 +10,7 @@ const dbPath = path.resolve(
 );
 
 router.get("/", async (req, res) => {
+    const db = new sqlite3.Database(dbPath);
     try {
         let { searchTerm } = req.query;
         
@@ -33,8 +34,6 @@ router.get("/", async (req, res) => {
             WHERE ${placeholders}`; 
 
         // Execute the query with the sanitized search terms as parameters
-        const db = new sqlite3.Database(dbPath);
-
         const params = searchTerms.map(term => `%${term}%`);
 
         db.all(query, params, (err, rows) => {
@@ -69,6 +68,7 @@ router.get("/", async (req, res) => {
         console.error(e);
         res.status(500).send('Error at /searchAddress route');
     }
+    db.close();
 });
 
 module.exports = router;

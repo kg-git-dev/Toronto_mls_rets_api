@@ -8,7 +8,6 @@ const dbPath = path.resolve(
 const Properties = async (req, res) => {
   let results;
   const databaseQuery = req.databaseQuery;
-
   try {
     const cacheResults = await req.redisClient.get(databaseQuery);
 
@@ -18,6 +17,7 @@ const Properties = async (req, res) => {
     } else {
       SaveInRedis(req, res, databaseQuery);
     }
+
   } catch (err) {
     console.error("Error:", err);
     res.status(500).send("Internal Server Error");
@@ -25,8 +25,8 @@ const Properties = async (req, res) => {
 };
 
 const SaveInRedis = async (req, res, databaseQuery) => {
+  const db = new sqlite3.Database(dbPath);
   try {
-    const db = new sqlite3.Database(dbPath);
     db.all(databaseQuery, async (err, rows) => {
       if (err) {
         console.error("Error executing query:", err);
@@ -36,9 +36,11 @@ const SaveInRedis = async (req, res, databaseQuery) => {
         res.json({ type: "new", results: rows });
       }
     });
-
-    db.close();
-  } catch (err) {}
+  } catch (err) {
+    console.error("Error:", err);
+    res.status(500).send("Internal Server Error");
+  }
+  db.close();
 };
 
 module.exports = Properties;
