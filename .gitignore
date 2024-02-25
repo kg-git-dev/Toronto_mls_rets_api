@@ -5,10 +5,19 @@
 node_modules/
 package-lock.json
 
-# Ignore official data files
+# Ignore residential data files
 XmlParser/Data/Residential/initial_data.xml
 XmlParser/Data/Residential/initial_data.json
 XmlParser/Data/Residential/residentialDatabase.db
 XmlParser/Data/Residential/Photos/
+
+
+# Ignore commercial data files
+XmlParser/Data/Commercial/commercial_properties_database.db
+XmlParser/Data/Commercial/Photos/
+
+
+
+
 
 

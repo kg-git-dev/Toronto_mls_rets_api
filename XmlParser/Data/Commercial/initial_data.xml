@@ -1,0 +1,1480 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE RETS SYSTEM "http://retsau.torontomls.net:6103/RETS-20041001.dtd">
+<RETS ReplyCode="0" ReplyText="">
+<COUNT Records="552"/>
+<REData>
+<REProperties>
+	<CommercialProperty>
+		<Listing>
+			<AirConditioning>Y</AirConditioning>
+			<RemarksForClients>hree Storey Office Building With Attractive Glass Facade. The Building Is In Close Proximity To Highway 404,Highway 401 And Don Mills Subway Station At Fairview Mall. Suite 300 Is A Full Floor With Direct Elevator Access, Kitchenette, Boardrooms, Approximately 10 Private Offices And Numerous Workstations.</RemarksForClients>
+			<Address>259 Yorkland Rd</Address>
+			<Amps>null</Amps>
+			<AptUnit>300</AptUnit>
+			<Area>Toronto</Area>
+			<AreaCode>01</AreaCode>
+			<AreaInfluences1></AreaInfluences1>
+			<AreaInfluences2></AreaInfluences2>
+			<AssessmentYear>null</AssessmentYear>
+			<Washrooms>null</Washrooms>
+			<BaySizeWidthFeet>null</BaySizeWidthFeet>
+			<BaySizeWidthInches>null</BaySizeWidthInches>
+			<BaySizeLengthFeet>null</BaySizeLengthFeet>
+			<BaySizeLengthInches>null</BaySizeLengthInches>
+			<Basement1></Basement1>
+			<Use>Professional Office</Use>
+			<ClearHeightFeet>null</ClearHeightFeet>
+			<ClearHeightInches>null</ClearHeightInches>
+			<Chattels></Chattels>
+			<CommonAreaUpcharge>null</CommonAreaUpcharge>
+			<CommercialCondoFees>null</CommercialCondoFees>
+			<Community>Henry Farm</Community>
+			<CommunityCode>01.C15.0650</CommunityCode>
+			<Province>Ontario</Province>
+			<Crane></Crane>
+			<DirectionsCrossStreets>Dvp &amp; And Sheppard Ave E</DirectionsCrossStreets>
+			<DaysOpen></DaysOpen>
+			<BusinessBuildingName></BusinessBuildingName>
+			<LotDepth>0.00</LotDepth>
+			<DisplayAddressOnInternet>Y</DisplayAddressOnInternet>
+			<Elevator>Public</Elevator>
+			<Employees>null</Employees>
+			<ExpensesActualEstimated></ExpensesActualEstimated>
+			<Extras></Extras>
+			<FinancialStatement></FinancialStatement>
+			<Franchise></Franchise>
+			<Freestanding>Y</Freestanding>
+			<LotFront>0.00</LotFront>
+			<GarageType>Covered</GarageType>
+			<GrossIncomeSales>null</GrossIncomeSales>
+			<HeatExpenses>null</HeatExpenses>
+			<HeatType>Gas Forced Air Closd</HeatType>
+			<HoursOpen></HoursOpen>
+			<HydroExpense>null</HydroExpense>
+			<IdxUpdtedDt>2011-12-09 03:27:38.0</IdxUpdtedDt>
+			<IndustrialArea>null</IndustrialArea>
+			<IndustrialAreaCode></IndustrialAreaCode>
+			<InsuranceExpense>null</InsuranceExpense>
+			<EstimInventoryValuesAtCost>null</EstimInventoryValuesAtCost>
+			<LotIrregularities></LotIrregularities>
+			<LegalDescription></LegalDescription>
+			<LLBO></LLBO>
+			<LotBldgUnitCode>Lot</LotBldgUnitCode>
+			<LotSizeCode>Feet</LotSizeCode>
+			<ListPriceCode>Net Lease</ListPriceCode>
+			<ListPrice>16.00</ListPrice>
+			<Maintenance>null</Maintenance>
+			<ManagementExpense>null</ManagementExpense>
+			<MinimumRentalTerm>60</MinimumRentalTerm>
+			<MLS>C5990392</MLS>
+			<MapColumn>null</MapColumn>
+			<Map>null</Map>
+			<MapRow></MapRow>
+			<Municipality>Toronto</Municipality>
+			<MunicipalityCode>01.C15</MunicipalityCode>
+			<MunicipalityDistrict>Toronto C15</MunicipalityDistrict>
+			<NetIncomeBeforeDebt>null</NetIncomeBeforeDebt>
+			<OfficeAptArea>14009</OfficeAptArea>
+			<PossessionRemarks>Tba</PossessionRemarks>
+			<Occupancy>Vacant</Occupancy>
+			<OfficeAptAreaCode>Sq Ft</OfficeAptAreaCode>
+			<OperatingExpenses>null</OperatingExpenses>
+			<OtherExpenses>null</OtherExpenses>
+			<OutsideStorage></OutsideStorage>
+			<OutofAreaMunicipality></OutofAreaMunicipality>
+			<ParcelId></ParcelId>
+			<ParkingSpaces>null</ParkingSpaces>
+			<PerBuilding>null</PerBuilding>
+			<PercentageRent>null</PercentageRent>
+			<PixUpdtedDt>2023-05-14 11:05:04.0</PixUpdtedDt>
+			<Category>Office</Category>
+			<Rail></Rail>
+			<RetailArea>null</RetailArea>
+			<RetailAreaCode></RetailAreaCode>
+			<ListBrokerage>HOMELIFE NEW WORLD REALTY INC.</ListBrokerage>
+			<SaleLease>Lease</SaleLease>
+			<Seats>null</Seats>
+			<Sewers></Sewers>
+			<DriveInLevelShippingDoorsHeightFeet>null</DriveInLevelShippingDoorsHeightFeet>
+			<DriveInLevelShippingDoorsHeightInches>null</DriveInLevelShippingDoorsHeightInches>
+			<DriveInLevelShippingDoors>null</DriveInLevelShippingDoors>
+			<DriveInLevelShippingDoorsWidthFeet>null</DriveInLevelShippingDoorsWidthFeet>
+			<DriveInLevelShippingDoorsWidthInches>null</DriveInLevelShippingDoorsWidthInches>
+			<DoubleManShippingDoorsHeightFeet>null</DoubleManShippingDoorsHeightFeet>
+			<DoubleManShippingDoorsHeightInches>null</DoubleManShippingDoorsHeightInches>
+			<DoubleManShippingDoors>null</DoubleManShippingDoors>
+			<DoubleManShippingDoorsWidthFeet>null</DoubleManShippingDoorsWidthFeet>
+			<DoubleManShippingDoorsWidthInches>null</DoubleManShippingDoorsWidthInches>
+			<GradeLevelShippingDoorsHeightFeet>null</GradeLevelShippingDoorsHeightFeet>
+			<GradeLevelShippingDoorsHeightInches>null</GradeLevelShippingDoorsHeightInches>
+			<GradeLevelShippingDoors>null</GradeLevelShippingDoors>
+			<GradeLevelShippingDoorsWidthFeet>null</GradeLevelShippingDoorsWidthFeet>
+			<GradeLevelShippingDoorsWidthInches>null</GradeLevelShippingDoorsWidthInches>
+			<TruckLevelShippingDoorsHeightFeet>null</TruckLevelShippingDoorsHeightFeet>
+			<TruckLevelShippingDoorsHeightInches>null</TruckLevelShippingDoorsHeightInches>
+			<TruckLevelShippingDoors>null</TruckLevelShippingDoors>
+			<TruckLevelShippingDoorsWidthFeet>null</TruckLevelShippingDoorsWidthFeet>
+			<TruckLevelShippingDoorsWidthInches>null</TruckLevelShippingDoorsWidthInches>
+			<SoilTest></SoilTest>
+			<Sprinklers>Y</Sprinklers>
+			<StreetName>Yorkland</StreetName>
+			<StreetDirection></StreetDirection>
+			<Street>259</Street>
+			<StreetAbbreviation>Rd</StreetAbbreviation>
+			<Status>A</Status>
+			<Survey></Survey>
+			<Taxes>0.00</Taxes>
+			<TaxesExpense>null</TaxesExpense>
+			<MaximumRentalTerm>120</MaximumRentalTerm>
+			<TimestampSql>2024-02-20 17:03:51.0</TimestampSql>
+			<TotalArea>14009.00</TotalArea>
+			<TotalAreaCode>Sq Ft</TotalAreaCode>
+			<VirtualTourURL></VirtualTourURL>
+			<TrailerParkingSpots>null</TrailerParkingSpots>
+			<Assessment>null</Assessment>
+			<TypeOwnSrch>.1.</TypeOwnSrch>
+			<TypeOwn1Out>Office</TypeOwn1Out>
+			<TypeTaxes>N/A</TypeTaxes>
+			<Uffi></Uffi>
+			<Utilities>Y</Utilities>
+			<VacancyAllowance>null</VacancyAllowance>
+			<SellerPropertyInfoStatement>Y</SellerPropertyInfoStatement>
+			<Volts>null</Volts>
+			<VirtualTourUploadDate>null</VirtualTourUploadDate>
+			<Water>Municipal</Water>
+			<WaterExpense>null</WaterExpense>
+			<WaterSupplyTypes></WaterSupplyTypes>
+			<TaxYear>2023</TaxYear>
+			<ApproxAge></ApproxAge>
+			<YearExpenses>null</YearExpenses>
+			<PostalCode>M2J 0B5</PostalCode>
+			<Zoning>Office</Zoning>
+		</Listing>
+	</CommercialProperty>
+	<CommercialProperty>
+		<Listing>
+			<AirConditioning>Y</AirConditioning>
+			<RemarksForClients>lease for Basement area. Prime Street Front Retail Space, Located In The Heart Of Kensington Market. Very Busy/ High Traffic Location. Surrounded By Supermarket, Trendy Bars, Cafe Shops, Retail Stores. Approx 3000 Sf. Exiting Japanese Restaurant With Kitchen And 2 Washrooms. Suitable For Many Uses Retail/Show Room,Restauant. .</RemarksForClients>
+			<Address>374 College St</Address>
+			<Amps>null</Amps>
+			<AptUnit></AptUnit>
+			<Area>Toronto</Area>
+			<AreaCode>01</AreaCode>
+			<AreaInfluences1></AreaInfluences1>
+			<AreaInfluences2></AreaInfluences2>
+			<AssessmentYear>null</AssessmentYear>
+			<Washrooms>null</Washrooms>
+			<BaySizeWidthFeet>null</BaySizeWidthFeet>
+			<BaySizeWidthInches>null</BaySizeWidthInches>
+			<BaySizeLengthFeet>null</BaySizeLengthFeet>
+			<BaySizeLengthInches>null</BaySizeLengthInches>
+			<Basement1>Y</Basement1>
+			<Use>Retail Store Related</Use>
+			<ClearHeightFeet>null</ClearHeightFeet>
+			<ClearHeightInches>null</ClearHeightInches>
+			<Chattels>N</Chattels>
+			<CommonAreaUpcharge>null</CommonAreaUpcharge>
+			<CommercialCondoFees>null</CommercialCondoFees>
+			<Community>University</Community>
+			<CommunityCode>01.C01.0890</CommunityCode>
+			<Province>Ontario</Province>
+			<Crane></Crane>
+			<DirectionsCrossStreets>College/Spadina</DirectionsCrossStreets>
+			<DaysOpen></DaysOpen>
+			<BusinessBuildingName></BusinessBuildingName>
+			<LotDepth>120.00</LotDepth>
+			<DisplayAddressOnInternet>Y</DisplayAddressOnInternet>
+			<Elevator></Elevator>
+			<Employees>null</Employees>
+			<ExpensesActualEstimated></ExpensesActualEstimated>
+			<Extras></Extras>
+			<FinancialStatement>N</FinancialStatement>
+			<Franchise>N</Franchise>
+			<Freestanding>Y</Freestanding>
+			<LotFront>27.25</LotFront>
+			<GarageType>None</GarageType>
+			<GrossIncomeSales>null</GrossIncomeSales>
+			<HeatExpenses>null</HeatExpenses>
+			<HeatType>Gas Forced Air Closd</HeatType>
+			<HoursOpen></HoursOpen>
+			<HydroExpense>null</HydroExpense>
+			<IdxUpdtedDt>2017-07-12 12:03:55.0</IdxUpdtedDt>
+			<IndustrialArea>null</IndustrialArea>
+			<IndustrialAreaCode></IndustrialAreaCode>
+			<InsuranceExpense>null</InsuranceExpense>
+			<EstimInventoryValuesAtCost>null</EstimInventoryValuesAtCost>
+			<LotIrregularities></LotIrregularities>
+			<LegalDescription></LegalDescription>
+			<LLBO>N</LLBO>
+			<LotBldgUnitCode>Building</LotBldgUnitCode>
+			<LotSizeCode>Feet</LotSizeCode>
+			<ListPriceCode>Net Lease</ListPriceCode>
+			<ListPrice>8300.00</ListPrice>
+			<Maintenance>null</Maintenance>
+			<ManagementExpense>null</ManagementExpense>
+			<MinimumRentalTerm>60</MinimumRentalTerm>
+			<MLS>C6054604</MLS>
+			<MapColumn>null</MapColumn>
+			<Map>null</Map>
+			<MapRow></MapRow>
+			<Municipality>Toronto</Municipality>
+			<MunicipalityCode>01.C01</MunicipalityCode>
+			<MunicipalityDistrict>Toronto C01</MunicipalityDistrict>
+			<NetIncomeBeforeDebt>null</NetIncomeBeforeDebt>
+			<OfficeAptArea>null</OfficeAptArea>
+			<PossessionRemarks>Tba</PossessionRemarks>
+			<Occupancy>Owner</Occupancy>
+			<OfficeAptAreaCode></OfficeAptAreaCode>
+			<OperatingExpenses>null</OperatingExpenses>
+			<OtherExpenses>null</OtherExpenses>
+			<OutsideStorage></OutsideStorage>
+			<OutofAreaMunicipality></OutofAreaMunicipality>
+			<ParcelId></ParcelId>
+			<ParkingSpaces>null</ParkingSpaces>
+			<PerBuilding>null</PerBuilding>
+			<PercentageRent>null</PercentageRent>
+			<PixUpdtedDt>2023-05-26 19:10:12.0</PixUpdtedDt>
+			<Category>Retail</Category>
+			<Rail></Rail>
+			<RetailArea>3000</RetailArea>
+			<RetailAreaCode>Sq Ft</RetailAreaCode>
+			<ListBrokerage>HOME LEGEND REALTY INC.</ListBrokerage>
+			<SaleLease>Lease</SaleLease>
+			<Seats>null</Seats>
+			<Sewers></Sewers>
+			<DriveInLevelShippingDoorsHeightFeet>null</DriveInLevelShippingDoorsHeightFeet>
+			<DriveInLevelShippingDoorsHeightInches>null</DriveInLevelShippingDoorsHeightInches>
+			<DriveInLevelShippingDoors>null</DriveInLevelShippingDoors>
+			<DriveInLevelShippingDoorsWidthFeet>null</DriveInLevelShippingDoorsWidthFeet>
+			<DriveInLevelShippingDoorsWidthInches>null</DriveInLevelShippingDoorsWidthInches>
+			<DoubleManShippingDoorsHeightFeet>null</DoubleManShippingDoorsHeightFeet>
+			<DoubleManShippingDoorsHeightInches>null</DoubleManShippingDoorsHeightInches>
+			<DoubleManShippingDoors>null</DoubleManShippingDoors>
+			<DoubleManShippingDoorsWidthFeet>null</DoubleManShippingDoorsWidthFeet>
+			<DoubleManShippingDoorsWidthInches>null</DoubleManShippingDoorsWidthInches>
+			<GradeLevelShippingDoorsHeightFeet>null</GradeLevelShippingDoorsHeightFeet>
+			<GradeLevelShippingDoorsHeightInches>null</GradeLevelShippingDoorsHeightInches>
+			<GradeLevelShippingDoors>null</GradeLevelShippingDoors>
+			<GradeLevelShippingDoorsWidthFeet>null</GradeLevelShippingDoorsWidthFeet>
+			<GradeLevelShippingDoorsWidthInches>null</GradeLevelShippingDoorsWidthInches>
+			<TruckLevelShippingDoorsHeightFeet>null</TruckLevelShippingDoorsHeightFeet>
+			<TruckLevelShippingDoorsHeightInches>null</TruckLevelShippingDoorsHeightInches>
+			<TruckLevelShippingDoors>null</TruckLevelShippingDoors>
+			<TruckLevelShippingDoorsWidthFeet>null</TruckLevelShippingDoorsWidthFeet>
+			<TruckLevelShippingDoorsWidthInches>null</TruckLevelShippingDoorsWidthInches>
+			<SoilTest></SoilTest>
+			<Sprinklers>N</Sprinklers>
+			<StreetName>College</StreetName>
+			<StreetDirection></StreetDirection>
+			<Street>374</Street>
+			<StreetAbbreviation>St</StreetAbbreviation>
+			<Status>A</Status>
+			<Survey></Survey>
+			<Taxes>2100.00</Taxes>
+			<TaxesExpense>null</TaxesExpense>
+			<MaximumRentalTerm>120</MaximumRentalTerm>
+			<TimestampSql>2024-02-20 19:33:50.0</TimestampSql>
+			<TotalArea>3000.00</TotalArea>
+			<TotalAreaCode>Sq Ft</TotalAreaCode>
+			<VirtualTourURL></VirtualTourURL>
+			<TrailerParkingSpots>null</TrailerParkingSpots>
+			<Assessment>null</Assessment>
+			<TypeOwnSrch>.Q.</TypeOwnSrch>
+			<TypeOwn1Out>Commercial/Retail</TypeOwn1Out>
+			<TypeTaxes>T.M.I.</TypeTaxes>
+			<Uffi></Uffi>
+			<Utilities>Y</Utilities>
+			<VacancyAllowance>null</VacancyAllowance>
+			<SellerPropertyInfoStatement>N</SellerPropertyInfoStatement>
+			<Volts>null</Volts>
+			<VirtualTourUploadDate>null</VirtualTourUploadDate>
+			<Water>Municipal</Water>
+			<WaterExpense>null</WaterExpense>
+			<WaterSupplyTypes></WaterSupplyTypes>
+			<TaxYear>2022</TaxYear>
+			<ApproxAge></ApproxAge>
+			<YearExpenses>null</YearExpenses>
+			<PostalCode>M5S 2M8</PostalCode>
+			<Zoning>Commercial</Zoning>
+		</Listing>
+	</CommercialProperty>
+	<CommercialProperty>
+		<Listing>
+			<AirConditioning>Y</AirConditioning>
+			<RemarksForClients>High Traffic, Great Block Between Belsize &amp; Manor, Excellent Visibility Storefront, Large Windows Suitable For Retail Or Professional Use, Greal Walk By Traffic.1817 Sq Feet Retail Space .One Washroom,One Kitchen. Lots Of Metered Street Parking.use as an office ,health,beauty store,hair salon &amp; retail store.</RemarksForClients>
+			<Address>539A Mount Pleasant Rd</Address>
+			<Amps>null</Amps>
+			<AptUnit>2nd Fl</AptUnit>
+			<Area>Toronto</Area>
+			<AreaCode>01</AreaCode>
+			<AreaInfluences1></AreaInfluences1>
+			<AreaInfluences2></AreaInfluences2>
+			<AssessmentYear>null</AssessmentYear>
+			<Washrooms>null</Washrooms>
+			<BaySizeWidthFeet>null</BaySizeWidthFeet>
+			<BaySizeWidthInches>null</BaySizeWidthInches>
+			<BaySizeLengthFeet>null</BaySizeLengthFeet>
+			<BaySizeLengthInches>null</BaySizeLengthInches>
+			<Basement1></Basement1>
+			<Use>Retail Store Related</Use>
+			<ClearHeightFeet>null</ClearHeightFeet>
+			<ClearHeightInches>null</ClearHeightInches>
+			<Chattels></Chattels>
+			<CommonAreaUpcharge>null</CommonAreaUpcharge>
+			<CommercialCondoFees>null</CommercialCondoFees>
+			<Community>Mount Pleasant East</Community>
+			<CommunityCode>01.C10.0770</CommunityCode>
+			<Province>Ontario</Province>
+			<Crane></Crane>
+			<DirectionsCrossStreets>Mt. Pleasant Rd. / Belsize Dr.</DirectionsCrossStreets>
+			<DaysOpen></DaysOpen>
+			<BusinessBuildingName></BusinessBuildingName>
+			<LotDepth>113.50</LotDepth>
+			<DisplayAddressOnInternet>Y</DisplayAddressOnInternet>
+			<Elevator></Elevator>
+			<Employees>null</Employees>
+			<ExpensesActualEstimated></ExpensesActualEstimated>
+			<Extras>$3,000.00 Net Rent Plus T.M.I. Approx. $729.17 Per Month. Tenant Pays Hydro(Separate meter) &amp; 1/3 of water &amp; 1/2 of Heat.Tenant Pay Content Insurance.</Extras>
+			<FinancialStatement></FinancialStatement>
+			<Franchise></Franchise>
+			<Freestanding>N</Freestanding>
+			<LotFront>21.25</LotFront>
+			<GarageType>None</GarageType>
+			<GrossIncomeSales>null</GrossIncomeSales>
+			<HeatExpenses>null</HeatExpenses>
+			<HeatType>Gas Forced Air Closd</HeatType>
+			<HoursOpen></HoursOpen>
+			<HydroExpense>null</HydroExpense>
+			<IdxUpdtedDt>2012-04-06 06:22:08.0</IdxUpdtedDt>
+			<IndustrialArea>null</IndustrialArea>
+			<IndustrialAreaCode></IndustrialAreaCode>
+			<InsuranceExpense>null</InsuranceExpense>
+			<EstimInventoryValuesAtCost>null</EstimInventoryValuesAtCost>
+			<LotIrregularities></LotIrregularities>
+			<LegalDescription></LegalDescription>
+			<LLBO></LLBO>
+			<LotBldgUnitCode>Lot</LotBldgUnitCode>
+			<LotSizeCode>Feet</LotSizeCode>
+			<ListPriceCode>Net Lease</ListPriceCode>
+			<ListPrice>3000.00</ListPrice>
+			<Maintenance>null</Maintenance>
+			<ManagementExpense>null</ManagementExpense>
+			<MinimumRentalTerm>36</MinimumRentalTerm>
+			<MLS>C7260760</MLS>
+			<MapColumn>null</MapColumn>
+			<Map>null</Map>
+			<MapRow></MapRow>
+			<Municipality>Toronto</Municipality>
+			<MunicipalityCode>01.C10</MunicipalityCode>
+			<MunicipalityDistrict>Toronto C10</MunicipalityDistrict>
+			<NetIncomeBeforeDebt>null</NetIncomeBeforeDebt>
+			<OfficeAptArea>null</OfficeAptArea>
+			<PossessionRemarks>TBA</PossessionRemarks>
+			<Occupancy>Vacant</Occupancy>
+			<OfficeAptAreaCode></OfficeAptAreaCode>
+			<OperatingExpenses>null</OperatingExpenses>
+			<OtherExpenses>null</OtherExpenses>
+			<OutsideStorage></OutsideStorage>
+			<OutofAreaMunicipality></OutofAreaMunicipality>
+			<ParcelId></ParcelId>
+			<ParkingSpaces>null</ParkingSpaces>
+			<PerBuilding>null</PerBuilding>
+			<PercentageRent>null</PercentageRent>
+			<PixUpdtedDt>2023-11-06 11:16:05.0</PixUpdtedDt>
+			<Category>Retail</Category>
+			<Rail></Rail>
+			<RetailArea>1817</RetailArea>
+			<RetailAreaCode>Sq Ft</RetailAreaCode>
+			<ListBrokerage>HOMELIFE/BAYVIEW REALTY INC.</ListBrokerage>
+			<SaleLease>Lease</SaleLease>
+			<Seats>null</Seats>
+			<Sewers></Sewers>
+			<DriveInLevelShippingDoorsHeightFeet>null</DriveInLevelShippingDoorsHeightFeet>
+			<DriveInLevelShippingDoorsHeightInches>null</DriveInLevelShippingDoorsHeightInches>
+			<DriveInLevelShippingDoors>null</DriveInLevelShippingDoors>
+			<DriveInLevelShippingDoorsWidthFeet>null</DriveInLevelShippingDoorsWidthFeet>
+			<DriveInLevelShippingDoorsWidthInches>null</DriveInLevelShippingDoorsWidthInches>
+			<DoubleManShippingDoorsHeightFeet>null</DoubleManShippingDoorsHeightFeet>
+			<DoubleManShippingDoorsHeightInches>null</DoubleManShippingDoorsHeightInches>
+			<DoubleManShippingDoors>null</DoubleManShippingDoors>
+			<DoubleManShippingDoorsWidthFeet>null</DoubleManShippingDoorsWidthFeet>
+			<DoubleManShippingDoorsWidthInches>null</DoubleManShippingDoorsWidthInches>
+			<GradeLevelShippingDoorsHeightFeet>null</GradeLevelShippingDoorsHeightFeet>
+			<GradeLevelShippingDoorsHeightInches>null</GradeLevelShippingDoorsHeightInches>
+			<GradeLevelShippingDoors>null</GradeLevelShippingDoors>
+			<GradeLevelShippingDoorsWidthFeet>null</GradeLevelShippingDoorsWidthFeet>
+			<GradeLevelShippingDoorsWidthInches>null</GradeLevelShippingDoorsWidthInches>
+			<TruckLevelShippingDoorsHeightFeet>null</TruckLevelShippingDoorsHeightFeet>
+			<TruckLevelShippingDoorsHeightInches>null</TruckLevelShippingDoorsHeightInches>
+			<TruckLevelShippingDoors>null</TruckLevelShippingDoors>
+			<TruckLevelShippingDoorsWidthFeet>null</TruckLevelShippingDoorsWidthFeet>
+			<TruckLevelShippingDoorsWidthInches>null</TruckLevelShippingDoorsWidthInches>
+			<SoilTest></SoilTest>
+			<Sprinklers>N</Sprinklers>
+			<StreetName>Mount Pleasant</StreetName>
+			<StreetDirection></StreetDirection>
+			<Street>539A</Street>
+			<StreetAbbreviation>Rd</StreetAbbreviation>
+			<Status>A</Status>
+			<Survey></Survey>
+			<Taxes>729.17</Taxes>
+			<TaxesExpense>null</TaxesExpense>
+			<MaximumRentalTerm>60</MaximumRentalTerm>
+			<TimestampSql>2024-02-21 16:09:46.0</TimestampSql>
+			<TotalArea>1817.00</TotalArea>
+			<TotalAreaCode>Sq Ft</TotalAreaCode>
+			<VirtualTourURL></VirtualTourURL>
+			<TrailerParkingSpots>null</TrailerParkingSpots>
+			<Assessment>null</Assessment>
+			<TypeOwnSrch>.Q.</TypeOwnSrch>
+			<TypeOwn1Out>Commercial/Retail</TypeOwn1Out>
+			<TypeTaxes>T.M.I.</TypeTaxes>
+			<Uffi></Uffi>
+			<Utilities>N</Utilities>
+			<VacancyAllowance>null</VacancyAllowance>
+			<SellerPropertyInfoStatement>N</SellerPropertyInfoStatement>
+			<Volts>null</Volts>
+			<VirtualTourUploadDate>null</VirtualTourUploadDate>
+			<Water>Municipal</Water>
+			<WaterExpense>null</WaterExpense>
+			<WaterSupplyTypes></WaterSupplyTypes>
+			<TaxYear>2023</TaxYear>
+			<ApproxAge></ApproxAge>
+			<YearExpenses>null</YearExpenses>
+			<PostalCode>M4S 2M5</PostalCode>
+			<Zoning>Commercial</Zoning>
+		</Listing>
+	</CommercialProperty>
+	<CommercialProperty>
+		<Listing>
+			<AirConditioning>Part</AirConditioning>
+			<RemarksForClients>Free Standing Storage/Warehouse Space Within A 2350 Sq Ft Lot On The South Side Of Dundas.  Access Lane Way Off Of Federal St. Double Garage Entry Door And Side Walk-In Door. High Ceilings. Previously Used To Cool And Store Produce In 3 Separated Areas. Two Walk-In Fridges Not Currently In Use, But Can Be Returned To Former State/Or Envision Your Own Needs In 3 Partitioned Spaces. The Entry Space Off Double Garage Door Can House Cars, Loading Equipment, Forklifts, Etc &amp; Then There Are Two Additional Spaces. Unique Aspects Inc: Electrical Panel, Cooling Compressors, Walk-In Fridges, TBD/N. Lot Narrows to the East. Expand Your Business Storage Space Here.</RemarksForClients>
+			<Address>1451 Dundas Rear St</Address>
+			<Amps>null</Amps>
+			<AptUnit></AptUnit>
+			<Area>Toronto</Area>
+			<AreaCode>01</AreaCode>
+			<AreaInfluences1>Public Transit</AreaInfluences1>
+			<AreaInfluences2></AreaInfluences2>
+			<AssessmentYear>null</AssessmentYear>
+			<Washrooms>null</Washrooms>
+			<BaySizeWidthFeet>null</BaySizeWidthFeet>
+			<BaySizeWidthInches>null</BaySizeWidthInches>
+			<BaySizeLengthFeet>null</BaySizeLengthFeet>
+			<BaySizeLengthInches>null</BaySizeLengthInches>
+			<Basement1>N</Basement1>
+			<Use>Warehousing</Use>
+			<ClearHeightFeet>13</ClearHeightFeet>
+			<ClearHeightInches>0</ClearHeightInches>
+			<Chattels></Chattels>
+			<CommonAreaUpcharge>null</CommonAreaUpcharge>
+			<CommercialCondoFees>null</CommercialCondoFees>
+			<Community>Little Portugal</Community>
+			<CommunityCode>01.C01.0980</CommunityCode>
+			<Province>Ontario</Province>
+			<Crane></Crane>
+			<DirectionsCrossStreets>Between Dufferin &amp; Dovercourt</DirectionsCrossStreets>
+			<DaysOpen>6</DaysOpen>
+			<BusinessBuildingName></BusinessBuildingName>
+			<LotDepth>45.00</LotDepth>
+			<DisplayAddressOnInternet>Y</DisplayAddressOnInternet>
+			<Elevator>None</Elevator>
+			<Employees>null</Employees>
+			<ExpensesActualEstimated></ExpensesActualEstimated>
+			<Extras></Extras>
+			<FinancialStatement>N</FinancialStatement>
+			<Franchise></Franchise>
+			<Freestanding>Y</Freestanding>
+			<LotFront>47.00</LotFront>
+			<GarageType>Double Detached</GarageType>
+			<GrossIncomeSales>null</GrossIncomeSales>
+			<HeatExpenses>null</HeatExpenses>
+			<HeatType>Fan Coil</HeatType>
+			<HoursOpen>7Am-5Pm</HoursOpen>
+			<HydroExpense>null</HydroExpense>
+			<IdxUpdtedDt>2015-02-03 11:50:23.0</IdxUpdtedDt>
+			<IndustrialArea>1000</IndustrialArea>
+			<IndustrialAreaCode>Sq Ft</IndustrialAreaCode>
+			<InsuranceExpense>null</InsuranceExpense>
+			<EstimInventoryValuesAtCost>null</EstimInventoryValuesAtCost>
+			<LotIrregularities>Pie Shape-Portion- Self Lane Way</LotIrregularities>
+			<LegalDescription>PT LT 9-10 PL D6 Toronto Parts 2, 3 &amp; 6 Toronto</LegalDescription>
+			<LLBO>N</LLBO>
+			<LotBldgUnitCode>Building</LotBldgUnitCode>
+			<LotSizeCode>Feet</LotSizeCode>
+			<ListPriceCode>Net Lease</ListPriceCode>
+			<ListPrice>1566.00</ListPrice>
+			<Maintenance>null</Maintenance>
+			<ManagementExpense>null</ManagementExpense>
+			<MinimumRentalTerm>60</MinimumRentalTerm>
+			<MLS>C7277652</MLS>
+			<MapColumn>null</MapColumn>
+			<Map>null</Map>
+			<MapRow></MapRow>
+			<Municipality>Toronto</Municipality>
+			<MunicipalityCode>01.C01</MunicipalityCode>
+			<MunicipalityDistrict>Toronto C01</MunicipalityDistrict>
+			<NetIncomeBeforeDebt>null</NetIncomeBeforeDebt>
+			<OfficeAptArea>null</OfficeAptArea>
+			<PossessionRemarks></PossessionRemarks>
+			<Occupancy>Tenant</Occupancy>
+			<OfficeAptAreaCode></OfficeAptAreaCode>
+			<OperatingExpenses>null</OperatingExpenses>
+			<OtherExpenses>null</OtherExpenses>
+			<OutsideStorage></OutsideStorage>
+			<OutofAreaMunicipality></OutofAreaMunicipality>
+			<ParcelId></ParcelId>
+			<ParkingSpaces>null</ParkingSpaces>
+			<PerBuilding>null</PerBuilding>
+			<PercentageRent>null</PercentageRent>
+			<PixUpdtedDt>2023-11-06 13:56:52.0</PixUpdtedDt>
+			<Category>Free Standing</Category>
+			<Rail>N</Rail>
+			<RetailArea>null</RetailArea>
+			<RetailAreaCode></RetailAreaCode>
+			<ListBrokerage>ROYAL LEPAGE WEST REALTY GROUP LTD.</ListBrokerage>
+			<SaleLease>Lease</SaleLease>
+			<Seats>null</Seats>
+			<Sewers>Sanitary</Sewers>
+			<DriveInLevelShippingDoorsHeightFeet>null</DriveInLevelShippingDoorsHeightFeet>
+			<DriveInLevelShippingDoorsHeightInches>null</DriveInLevelShippingDoorsHeightInches>
+			<DriveInLevelShippingDoors>1</DriveInLevelShippingDoors>
+			<DriveInLevelShippingDoorsWidthFeet>null</DriveInLevelShippingDoorsWidthFeet>
+			<DriveInLevelShippingDoorsWidthInches>null</DriveInLevelShippingDoorsWidthInches>
+			<DoubleManShippingDoorsHeightFeet>null</DoubleManShippingDoorsHeightFeet>
+			<DoubleManShippingDoorsHeightInches>null</DoubleManShippingDoorsHeightInches>
+			<DoubleManShippingDoors>0</DoubleManShippingDoors>
+			<DoubleManShippingDoorsWidthFeet>null</DoubleManShippingDoorsWidthFeet>
+			<DoubleManShippingDoorsWidthInches>null</DoubleManShippingDoorsWidthInches>
+			<GradeLevelShippingDoorsHeightFeet>null</GradeLevelShippingDoorsHeightFeet>
+			<GradeLevelShippingDoorsHeightInches>null</GradeLevelShippingDoorsHeightInches>
+			<GradeLevelShippingDoors>1</GradeLevelShippingDoors>
+			<GradeLevelShippingDoorsWidthFeet>null</GradeLevelShippingDoorsWidthFeet>
+			<GradeLevelShippingDoorsWidthInches>null</GradeLevelShippingDoorsWidthInches>
+			<TruckLevelShippingDoorsHeightFeet>null</TruckLevelShippingDoorsHeightFeet>
+			<TruckLevelShippingDoorsHeightInches>null</TruckLevelShippingDoorsHeightInches>
+			<TruckLevelShippingDoors>0</TruckLevelShippingDoors>
+			<TruckLevelShippingDoorsWidthFeet>null</TruckLevelShippingDoorsWidthFeet>
+			<TruckLevelShippingDoorsWidthInches>null</TruckLevelShippingDoorsWidthInches>
+			<SoilTest></SoilTest>
+			<Sprinklers>N</Sprinklers>
+			<StreetName>Dundas Rear</StreetName>
+			<StreetDirection></StreetDirection>
+			<Street>1451</Street>
+			<StreetAbbreviation>St</StreetAbbreviation>
+			<Status>A</Status>
+			<Survey></Survey>
+			<Taxes>278.00</Taxes>
+			<TaxesExpense>null</TaxesExpense>
+			<MaximumRentalTerm>120</MaximumRentalTerm>
+			<TimestampSql>2024-02-20 12:34:04.0</TimestampSql>
+			<TotalArea>2350.00</TotalArea>
+			<TotalAreaCode>Sq Ft Divisible</TotalAreaCode>
+			<VirtualTourURL></VirtualTourURL>
+			<TrailerParkingSpots>null</TrailerParkingSpots>
+			<Assessment>null</Assessment>
+			<TypeOwnSrch>.I.</TypeOwnSrch>
+			<TypeOwn1Out>Industrial</TypeOwn1Out>
+			<TypeTaxes>T.M.I.</TypeTaxes>
+			<Uffi></Uffi>
+			<Utilities>A</Utilities>
+			<VacancyAllowance>null</VacancyAllowance>
+			<SellerPropertyInfoStatement>N</SellerPropertyInfoStatement>
+			<Volts>600</Volts>
+			<VirtualTourUploadDate>null</VirtualTourUploadDate>
+			<Water>None</Water>
+			<WaterExpense>null</WaterExpense>
+			<WaterSupplyTypes></WaterSupplyTypes>
+			<TaxYear>2023</TaxYear>
+			<ApproxAge>31-50</ApproxAge>
+			<YearExpenses>null</YearExpenses>
+			<PostalCode>M6J 1Y7</PostalCode>
+			<Zoning>R (dt*804)</Zoning>
+		</Listing>
+	</CommercialProperty>
+	<CommercialProperty>
+		<Listing>
+			<AirConditioning>Y</AirConditioning>
+			<RemarksForClients>High Exposure Flagship Opportunity To Occupy A Total 5000 Sqft On Dundas St W. This Storefront Has Been occupied By The Same Business For 25 Years. Looking For Usages In Retail, Professional Offices, Gallery, Studio, Etc. Double Lot Frontage Exposure (25X100). 3 Access Staircases To Lower Level And 3 Additional Entry/Exits to the Exterior Of The Building. High Ceilings. Envision An Open Concept Space Of This Magnitude. Unique Aspects Inc: Plumbing Throughout, 600 Volts, Cooling Compressors, Walk-In Fridges, TBD/N. Dedicated Meters For Hydro And Gas. Expand Your Business Success Story Here.</RemarksForClients>
+			<Address>1453 Dundas St W</Address>
+			<Amps>null</Amps>
+			<AptUnit></AptUnit>
+			<Area>Toronto</Area>
+			<AreaCode>01</AreaCode>
+			<AreaInfluences1>Public Transit</AreaInfluences1>
+			<AreaInfluences2></AreaInfluences2>
+			<AssessmentYear>null</AssessmentYear>
+			<Washrooms>1</Washrooms>
+			<BaySizeWidthFeet>null</BaySizeWidthFeet>
+			<BaySizeWidthInches>null</BaySizeWidthInches>
+			<BaySizeLengthFeet>null</BaySizeLengthFeet>
+			<BaySizeLengthInches>null</BaySizeLengthInches>
+			<Basement1>Y</Basement1>
+			<Use>Retail Store Related</Use>
+			<ClearHeightFeet>null</ClearHeightFeet>
+			<ClearHeightInches>null</ClearHeightInches>
+			<Chattels></Chattels>
+			<CommonAreaUpcharge>null</CommonAreaUpcharge>
+			<CommercialCondoFees>null</CommercialCondoFees>
+			<Community>Little Portugal</Community>
+			<CommunityCode>01.C01.0980</CommunityCode>
+			<Province>Ontario</Province>
+			<Crane></Crane>
+			<DirectionsCrossStreets>Dundas (Dufferin &amp; Dovercourt)</DirectionsCrossStreets>
+			<DaysOpen>6</DaysOpen>
+			<BusinessBuildingName></BusinessBuildingName>
+			<LotDepth>100.00</LotDepth>
+			<DisplayAddressOnInternet>Y</DisplayAddressOnInternet>
+			<Elevator>None</Elevator>
+			<Employees>null</Employees>
+			<ExpensesActualEstimated></ExpensesActualEstimated>
+			<Extras>Good Value At $18.48/SqFt Net Lease For A Total of 5000 SqFt Of Usable Space On Dundas. TMI $2207/month.</Extras>
+			<FinancialStatement>N</FinancialStatement>
+			<Franchise></Franchise>
+			<Freestanding>Y</Freestanding>
+			<LotFront>25.00</LotFront>
+			<GarageType>Double Detached</GarageType>
+			<GrossIncomeSales>null</GrossIncomeSales>
+			<HeatExpenses>null</HeatExpenses>
+			<HeatType>Gas Forced Air Closd</HeatType>
+			<HoursOpen>7Am-5Pm</HoursOpen>
+			<HydroExpense>null</HydroExpense>
+			<IdxUpdtedDt>2015-02-03 11:50:23.0</IdxUpdtedDt>
+			<IndustrialArea>null</IndustrialArea>
+			<IndustrialAreaCode>Sq Ft</IndustrialAreaCode>
+			<InsuranceExpense>null</InsuranceExpense>
+			<EstimInventoryValuesAtCost>null</EstimInventoryValuesAtCost>
+			<LotIrregularities>1453 &amp; 1455 Dundas (Double Lot)</LotIrregularities>
+			<LegalDescription>LT 1 PL D216 ; PT LT 2 PL D216 Toronto</LegalDescription>
+			<LLBO>N</LLBO>
+			<LotBldgUnitCode>Unit</LotBldgUnitCode>
+			<LotSizeCode>Feet</LotSizeCode>
+			<ListPriceCode>Net Lease</ListPriceCode>
+			<ListPrice>7700.00</ListPrice>
+			<Maintenance>null</Maintenance>
+			<ManagementExpense>null</ManagementExpense>
+			<MinimumRentalTerm>60</MinimumRentalTerm>
+			<MLS>C7277668</MLS>
+			<MapColumn>null</MapColumn>
+			<Map>null</Map>
+			<MapRow></MapRow>
+			<Municipality>Toronto</Municipality>
+			<MunicipalityCode>01.C01</MunicipalityCode>
+			<MunicipalityDistrict>Toronto C01</MunicipalityDistrict>
+			<NetIncomeBeforeDebt>null</NetIncomeBeforeDebt>
+			<OfficeAptArea>2500</OfficeAptArea>
+			<PossessionRemarks></PossessionRemarks>
+			<Occupancy>Tenant</Occupancy>
+			<OfficeAptAreaCode>Sq Ft</OfficeAptAreaCode>
+			<OperatingExpenses>null</OperatingExpenses>
+			<OtherExpenses>null</OtherExpenses>
+			<OutsideStorage></OutsideStorage>
+			<OutofAreaMunicipality></OutofAreaMunicipality>
+			<ParcelId>212960108</ParcelId>
+			<ParkingSpaces>null</ParkingSpaces>
+			<PerBuilding>null</PerBuilding>
+			<PercentageRent>null</PercentageRent>
+			<PixUpdtedDt>2023-11-06 15:03:04.0</PixUpdtedDt>
+			<Category>Retail</Category>
+			<Rail>N</Rail>
+			<RetailArea>2500</RetailArea>
+			<RetailAreaCode>Sq Ft</RetailAreaCode>
+			<ListBrokerage>ROYAL LEPAGE WEST REALTY GROUP LTD.</ListBrokerage>
+			<SaleLease>Lease</SaleLease>
+			<Seats>null</Seats>
+			<Sewers>Sanitary</Sewers>
+			<DriveInLevelShippingDoorsHeightFeet>null</DriveInLevelShippingDoorsHeightFeet>
+			<DriveInLevelShippingDoorsHeightInches>null</DriveInLevelShippingDoorsHeightInches>
+			<DriveInLevelShippingDoors>0</DriveInLevelShippingDoors>
+			<DriveInLevelShippingDoorsWidthFeet>null</DriveInLevelShippingDoorsWidthFeet>
+			<DriveInLevelShippingDoorsWidthInches>null</DriveInLevelShippingDoorsWidthInches>
+			<DoubleManShippingDoorsHeightFeet>null</DoubleManShippingDoorsHeightFeet>
+			<DoubleManShippingDoorsHeightInches>null</DoubleManShippingDoorsHeightInches>
+			<DoubleManShippingDoors>-1</DoubleManShippingDoors>
+			<DoubleManShippingDoorsWidthFeet>null</DoubleManShippingDoorsWidthFeet>
+			<DoubleManShippingDoorsWidthInches>null</DoubleManShippingDoorsWidthInches>
+			<GradeLevelShippingDoorsHeightFeet>null</GradeLevelShippingDoorsHeightFeet>
+			<GradeLevelShippingDoorsHeightInches>null</GradeLevelShippingDoorsHeightInches>
+			<GradeLevelShippingDoors>2</GradeLevelShippingDoors>
+			<GradeLevelShippingDoorsWidthFeet>null</GradeLevelShippingDoorsWidthFeet>
+			<GradeLevelShippingDoorsWidthInches>null</GradeLevelShippingDoorsWidthInches>
+			<TruckLevelShippingDoorsHeightFeet>null</TruckLevelShippingDoorsHeightFeet>
+			<TruckLevelShippingDoorsHeightInches>null</TruckLevelShippingDoorsHeightInches>
+			<TruckLevelShippingDoors>1</TruckLevelShippingDoors>
+			<TruckLevelShippingDoorsWidthFeet>null</TruckLevelShippingDoorsWidthFeet>
+			<TruckLevelShippingDoorsWidthInches>null</TruckLevelShippingDoorsWidthInches>
+			<SoilTest></SoilTest>
+			<Sprinklers>Part</Sprinklers>
+			<StreetName>Dundas</StreetName>
+			<StreetDirection>W</StreetDirection>
+			<Street>1453</Street>
+			<StreetAbbreviation>St</StreetAbbreviation>
+			<Status>A</Status>
+			<Survey></Survey>
+			<Taxes>2207.00</Taxes>
+			<TaxesExpense>null</TaxesExpense>
+			<MaximumRentalTerm>120</MaximumRentalTerm>
+			<TimestampSql>2024-02-20 12:35:52.0</TimestampSql>
+			<TotalArea>5000.00</TotalArea>
+			<TotalAreaCode>Sq Ft</TotalAreaCode>
+			<VirtualTourURL></VirtualTourURL>
+			<TrailerParkingSpots>null</TrailerParkingSpots>
+			<Assessment>null</Assessment>
+			<TypeOwnSrch>.Q.</TypeOwnSrch>
+			<TypeOwn1Out>Commercial/Retail</TypeOwn1Out>
+			<TypeTaxes>T.M.I.</TypeTaxes>
+			<Uffi></Uffi>
+			<Utilities>A</Utilities>
+			<VacancyAllowance>null</VacancyAllowance>
+			<SellerPropertyInfoStatement>N</SellerPropertyInfoStatement>
+			<Volts>600</Volts>
+			<VirtualTourUploadDate>null</VirtualTourUploadDate>
+			<Water>Municipal</Water>
+			<WaterExpense>null</WaterExpense>
+			<WaterSupplyTypes></WaterSupplyTypes>
+			<TaxYear>2023</TaxYear>
+			<ApproxAge>31-50</ApproxAge>
+			<YearExpenses>null</YearExpenses>
+			<PostalCode>M6J 1Y7</PostalCode>
+			<Zoning>CR2. 5</Zoning>
+		</Listing>
+	</CommercialProperty>
+	<CommercialProperty>
+		<Listing>
+			<AirConditioning>Y</AirConditioning>
+			<RemarksForClients>High Exposure Flagship Opportunity. 7350 SqFt Divisible Lot. The 5000 SqFt Storefront On 2 Levels Has Been Occupied By The Same Business For 25 Years. Approx 1000 Sqft Of Additional Warehouse/Storage Space at Rear. Grow Your Footprint In Retail, Professional Offices, Gallery, Studio, Etc. Frontage Exposure (25X100) For 1453/5 Dundas St W (Double Lot). High Ceilings. There Are 3 Staircases To Lower Level And 3 Additional Exits To The Exterior Of The Building. Interior Conveyor Belt From Laneway To Lower Lvl. Rear Warehouse/Storage Is Located On South Side Of Building Off Laneway. Envision An Open Concept Space Of This Magnitude. Unique Aspects Inc: Plumbing Throughout, 600 Volts, 3 Phase, Cooling Compressors, Walk-In Fridges, TBD/N. Dedicated Meters For Hydro And Gas. Expand Your Business Success Story Here.</RemarksForClients>
+			<Address>1453/5 Dundas St W</Address>
+			<Amps>null</Amps>
+			<AptUnit></AptUnit>
+			<Area>Toronto</Area>
+			<AreaCode>01</AreaCode>
+			<AreaInfluences1>Public Transit</AreaInfluences1>
+			<AreaInfluences2></AreaInfluences2>
+			<AssessmentYear>2023</AssessmentYear>
+			<Washrooms>1</Washrooms>
+			<BaySizeWidthFeet>null</BaySizeWidthFeet>
+			<BaySizeWidthInches>null</BaySizeWidthInches>
+			<BaySizeLengthFeet>null</BaySizeLengthFeet>
+			<BaySizeLengthInches>null</BaySizeLengthInches>
+			<Basement1>Y</Basement1>
+			<Use>Retail Store Related</Use>
+			<ClearHeightFeet>12</ClearHeightFeet>
+			<ClearHeightInches>0</ClearHeightInches>
+			<Chattels></Chattels>
+			<CommonAreaUpcharge>null</CommonAreaUpcharge>
+			<CommercialCondoFees>null</CommercialCondoFees>
+			<Community>Little Portugal</Community>
+			<CommunityCode>01.C01.0980</CommunityCode>
+			<Province>Ontario</Province>
+			<Crane></Crane>
+			<DirectionsCrossStreets>Dufferin &amp; Dundas</DirectionsCrossStreets>
+			<DaysOpen>6</DaysOpen>
+			<BusinessBuildingName></BusinessBuildingName>
+			<LotDepth>150.00</LotDepth>
+			<DisplayAddressOnInternet>Y</DisplayAddressOnInternet>
+			<Elevator>None</Elevator>
+			<Employees>null</Employees>
+			<ExpensesActualEstimated></ExpensesActualEstimated>
+			<Extras>Net Lease And TMI Calculated Monthly. Warehouse Storage Building At Rear Can Be Leased Separately Or Removed From This Lease By Deducting $1844/Month (Incl. Net Rent &amp; TMI).</Extras>
+			<FinancialStatement>N</FinancialStatement>
+			<Franchise></Franchise>
+			<Freestanding>Y</Freestanding>
+			<LotFront>25.00</LotFront>
+			<GarageType>Double Detached</GarageType>
+			<GrossIncomeSales>null</GrossIncomeSales>
+			<HeatExpenses>null</HeatExpenses>
+			<HeatType>Gas Forced Air Closd</HeatType>
+			<HoursOpen>7Am-5Pm</HoursOpen>
+			<HydroExpense>null</HydroExpense>
+			<IdxUpdtedDt>2015-02-03 11:50:23.0</IdxUpdtedDt>
+			<IndustrialArea>2350</IndustrialArea>
+			<IndustrialAreaCode>Sq Ft</IndustrialAreaCode>
+			<InsuranceExpense>null</InsuranceExpense>
+			<EstimInventoryValuesAtCost>null</EstimInventoryValuesAtCost>
+			<LotIrregularities>2 Bldgs. 1453 Dundas + 1451 Dundas Rear</LotIrregularities>
+			<LegalDescription>LT 1 PL D216; PT LT 2 PL D216 Toronto AND PT LT 9-10 PL D6 Toronto Parts 2, 3 &amp; 6</LegalDescription>
+			<LLBO>N</LLBO>
+			<LotBldgUnitCode>Building</LotBldgUnitCode>
+			<LotSizeCode>Feet</LotSizeCode>
+			<ListPriceCode>Net Lease</ListPriceCode>
+			<ListPrice>9260.00</ListPrice>
+			<Maintenance>null</Maintenance>
+			<ManagementExpense>null</ManagementExpense>
+			<MinimumRentalTerm>60</MinimumRentalTerm>
+			<MLS>C7277724</MLS>
+			<MapColumn>null</MapColumn>
+			<Map>null</Map>
+			<MapRow></MapRow>
+			<Municipality>Toronto</Municipality>
+			<MunicipalityCode>01.C01</MunicipalityCode>
+			<MunicipalityDistrict>Toronto C01</MunicipalityDistrict>
+			<NetIncomeBeforeDebt>null</NetIncomeBeforeDebt>
+			<OfficeAptArea>2500</OfficeAptArea>
+			<PossessionRemarks></PossessionRemarks>
+			<Occupancy>Tenant</Occupancy>
+			<OfficeAptAreaCode>Sq Ft</OfficeAptAreaCode>
+			<OperatingExpenses>null</OperatingExpenses>
+			<OtherExpenses>null</OtherExpenses>
+			<OutsideStorage></OutsideStorage>
+			<OutofAreaMunicipality></OutofAreaMunicipality>
+			<ParcelId>212960108</ParcelId>
+			<ParkingSpaces>null</ParkingSpaces>
+			<PerBuilding>null</PerBuilding>
+			<PercentageRent>null</PercentageRent>
+			<PixUpdtedDt>2023-11-06 15:18:17.0</PixUpdtedDt>
+			<Category>Multi-Use</Category>
+			<Rail>N</Rail>
+			<RetailArea>2500</RetailArea>
+			<RetailAreaCode>Sq Ft</RetailAreaCode>
+			<ListBrokerage>ROYAL LEPAGE WEST REALTY GROUP LTD.</ListBrokerage>
+			<SaleLease>Lease</SaleLease>
+			<Seats>null</Seats>
+			<Sewers>Sanitary</Sewers>
+			<DriveInLevelShippingDoorsHeightFeet>null</DriveInLevelShippingDoorsHeightFeet>
+			<DriveInLevelShippingDoorsHeightInches>null</DriveInLevelShippingDoorsHeightInches>
+			<DriveInLevelShippingDoors>1</DriveInLevelShippingDoors>
+			<DriveInLevelShippingDoorsWidthFeet>null</DriveInLevelShippingDoorsWidthFeet>
+			<DriveInLevelShippingDoorsWidthInches>null</DriveInLevelShippingDoorsWidthInches>
+			<DoubleManShippingDoorsHeightFeet>null</DoubleManShippingDoorsHeightFeet>
+			<DoubleManShippingDoorsHeightInches>null</DoubleManShippingDoorsHeightInches>
+			<DoubleManShippingDoors>1</DoubleManShippingDoors>
+			<DoubleManShippingDoorsWidthFeet>null</DoubleManShippingDoorsWidthFeet>
+			<DoubleManShippingDoorsWidthInches>null</DoubleManShippingDoorsWidthInches>
+			<GradeLevelShippingDoorsHeightFeet>null</GradeLevelShippingDoorsHeightFeet>
+			<GradeLevelShippingDoorsHeightInches>null</GradeLevelShippingDoorsHeightInches>
+			<GradeLevelShippingDoors>1</GradeLevelShippingDoors>
+			<GradeLevelShippingDoorsWidthFeet>null</GradeLevelShippingDoorsWidthFeet>
+			<GradeLevelShippingDoorsWidthInches>null</GradeLevelShippingDoorsWidthInches>
+			<TruckLevelShippingDoorsHeightFeet>null</TruckLevelShippingDoorsHeightFeet>
+			<TruckLevelShippingDoorsHeightInches>null</TruckLevelShippingDoorsHeightInches>
+			<TruckLevelShippingDoors>1</TruckLevelShippingDoors>
+			<TruckLevelShippingDoorsWidthFeet>null</TruckLevelShippingDoorsWidthFeet>
+			<TruckLevelShippingDoorsWidthInches>null</TruckLevelShippingDoorsWidthInches>
+			<SoilTest></SoilTest>
+			<Sprinklers>Part</Sprinklers>
+			<StreetName>Dundas</StreetName>
+			<StreetDirection>W</StreetDirection>
+			<Street>1453/5</Street>
+			<StreetAbbreviation>St</StreetAbbreviation>
+			<Status>A</Status>
+			<Survey></Survey>
+			<Taxes>2485.00</Taxes>
+			<TaxesExpense>null</TaxesExpense>
+			<MaximumRentalTerm>120</MaximumRentalTerm>
+			<TimestampSql>2024-02-20 12:37:16.0</TimestampSql>
+			<TotalArea>7350.00</TotalArea>
+			<TotalAreaCode>Sq Ft Divisible</TotalAreaCode>
+			<VirtualTourURL></VirtualTourURL>
+			<TrailerParkingSpots>null</TrailerParkingSpots>
+			<Assessment>null</Assessment>
+			<TypeOwnSrch>.Q.</TypeOwnSrch>
+			<TypeOwn1Out>Commercial/Retail</TypeOwn1Out>
+			<TypeTaxes>T.M.I.</TypeTaxes>
+			<Uffi></Uffi>
+			<Utilities>A</Utilities>
+			<VacancyAllowance>null</VacancyAllowance>
+			<SellerPropertyInfoStatement>Y</SellerPropertyInfoStatement>
+			<Volts>600</Volts>
+			<VirtualTourUploadDate>null</VirtualTourUploadDate>
+			<Water>Municipal</Water>
+			<WaterExpense>null</WaterExpense>
+			<WaterSupplyTypes></WaterSupplyTypes>
+			<TaxYear>2023</TaxYear>
+			<ApproxAge>31-50</ApproxAge>
+			<YearExpenses>null</YearExpenses>
+			<PostalCode>M6J 1Y7</PostalCode>
+			<Zoning>CR2.5</Zoning>
+		</Listing>
+	</CommercialProperty>
+	<CommercialProperty>
+		<Listing>
+			<AirConditioning>Y</AirConditioning>
+			<RemarksForClients>Existing, Long Practicing Family Med Clinic Disbanding - Principals Retiring. Exceptionally Well Improved Space, Shoppers Drug Mart Located Beside, Long Established Fully Leased Plaza With Wide Array Of Tenancies Including Supermarket Serving A Thriving Community. Floor Plan Attached. Hydro Incl In Additional Rent. Various Uses Available Except Optical, Dental, Chiro, Physio, RMT. Excellent Visibility, Access And Ample Parking.</RemarksForClients>
+			<Address>51 Underhill Dr</Address>
+			<Amps>null</Amps>
+			<AptUnit>200</AptUnit>
+			<Area>Toronto</Area>
+			<AreaCode>01</AreaCode>
+			<AreaInfluences1></AreaInfluences1>
+			<AreaInfluences2></AreaInfluences2>
+			<AssessmentYear>null</AssessmentYear>
+			<Washrooms>null</Washrooms>
+			<BaySizeWidthFeet>null</BaySizeWidthFeet>
+			<BaySizeWidthInches>null</BaySizeWidthInches>
+			<BaySizeLengthFeet>null</BaySizeLengthFeet>
+			<BaySizeLengthInches>null</BaySizeLengthInches>
+			<Basement1></Basement1>
+			<Use></Use>
+			<ClearHeightFeet>null</ClearHeightFeet>
+			<ClearHeightInches>null</ClearHeightInches>
+			<Chattels></Chattels>
+			<CommonAreaUpcharge>null</CommonAreaUpcharge>
+			<CommercialCondoFees>null</CommercialCondoFees>
+			<Community>Parkwoods-Donalda</Community>
+			<CommunityCode>01.C13.0660</CommunityCode>
+			<Province>Ontario</Province>
+			<Crane></Crane>
+			<DirectionsCrossStreets>E/Dvp, W/Victoria Pk</DirectionsCrossStreets>
+			<DaysOpen></DaysOpen>
+			<BusinessBuildingName></BusinessBuildingName>
+			<LotDepth>0.00</LotDepth>
+			<DisplayAddressOnInternet>Y</DisplayAddressOnInternet>
+			<Elevator>Public</Elevator>
+			<Employees>null</Employees>
+			<ExpensesActualEstimated></ExpensesActualEstimated>
+			<Extras></Extras>
+			<FinancialStatement></FinancialStatement>
+			<Franchise></Franchise>
+			<Freestanding>N</Freestanding>
+			<LotFront>0.00</LotFront>
+			<GarageType>Outside/Surface</GarageType>
+			<GrossIncomeSales>null</GrossIncomeSales>
+			<HeatExpenses>null</HeatExpenses>
+			<HeatType>Gas Forced Air Closd</HeatType>
+			<HoursOpen></HoursOpen>
+			<HydroExpense>null</HydroExpense>
+			<IdxUpdtedDt>null</IdxUpdtedDt>
+			<IndustrialArea>null</IndustrialArea>
+			<IndustrialAreaCode></IndustrialAreaCode>
+			<InsuranceExpense>null</InsuranceExpense>
+			<EstimInventoryValuesAtCost>null</EstimInventoryValuesAtCost>
+			<LotIrregularities></LotIrregularities>
+			<LegalDescription></LegalDescription>
+			<LLBO></LLBO>
+			<LotBldgUnitCode>Lot</LotBldgUnitCode>
+			<LotSizeCode>Feet</LotSizeCode>
+			<ListPriceCode>Sq Ft Net</ListPriceCode>
+			<ListPrice>14.00</ListPrice>
+			<Maintenance>null</Maintenance>
+			<ManagementExpense>null</ManagementExpense>
+			<MinimumRentalTerm>36</MinimumRentalTerm>
+			<MLS>C7282606</MLS>
+			<MapColumn>null</MapColumn>
+			<Map>null</Map>
+			<MapRow></MapRow>
+			<Municipality>Toronto</Municipality>
+			<MunicipalityCode>01.C13</MunicipalityCode>
+			<MunicipalityDistrict>Toronto C13</MunicipalityDistrict>
+			<NetIncomeBeforeDebt>null</NetIncomeBeforeDebt>
+			<OfficeAptArea>1912</OfficeAptArea>
+			<PossessionRemarks>T B N</PossessionRemarks>
+			<Occupancy>Vacant</Occupancy>
+			<OfficeAptAreaCode>Sq Ft</OfficeAptAreaCode>
+			<OperatingExpenses>null</OperatingExpenses>
+			<OtherExpenses>null</OtherExpenses>
+			<OutsideStorage></OutsideStorage>
+			<OutofAreaMunicipality></OutofAreaMunicipality>
+			<ParcelId></ParcelId>
+			<ParkingSpaces>null</ParkingSpaces>
+			<PerBuilding>null</PerBuilding>
+			<PercentageRent>null</PercentageRent>
+			<PixUpdtedDt>2023-11-08 09:02:46.0</PixUpdtedDt>
+			<Category>Office</Category>
+			<Rail></Rail>
+			<RetailArea>null</RetailArea>
+			<RetailAreaCode></RetailAreaCode>
+			<ListBrokerage>COOPER &amp; COMPANY REAL ESTATE LIMITED</ListBrokerage>
+			<SaleLease>Lease</SaleLease>
+			<Seats>null</Seats>
+			<Sewers></Sewers>
+			<DriveInLevelShippingDoorsHeightFeet>null</DriveInLevelShippingDoorsHeightFeet>
+			<DriveInLevelShippingDoorsHeightInches>null</DriveInLevelShippingDoorsHeightInches>
+			<DriveInLevelShippingDoors>null</DriveInLevelShippingDoors>
+			<DriveInLevelShippingDoorsWidthFeet>null</DriveInLevelShippingDoorsWidthFeet>
+			<DriveInLevelShippingDoorsWidthInches>null</DriveInLevelShippingDoorsWidthInches>
+			<DoubleManShippingDoorsHeightFeet>null</DoubleManShippingDoorsHeightFeet>
+			<DoubleManShippingDoorsHeightInches>null</DoubleManShippingDoorsHeightInches>
+			<DoubleManShippingDoors>null</DoubleManShippingDoors>
+			<DoubleManShippingDoorsWidthFeet>null</DoubleManShippingDoorsWidthFeet>
+			<DoubleManShippingDoorsWidthInches>null</DoubleManShippingDoorsWidthInches>
+			<GradeLevelShippingDoorsHeightFeet>null</GradeLevelShippingDoorsHeightFeet>
+			<GradeLevelShippingDoorsHeightInches>null</GradeLevelShippingDoorsHeightInches>
+			<GradeLevelShippingDoors>null</GradeLevelShippingDoors>
+			<GradeLevelShippingDoorsWidthFeet>null</GradeLevelShippingDoorsWidthFeet>
+			<GradeLevelShippingDoorsWidthInches>null</GradeLevelShippingDoorsWidthInches>
+			<TruckLevelShippingDoorsHeightFeet>null</TruckLevelShippingDoorsHeightFeet>
+			<TruckLevelShippingDoorsHeightInches>null</TruckLevelShippingDoorsHeightInches>
+			<TruckLevelShippingDoors>null</TruckLevelShippingDoors>
+			<TruckLevelShippingDoorsWidthFeet>null</TruckLevelShippingDoorsWidthFeet>
+			<TruckLevelShippingDoorsWidthInches>null</TruckLevelShippingDoorsWidthInches>
+			<SoilTest></SoilTest>
+			<Sprinklers>N</Sprinklers>
+			<StreetName>Underhill</StreetName>
+			<StreetDirection></StreetDirection>
+			<Street>51</Street>
+			<StreetAbbreviation>Dr</StreetAbbreviation>
+			<Status>A</Status>
+			<Survey></Survey>
+			<Taxes>13.50</Taxes>
+			<TaxesExpense>null</TaxesExpense>
+			<MaximumRentalTerm>60</MaximumRentalTerm>
+			<TimestampSql>2024-02-20 09:35:23.0</TimestampSql>
+			<TotalArea>1912.00</TotalArea>
+			<TotalAreaCode>Sq Ft</TotalAreaCode>
+			<VirtualTourURL></VirtualTourURL>
+			<TrailerParkingSpots>null</TrailerParkingSpots>
+			<Assessment>null</Assessment>
+			<TypeOwnSrch>.1.</TypeOwnSrch>
+			<TypeOwn1Out>Office</TypeOwn1Out>
+			<TypeTaxes>T.&amp; O.</TypeTaxes>
+			<Uffi></Uffi>
+			<Utilities>Y</Utilities>
+			<VacancyAllowance>null</VacancyAllowance>
+			<SellerPropertyInfoStatement>N</SellerPropertyInfoStatement>
+			<Volts>null</Volts>
+			<VirtualTourUploadDate>null</VirtualTourUploadDate>
+			<Water>Municipal</Water>
+			<WaterExpense>null</WaterExpense>
+			<WaterSupplyTypes></WaterSupplyTypes>
+			<TaxYear>2024</TaxYear>
+			<ApproxAge></ApproxAge>
+			<YearExpenses>null</YearExpenses>
+			<PostalCode>M3A 2J8</PostalCode>
+			<Zoning>Commercial</Zoning>
+		</Listing>
+	</CommercialProperty>
+	<CommercialProperty>
+		<Listing>
+			<AirConditioning>Y</AirConditioning>
+			<RemarksForClients>B R I G H T Well Improved Space, Floor Plans Attached. Vibrant Building Centered Within The Dynamic Yonge Bedford Park Community. T T C And All Area Amenities Available And Rare U/Ground Parking For Tenants (Only $135 Per Month Plus HST) Street Parking, Side Street Parking, Municipal Lot. All In Gross Rent Rate $32 Per Sq Ft Includes Hydro. Proactive Landlord/Self Managed Building. Space Is Divisible And Or Can Be Reconfigured.</RemarksForClients>
+			<Address>3300 Yonge St</Address>
+			<Amps>null</Amps>
+			<AptUnit>304</AptUnit>
+			<Area>Toronto</Area>
+			<AreaCode>01</AreaCode>
+			<AreaInfluences1>Public Transit</AreaInfluences1>
+			<AreaInfluences2>Subways</AreaInfluences2>
+			<AssessmentYear>null</AssessmentYear>
+			<Washrooms>null</Washrooms>
+			<BaySizeWidthFeet>null</BaySizeWidthFeet>
+			<BaySizeWidthInches>null</BaySizeWidthInches>
+			<BaySizeLengthFeet>null</BaySizeLengthFeet>
+			<BaySizeLengthInches>null</BaySizeLengthInches>
+			<Basement1></Basement1>
+			<Use></Use>
+			<ClearHeightFeet>null</ClearHeightFeet>
+			<ClearHeightInches>null</ClearHeightInches>
+			<Chattels></Chattels>
+			<CommonAreaUpcharge>null</CommonAreaUpcharge>
+			<CommercialCondoFees>null</CommercialCondoFees>
+			<Community>Lawrence Park North</Community>
+			<CommunityCode>01.C04.0690</CommunityCode>
+			<Province>Ontario</Province>
+			<Crane></Crane>
+			<DirectionsCrossStreets>N/Lawrence Ave</DirectionsCrossStreets>
+			<DaysOpen></DaysOpen>
+			<BusinessBuildingName></BusinessBuildingName>
+			<LotDepth>0.00</LotDepth>
+			<DisplayAddressOnInternet>Y</DisplayAddressOnInternet>
+			<Elevator>Public</Elevator>
+			<Employees>null</Employees>
+			<ExpensesActualEstimated></ExpensesActualEstimated>
+			<Extras></Extras>
+			<FinancialStatement></FinancialStatement>
+			<Franchise></Franchise>
+			<Freestanding>N</Freestanding>
+			<LotFront>0.00</LotFront>
+			<GarageType>Underground</GarageType>
+			<GrossIncomeSales>null</GrossIncomeSales>
+			<HeatExpenses>null</HeatExpenses>
+			<HeatType>Gas Forced Air Closd</HeatType>
+			<HoursOpen></HoursOpen>
+			<HydroExpense>null</HydroExpense>
+			<IdxUpdtedDt>null</IdxUpdtedDt>
+			<IndustrialArea>null</IndustrialArea>
+			<IndustrialAreaCode></IndustrialAreaCode>
+			<InsuranceExpense>null</InsuranceExpense>
+			<EstimInventoryValuesAtCost>null</EstimInventoryValuesAtCost>
+			<LotIrregularities></LotIrregularities>
+			<LegalDescription></LegalDescription>
+			<LLBO></LLBO>
+			<LotBldgUnitCode>Lot</LotBldgUnitCode>
+			<LotSizeCode>Feet</LotSizeCode>
+			<ListPriceCode>Sq Ft Net</ListPriceCode>
+			<ListPrice>14.50</ListPrice>
+			<Maintenance>null</Maintenance>
+			<ManagementExpense>null</ManagementExpense>
+			<MinimumRentalTerm>24</MinimumRentalTerm>
+			<MLS>C7349866</MLS>
+			<MapColumn>null</MapColumn>
+			<Map>null</Map>
+			<MapRow></MapRow>
+			<Municipality>Toronto</Municipality>
+			<MunicipalityCode>01.C04</MunicipalityCode>
+			<MunicipalityDistrict>Toronto C04</MunicipalityDistrict>
+			<NetIncomeBeforeDebt>null</NetIncomeBeforeDebt>
+			<OfficeAptArea>5576</OfficeAptArea>
+			<PossessionRemarks>Vacant</PossessionRemarks>
+			<Occupancy>Vacant</Occupancy>
+			<OfficeAptAreaCode>Sq Ft Divisible</OfficeAptAreaCode>
+			<OperatingExpenses>null</OperatingExpenses>
+			<OtherExpenses>null</OtherExpenses>
+			<OutsideStorage></OutsideStorage>
+			<OutofAreaMunicipality></OutofAreaMunicipality>
+			<ParcelId>211490201</ParcelId>
+			<ParkingSpaces>4</ParkingSpaces>
+			<PerBuilding>null</PerBuilding>
+			<PercentageRent>null</PercentageRent>
+			<PixUpdtedDt>2023-12-11 07:21:36.0</PixUpdtedDt>
+			<Category>Office</Category>
+			<Rail></Rail>
+			<RetailArea>null</RetailArea>
+			<RetailAreaCode></RetailAreaCode>
+			<ListBrokerage>COOPER &amp; COMPANY REAL ESTATE LIMITED</ListBrokerage>
+			<SaleLease>Lease</SaleLease>
+			<Seats>null</Seats>
+			<Sewers></Sewers>
+			<DriveInLevelShippingDoorsHeightFeet>null</DriveInLevelShippingDoorsHeightFeet>
+			<DriveInLevelShippingDoorsHeightInches>null</DriveInLevelShippingDoorsHeightInches>
+			<DriveInLevelShippingDoors>null</DriveInLevelShippingDoors>
+			<DriveInLevelShippingDoorsWidthFeet>null</DriveInLevelShippingDoorsWidthFeet>
+			<DriveInLevelShippingDoorsWidthInches>null</DriveInLevelShippingDoorsWidthInches>
+			<DoubleManShippingDoorsHeightFeet>null</DoubleManShippingDoorsHeightFeet>
+			<DoubleManShippingDoorsHeightInches>null</DoubleManShippingDoorsHeightInches>
+			<DoubleManShippingDoors>null</DoubleManShippingDoors>
+			<DoubleManShippingDoorsWidthFeet>null</DoubleManShippingDoorsWidthFeet>
+			<DoubleManShippingDoorsWidthInches>null</DoubleManShippingDoorsWidthInches>
+			<GradeLevelShippingDoorsHeightFeet>null</GradeLevelShippingDoorsHeightFeet>
+			<GradeLevelShippingDoorsHeightInches>null</GradeLevelShippingDoorsHeightInches>
+			<GradeLevelShippingDoors>null</GradeLevelShippingDoors>
+			<GradeLevelShippingDoorsWidthFeet>null</GradeLevelShippingDoorsWidthFeet>
+			<GradeLevelShippingDoorsWidthInches>null</GradeLevelShippingDoorsWidthInches>
+			<TruckLevelShippingDoorsHeightFeet>null</TruckLevelShippingDoorsHeightFeet>
+			<TruckLevelShippingDoorsHeightInches>null</TruckLevelShippingDoorsHeightInches>
+			<TruckLevelShippingDoors>null</TruckLevelShippingDoors>
+			<TruckLevelShippingDoorsWidthFeet>null</TruckLevelShippingDoorsWidthFeet>
+			<TruckLevelShippingDoorsWidthInches>null</TruckLevelShippingDoorsWidthInches>
+			<SoilTest></SoilTest>
+			<Sprinklers>N</Sprinklers>
+			<StreetName>Yonge</StreetName>
+			<StreetDirection></StreetDirection>
+			<Street>3300</Street>
+			<StreetAbbreviation>St</StreetAbbreviation>
+			<Status>A</Status>
+			<Survey></Survey>
+			<Taxes>17.50</Taxes>
+			<TaxesExpense>null</TaxesExpense>
+			<MaximumRentalTerm>60</MaximumRentalTerm>
+			<TimestampSql>2024-02-21 09:27:03.0</TimestampSql>
+			<TotalArea>5576.00</TotalArea>
+			<TotalAreaCode>Sq Ft Divisible</TotalAreaCode>
+			<VirtualTourURL></VirtualTourURL>
+			<TrailerParkingSpots>null</TrailerParkingSpots>
+			<Assessment>null</Assessment>
+			<TypeOwnSrch>.1.</TypeOwnSrch>
+			<TypeOwn1Out>Office</TypeOwn1Out>
+			<TypeTaxes>T.&amp; O.</TypeTaxes>
+			<Uffi></Uffi>
+			<Utilities>Y</Utilities>
+			<VacancyAllowance>null</VacancyAllowance>
+			<SellerPropertyInfoStatement>N</SellerPropertyInfoStatement>
+			<Volts>null</Volts>
+			<VirtualTourUploadDate>null</VirtualTourUploadDate>
+			<Water>Municipal</Water>
+			<WaterExpense>null</WaterExpense>
+			<WaterSupplyTypes></WaterSupplyTypes>
+			<TaxYear>2024</TaxYear>
+			<ApproxAge></ApproxAge>
+			<YearExpenses>null</YearExpenses>
+			<PostalCode>M4N 2L6</PostalCode>
+			<Zoning>Commercial</Zoning>
+		</Listing>
+	</CommercialProperty>
+	<CommercialProperty>
+		<Listing>
+			<AirConditioning>Y</AirConditioning>
+			<RemarksForClients>B R I G H T Well updated space, Floor Plan Attached, Vibrant Building Centered Amid The Dynamic Yonge Bedford Park Community. T T C And All Area Amenities Available. Rare U/Ground Parking For Tenants (Only $135 Per Month Plus HST). Street Parking, Side St Parking And Municipal Lot. All in Gross Rent Rate $32 Per Sq Ft Includes Hydro.  Proactive Landlord/Self Managed Building. Suite 302 Could Be Added (1,270 Sq Ft), Total Area 5,576 Sq Ft</RemarksForClients>
+			<Address>3300 Yonge St</Address>
+			<Amps>null</Amps>
+			<AptUnit>301</AptUnit>
+			<Area>Toronto</Area>
+			<AreaCode>01</AreaCode>
+			<AreaInfluences1>Public Transit</AreaInfluences1>
+			<AreaInfluences2>Subways</AreaInfluences2>
+			<AssessmentYear>null</AssessmentYear>
+			<Washrooms>null</Washrooms>
+			<BaySizeWidthFeet>null</BaySizeWidthFeet>
+			<BaySizeWidthInches>null</BaySizeWidthInches>
+			<BaySizeLengthFeet>null</BaySizeLengthFeet>
+			<BaySizeLengthInches>null</BaySizeLengthInches>
+			<Basement1></Basement1>
+			<Use></Use>
+			<ClearHeightFeet>null</ClearHeightFeet>
+			<ClearHeightInches>null</ClearHeightInches>
+			<Chattels></Chattels>
+			<CommonAreaUpcharge>null</CommonAreaUpcharge>
+			<CommercialCondoFees>null</CommercialCondoFees>
+			<Community>Lawrence Park North</Community>
+			<CommunityCode>01.C04.0690</CommunityCode>
+			<Province>Ontario</Province>
+			<Crane></Crane>
+			<DirectionsCrossStreets>N/Lawrence Ave</DirectionsCrossStreets>
+			<DaysOpen></DaysOpen>
+			<BusinessBuildingName></BusinessBuildingName>
+			<LotDepth>0.00</LotDepth>
+			<DisplayAddressOnInternet>Y</DisplayAddressOnInternet>
+			<Elevator>Public</Elevator>
+			<Employees>null</Employees>
+			<ExpensesActualEstimated></ExpensesActualEstimated>
+			<Extras></Extras>
+			<FinancialStatement></FinancialStatement>
+			<Franchise></Franchise>
+			<Freestanding>N</Freestanding>
+			<LotFront>0.00</LotFront>
+			<GarageType>Underground</GarageType>
+			<GrossIncomeSales>null</GrossIncomeSales>
+			<HeatExpenses>null</HeatExpenses>
+			<HeatType>Gas Forced Air Closd</HeatType>
+			<HoursOpen></HoursOpen>
+			<HydroExpense>null</HydroExpense>
+			<IdxUpdtedDt>null</IdxUpdtedDt>
+			<IndustrialArea>null</IndustrialArea>
+			<IndustrialAreaCode></IndustrialAreaCode>
+			<InsuranceExpense>null</InsuranceExpense>
+			<EstimInventoryValuesAtCost>null</EstimInventoryValuesAtCost>
+			<LotIrregularities></LotIrregularities>
+			<LegalDescription></LegalDescription>
+			<LLBO></LLBO>
+			<LotBldgUnitCode>Lot</LotBldgUnitCode>
+			<LotSizeCode>Feet</LotSizeCode>
+			<ListPriceCode>Sq Ft Net</ListPriceCode>
+			<ListPrice>14.50</ListPrice>
+			<Maintenance>null</Maintenance>
+			<ManagementExpense>null</ManagementExpense>
+			<MinimumRentalTerm>24</MinimumRentalTerm>
+			<MLS>C7349868</MLS>
+			<MapColumn>null</MapColumn>
+			<Map>null</Map>
+			<MapRow></MapRow>
+			<Municipality>Toronto</Municipality>
+			<MunicipalityCode>01.C04</MunicipalityCode>
+			<MunicipalityDistrict>Toronto C04</MunicipalityDistrict>
+			<NetIncomeBeforeDebt>null</NetIncomeBeforeDebt>
+			<OfficeAptArea>4306</OfficeAptArea>
+			<PossessionRemarks>Vacant</PossessionRemarks>
+			<Occupancy>Vacant</Occupancy>
+			<OfficeAptAreaCode>Sq Ft</OfficeAptAreaCode>
+			<OperatingExpenses>null</OperatingExpenses>
+			<OtherExpenses>null</OtherExpenses>
+			<OutsideStorage></OutsideStorage>
+			<OutofAreaMunicipality></OutofAreaMunicipality>
+			<ParcelId>211490201</ParcelId>
+			<ParkingSpaces>4</ParkingSpaces>
+			<PerBuilding>null</PerBuilding>
+			<PercentageRent>null</PercentageRent>
+			<PixUpdtedDt>2023-12-11 07:26:24.0</PixUpdtedDt>
+			<Category>Office</Category>
+			<Rail></Rail>
+			<RetailArea>null</RetailArea>
+			<RetailAreaCode></RetailAreaCode>
+			<ListBrokerage>COOPER &amp; COMPANY REAL ESTATE LIMITED</ListBrokerage>
+			<SaleLease>Lease</SaleLease>
+			<Seats>null</Seats>
+			<Sewers></Sewers>
+			<DriveInLevelShippingDoorsHeightFeet>null</DriveInLevelShippingDoorsHeightFeet>
+			<DriveInLevelShippingDoorsHeightInches>null</DriveInLevelShippingDoorsHeightInches>
+			<DriveInLevelShippingDoors>null</DriveInLevelShippingDoors>
+			<DriveInLevelShippingDoorsWidthFeet>null</DriveInLevelShippingDoorsWidthFeet>
+			<DriveInLevelShippingDoorsWidthInches>null</DriveInLevelShippingDoorsWidthInches>
+			<DoubleManShippingDoorsHeightFeet>null</DoubleManShippingDoorsHeightFeet>
+			<DoubleManShippingDoorsHeightInches>null</DoubleManShippingDoorsHeightInches>
+			<DoubleManShippingDoors>null</DoubleManShippingDoors>
+			<DoubleManShippingDoorsWidthFeet>null</DoubleManShippingDoorsWidthFeet>
+			<DoubleManShippingDoorsWidthInches>null</DoubleManShippingDoorsWidthInches>
+			<GradeLevelShippingDoorsHeightFeet>null</GradeLevelShippingDoorsHeightFeet>
+			<GradeLevelShippingDoorsHeightInches>null</GradeLevelShippingDoorsHeightInches>
+			<GradeLevelShippingDoors>null</GradeLevelShippingDoors>
+			<GradeLevelShippingDoorsWidthFeet>null</GradeLevelShippingDoorsWidthFeet>
+			<GradeLevelShippingDoorsWidthInches>null</GradeLevelShippingDoorsWidthInches>
+			<TruckLevelShippingDoorsHeightFeet>null</TruckLevelShippingDoorsHeightFeet>
+			<TruckLevelShippingDoorsHeightInches>null</TruckLevelShippingDoorsHeightInches>
+			<TruckLevelShippingDoors>null</TruckLevelShippingDoors>
+			<TruckLevelShippingDoorsWidthFeet>null</TruckLevelShippingDoorsWidthFeet>
+			<TruckLevelShippingDoorsWidthInches>null</TruckLevelShippingDoorsWidthInches>
+			<SoilTest></SoilTest>
+			<Sprinklers>N</Sprinklers>
+			<StreetName>Yonge</StreetName>
+			<StreetDirection></StreetDirection>
+			<Street>3300</Street>
+			<StreetAbbreviation>St</StreetAbbreviation>
+			<Status>A</Status>
+			<Survey></Survey>
+			<Taxes>17.50</Taxes>
+			<TaxesExpense>null</TaxesExpense>
+			<MaximumRentalTerm>60</MaximumRentalTerm>
+			<TimestampSql>2024-02-21 09:11:58.0</TimestampSql>
+			<TotalArea>4306.00</TotalArea>
+			<TotalAreaCode>Sq Ft</TotalAreaCode>
+			<VirtualTourURL></VirtualTourURL>
+			<TrailerParkingSpots>null</TrailerParkingSpots>
+			<Assessment>null</Assessment>
+			<TypeOwnSrch>.1.</TypeOwnSrch>
+			<TypeOwn1Out>Office</TypeOwn1Out>
+			<TypeTaxes>T.&amp; O.</TypeTaxes>
+			<Uffi></Uffi>
+			<Utilities>Y</Utilities>
+			<VacancyAllowance>null</VacancyAllowance>
+			<SellerPropertyInfoStatement>N</SellerPropertyInfoStatement>
+			<Volts>null</Volts>
+			<VirtualTourUploadDate>null</VirtualTourUploadDate>
+			<Water>Municipal</Water>
+			<WaterExpense>null</WaterExpense>
+			<WaterSupplyTypes></WaterSupplyTypes>
+			<TaxYear>2024</TaxYear>
+			<ApproxAge></ApproxAge>
+			<YearExpenses>null</YearExpenses>
+			<PostalCode>M4N 2L6</PostalCode>
+			<Zoning>Commercial</Zoning>
+		</Listing>
+	</CommercialProperty>
+	<CommercialProperty>
+		<Listing>
+			<AirConditioning>Y</AirConditioning>
+			<RemarksForClients>B R I G H T Well Updated Space, Floor Plan Attached, Vibrant Building Centered Within The Dynamic Yonge Bedford Park Community. T T C And All Area Amenities Available. Rare U/Ground Parking For Tenants (Only $135 Per Month Plus HST) Street Parking, Side Street Parking, Municipal Lot. All In Gross Rent Rate $32 Per Sq Ft Includes Hydro.  Proactive Landlord/Self Managed Building. Can Be Combined With Suite 301 (4,306 Sq Ft) Also Available.</RemarksForClients>
+			<Address>3300 Yonge St</Address>
+			<Amps>null</Amps>
+			<AptUnit>302</AptUnit>
+			<Area>Toronto</Area>
+			<AreaCode>01</AreaCode>
+			<AreaInfluences1>Public Transit</AreaInfluences1>
+			<AreaInfluences2>Subways</AreaInfluences2>
+			<AssessmentYear>null</AssessmentYear>
+			<Washrooms>null</Washrooms>
+			<BaySizeWidthFeet>null</BaySizeWidthFeet>
+			<BaySizeWidthInches>null</BaySizeWidthInches>
+			<BaySizeLengthFeet>null</BaySizeLengthFeet>
+			<BaySizeLengthInches>null</BaySizeLengthInches>
+			<Basement1></Basement1>
+			<Use></Use>
+			<ClearHeightFeet>null</ClearHeightFeet>
+			<ClearHeightInches>null</ClearHeightInches>
+			<Chattels></Chattels>
+			<CommonAreaUpcharge>null</CommonAreaUpcharge>
+			<CommercialCondoFees>null</CommercialCondoFees>
+			<Community>Lawrence Park North</Community>
+			<CommunityCode>01.C04.0690</CommunityCode>
+			<Province>Ontario</Province>
+			<Crane></Crane>
+			<DirectionsCrossStreets>N/Lawrence Ave</DirectionsCrossStreets>
+			<DaysOpen></DaysOpen>
+			<BusinessBuildingName></BusinessBuildingName>
+			<LotDepth>0.00</LotDepth>
+			<DisplayAddressOnInternet>Y</DisplayAddressOnInternet>
+			<Elevator>Public</Elevator>
+			<Employees>null</Employees>
+			<ExpensesActualEstimated></ExpensesActualEstimated>
+			<Extras></Extras>
+			<FinancialStatement></FinancialStatement>
+			<Franchise></Franchise>
+			<Freestanding>N</Freestanding>
+			<LotFront>0.00</LotFront>
+			<GarageType>Underground</GarageType>
+			<GrossIncomeSales>null</GrossIncomeSales>
+			<HeatExpenses>null</HeatExpenses>
+			<HeatType>Gas Forced Air Closd</HeatType>
+			<HoursOpen></HoursOpen>
+			<HydroExpense>null</HydroExpense>
+			<IdxUpdtedDt>null</IdxUpdtedDt>
+			<IndustrialArea>null</IndustrialArea>
+			<IndustrialAreaCode></IndustrialAreaCode>
+			<InsuranceExpense>null</InsuranceExpense>
+			<EstimInventoryValuesAtCost>null</EstimInventoryValuesAtCost>
+			<LotIrregularities></LotIrregularities>
+			<LegalDescription></LegalDescription>
+			<LLBO></LLBO>
+			<LotBldgUnitCode>Lot</LotBldgUnitCode>
+			<LotSizeCode>Feet</LotSizeCode>
+			<ListPriceCode>Sq Ft Net</ListPriceCode>
+			<ListPrice>14.50</ListPrice>
+			<Maintenance>null</Maintenance>
+			<ManagementExpense>null</ManagementExpense>
+			<MinimumRentalTerm>24</MinimumRentalTerm>
+			<MLS>C7349872</MLS>
+			<MapColumn>null</MapColumn>
+			<Map>null</Map>
+			<MapRow></MapRow>
+			<Municipality>Toronto</Municipality>
+			<MunicipalityCode>01.C04</MunicipalityCode>
+			<MunicipalityDistrict>Toronto C04</MunicipalityDistrict>
+			<NetIncomeBeforeDebt>null</NetIncomeBeforeDebt>
+			<OfficeAptArea>1270</OfficeAptArea>
+			<PossessionRemarks>Vacant</PossessionRemarks>
+			<Occupancy>Vacant</Occupancy>
+			<OfficeAptAreaCode>Sq Ft</OfficeAptAreaCode>
+			<OperatingExpenses>null</OperatingExpenses>
+			<OtherExpenses>null</OtherExpenses>
+			<OutsideStorage></OutsideStorage>
+			<OutofAreaMunicipality></OutofAreaMunicipality>
+			<ParcelId>211490201</ParcelId>
+			<ParkingSpaces>1</ParkingSpaces>
+			<PerBuilding>null</PerBuilding>
+			<PercentageRent>null</PercentageRent>
+			<PixUpdtedDt>2023-12-11 07:29:48.0</PixUpdtedDt>
+			<Category>Office</Category>
+			<Rail></Rail>
+			<RetailArea>null</RetailArea>
+			<RetailAreaCode></RetailAreaCode>
+			<ListBrokerage>COOPER &amp; COMPANY REAL ESTATE LIMITED</ListBrokerage>
+			<SaleLease>Lease</SaleLease>
+			<Seats>null</Seats>
+			<Sewers></Sewers>
+			<DriveInLevelShippingDoorsHeightFeet>null</DriveInLevelShippingDoorsHeightFeet>
+			<DriveInLevelShippingDoorsHeightInches>null</DriveInLevelShippingDoorsHeightInches>
+			<DriveInLevelShippingDoors>null</DriveInLevelShippingDoors>
+			<DriveInLevelShippingDoorsWidthFeet>null</DriveInLevelShippingDoorsWidthFeet>
+			<DriveInLevelShippingDoorsWidthInches>null</DriveInLevelShippingDoorsWidthInches>
+			<DoubleManShippingDoorsHeightFeet>null</DoubleManShippingDoorsHeightFeet>
+			<DoubleManShippingDoorsHeightInches>null</DoubleManShippingDoorsHeightInches>
+			<DoubleManShippingDoors>null</DoubleManShippingDoors>
+			<DoubleManShippingDoorsWidthFeet>null</DoubleManShippingDoorsWidthFeet>
+			<DoubleManShippingDoorsWidthInches>null</DoubleManShippingDoorsWidthInches>
+			<GradeLevelShippingDoorsHeightFeet>null</GradeLevelShippingDoorsHeightFeet>
+			<GradeLevelShippingDoorsHeightInches>null</GradeLevelShippingDoorsHeightInches>
+			<GradeLevelShippingDoors>null</GradeLevelShippingDoors>
+			<GradeLevelShippingDoorsWidthFeet>null</GradeLevelShippingDoorsWidthFeet>
+			<GradeLevelShippingDoorsWidthInches>null</GradeLevelShippingDoorsWidthInches>
+			<TruckLevelShippingDoorsHeightFeet>null</TruckLevelShippingDoorsHeightFeet>
+			<TruckLevelShippingDoorsHeightInches>null</TruckLevelShippingDoorsHeightInches>
+			<TruckLevelShippingDoors>null</TruckLevelShippingDoors>
+			<TruckLevelShippingDoorsWidthFeet>null</TruckLevelShippingDoorsWidthFeet>
+			<TruckLevelShippingDoorsWidthInches>null</TruckLevelShippingDoorsWidthInches>
+			<SoilTest></SoilTest>
+			<Sprinklers>N</Sprinklers>
+			<StreetName>Yonge</StreetName>
+			<StreetDirection></StreetDirection>
+			<Street>3300</Street>
+			<StreetAbbreviation>St</StreetAbbreviation>
+			<Status>A</Status>
+			<Survey></Survey>
+			<Taxes>17.50</Taxes>
+			<TaxesExpense>null</TaxesExpense>
+			<MaximumRentalTerm>60</MaximumRentalTerm>
+			<TimestampSql>2024-02-21 09:18:43.0</TimestampSql>
+			<TotalArea>1270.00</TotalArea>
+			<TotalAreaCode>Sq Ft</TotalAreaCode>
+			<VirtualTourURL></VirtualTourURL>
+			<TrailerParkingSpots>null</TrailerParkingSpots>
+			<Assessment>null</Assessment>
+			<TypeOwnSrch>.1.</TypeOwnSrch>
+			<TypeOwn1Out>Office</TypeOwn1Out>
+			<TypeTaxes>T.&amp; O.</TypeTaxes>
+			<Uffi></Uffi>
+			<Utilities>Y</Utilities>
+			<VacancyAllowance>null</VacancyAllowance>
+			<SellerPropertyInfoStatement>N</SellerPropertyInfoStatement>
+			<Volts>null</Volts>
+			<VirtualTourUploadDate>null</VirtualTourUploadDate>
+			<Water>Municipal</Water>
+			<WaterExpense>null</WaterExpense>
+			<WaterSupplyTypes></WaterSupplyTypes>
+			<TaxYear>2024</TaxYear>
+			<ApproxAge></ApproxAge>
+			<YearExpenses>null</YearExpenses>
+			<PostalCode>M4N 2L6</PostalCode>
+			<Zoning>Commercial</Zoning>
+		</Listing>
+	</CommercialProperty>
+</REProperties>
+</REData>
+<MAXROWS/>
+</RETS>
