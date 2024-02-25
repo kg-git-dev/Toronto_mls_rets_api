@@ -17,8 +17,6 @@ const { getMatchingFiles } = require('../images');
 
         const commercialProperties = await parseXmlAsync(xmlPath, initialXmlObject, propertyType = 'CommercialProperty');
 
-        console.log('commercial ran')
-
         for (const property of commercialProperties) {
             property.MinListPrice = property.ListPrice;
             property.MaxListPrice = property.ListPrice;

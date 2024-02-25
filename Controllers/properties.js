@@ -44,9 +44,6 @@ const SaveInRedis = async (req, res, databaseQuery, dbPath) => {
 function getDatabasePath(dbName) {
   let basePath = "../XmlParser/Data/";
   let dbFileName = "";
-  console.log('came to case')
-
-
   switch (dbName) {
     case "commercial_properties_database":
       dbFileName = "Commercial/commercial_properties_database.db";

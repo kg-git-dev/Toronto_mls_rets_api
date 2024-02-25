@@ -1,28 +1,43 @@
 const express = require("express");
 const router = express.Router();
-
 const sqlite3 = require("sqlite3").verbose();
 const path = require("path");
 
-const dbPath = path.resolve(
-    __dirname,
-    "../XmlParser/Data/Residential/residentialDatabase.db"
-);
+// Function to get database name based on route
+function getDatabaseInfo(route) {
+    switch (route) {
+        case "residential":
+            return {
+                dbName: "residentialDatabase.db",
+                tableName: "residentialDatabase"
+            };
+        case "commercial":
+            return {
+                dbName: "commercial_properties_database.db",
+                tableName: "commercial_properties_table"
+            };
+        default:
+            throw new Error("Invalid route");
+    }
+}
 
-router.get("/", async (req, res) => {
+router.get("/:route", async (req, res) => {
+    const { route } = req.params;
+    const { dbName, tableName } = getDatabaseInfo(route); // Get database name and table name based on route
+    const dbPath = path.resolve(__dirname, `../XmlParser/Data/${route.charAt(0).toUpperCase() + route.slice(1)}/${dbName}`); // Construct full database path
     const db = new sqlite3.Database(dbPath);
+
     try {
         let { searchTerm } = req.query;
         
         // Extract searchTerm from the query parameters and sanitize
-        if (searchTerm) {
-            searchTerm = searchTerm.replace(/'/g, ""); // Remove single quotes
-            searchTerm = searchTerm.toLowerCase(); // Convert to lowercase
-            searchTerm = searchTerm.trim(); // Trim whitespace
-        } else {
-            res.status(400).json({ error: "Missing searchTerm parameter" });
-            return;
+        if (!searchTerm) {
+            return res.status(400).json({ error: "Missing searchTerm parameter" });
         }
+
+        searchTerm = searchTerm.replace(/'/g, ""); // Remove single quotes
+        searchTerm = searchTerm.toLowerCase(); // Convert to lowercase
+        searchTerm = searchTerm.trim(); // Trim whitespace
 
         const searchTerms = searchTerm.split(" "); // Split search term into individual words
         
@@ -30,7 +45,7 @@ router.get("/", async (req, res) => {
         
         const query = `
             SELECT MLS, Street, StreetName, StreetAbbreviation, Area, Province, SearchAddress 
-            FROM residentialDatabase 
+            FROM ${tableName} 
             WHERE ${placeholders}`; 
 
         // Execute the query with the sanitized search terms as parameters
@@ -39,8 +54,7 @@ router.get("/", async (req, res) => {
         db.all(query, params, (err, rows) => {
             if (err) {
                 console.error("Error executing query:", err);
-                res.status(500).json({ error: "Internal Server Error" });
-                return;
+                return res.status(500).json({ error: "Internal Server Error" });
             }
 
             // Calculate scores for each row based on the number of matched keywords
@@ -67,8 +81,9 @@ router.get("/", async (req, res) => {
     } catch (e) {
         console.error(e);
         res.status(500).send('Error at /searchAddress route');
+    } finally {
+        db.close();
     }
-    db.close();
 });
 
 module.exports = router;
