@@ -13,6 +13,8 @@ const PORT = process.env.PORT || 3000;
 //importing residential, commercial and condos routes
 const residentialRoutes = require("./Routes/residential");
 
+const commercialRoutes = require("./Routes/commercial");
+
 //importing getLatLong routes
 const getLatLongRoutes = require("./Routes/getLatLong");
 
@@ -44,6 +46,9 @@ app.use(
 
 //Seperating routes into residential, commercial and condos
 app.use("/residential", residentialRoutes);
+
+app.use("/commercial", commercialRoutes);
+
 
 //Integrating get-lat-long-queue
 app.use("/get-lat-long", cors(), getLatLongRoutes);

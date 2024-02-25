@@ -5,10 +5,9 @@ const propertiesMiddleware = require('../Middleware');
 
 // Custom middleware function to add additional parameter
 function handleOptionalParametersWithDbType(req, res, next) {
-    
     // Add your logic here to determine the database type
-    const dbName = 'residentialDatabase'; // Assuming 'commercial' is the database type
-    const tableName = 'residentialDatabase'
+    const dbName = 'commercial_properties_database'; // Assuming 'commercial' is the database type
+    const tableName = 'commercial_properties_table';
     
     // Attach dbType to the request object
     req.dbName = dbName;

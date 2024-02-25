@@ -1,4 +1,5 @@
 const handleOptionalParameters = (req, res, next) => {
+  const tableName = req.tableName;
   const { $limit, $skip, $select, $range, $selectOr } = req.query;
 
   const limit = parseInt($limit) || 10; 
@@ -13,7 +14,8 @@ const handleOptionalParameters = (req, res, next) => {
     skip,
     selectFields,
     rangeFields,
-    selectOrFields, // Pass selectOrFields to buildDatabaseQuery
+    selectOrFields, 
+    tableName,
   });
 
   req.databaseQuery = databaseQuery;
@@ -21,8 +23,8 @@ const handleOptionalParameters = (req, res, next) => {
   next();
 };
 
-const buildDatabaseQuery = ({ limit, skip, selectFields, rangeFields, selectOrFields }) => {
-  const query = "SELECT * FROM residentialDatabase";
+const buildDatabaseQuery = ({ limit, skip, selectFields, rangeFields, selectOrFields, tableName }) => {
+  const query = `SELECT * FROM ${tableName}`;
   const conditions = [];
 
   addSelectConditions(conditions, selectFields);
