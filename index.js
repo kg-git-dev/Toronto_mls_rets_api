@@ -52,5 +52,5 @@ app.use("/get-lat-long", cors(), getLatLongRoutes);
 app.use("/propertySearch", propertySearchRoutes)
 
 app.listen(PORT, () => {
-  console.log(`Server running on port: ${PORT}`);
+  console.log(`${new Date(Date.now()).toLocaleString()}: Server running on port: ${PORT}`);
 });
