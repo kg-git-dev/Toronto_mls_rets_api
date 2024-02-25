@@ -38,17 +38,22 @@ app.use((req, res, next) => {
   next();
 });
 
-//make images available
+//make residential images available
 app.use(
   "/residentialPhotos",
   express.static(path.join(__dirname, "XmlParser/Data/Residential/Photos/"))
+);
+
+//make commercial images available
+app.use(
+  "/commercialPhotos",
+  express.static(path.join(__dirname, "XmlParser/Data/Commercial/Photos/"))
 );
 
 //Seperating routes into residential, commercial and condos
 app.use("/residential", residentialRoutes);
 
 app.use("/commercial", commercialRoutes);
-
 
 //Integrating get-lat-long-queue
 app.use("/get-lat-long", cors(), getLatLongRoutes);
